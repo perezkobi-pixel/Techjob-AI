@@ -1,0 +1,745 @@
+{
+ "ranAt": "2026-10-20T12:11:38.833Z",
+ "report": [
+  {
+   "company": "HiBob",
+   "type": "חברת מוצר",
+   "best": {
+    "ats": "ashby",
+    "token": "bob",
+    "ok": true,
+    "total": 3,
+    "israel": 0,
+    "tech": 0
+   },
+   "all": [
+    {
+     "ats": "ashby",
+     "token": "bob",
+     "ok": true,
+     "total": 3,
+     "israel": 0,
+     "tech": 0
+    }
+   ]
+  },
+  {
+   "company": "Outbrain",
+   "type": "חברת מוצר",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Cyera",
+   "type": "סייבר",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Snyk",
+   "type": "סייבר",
+   "best": {
+    "ats": "ashby",
+    "token": "snyk",
+    "ok": true,
+    "total": 27,
+    "israel": 1,
+    "tech": 0
+   },
+   "all": [
+    {
+     "ats": "ashby",
+     "token": "snyk",
+     "ok": true,
+     "total": 27,
+     "israel": 1,
+     "tech": 0
+    }
+   ]
+  },
+  {
+   "company": "Tipalti",
+   "type": "פינטק",
+   "best": {
+    "ats": "greenhouse",
+    "token": "tipaltisolutions",
+    "ok": true,
+    "total": 21,
+    "israel": 7,
+    "tech": 5
+   },
+   "all": [
+    {
+     "ats": "greenhouse",
+     "token": "tipaltisolutions",
+     "ok": true,
+     "total": 21,
+     "israel": 7,
+     "tech": 5
+    }
+   ]
+  },
+  {
+   "company": "Rapyd",
+   "type": "פינטק",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Papaya Global",
+   "type": "חברת מוצר",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Coralogix",
+   "type": "חברת מוצר",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Lemonade",
+   "type": "חברת מוצר",
+   "best": {
+    "ats": "ashby",
+    "token": "lemonade",
+    "ok": true,
+    "total": 40,
+    "israel": 0,
+    "tech": 0
+   },
+   "all": [
+    {
+     "ats": "ashby",
+     "token": "lemonade",
+     "ok": true,
+     "total": 40,
+     "israel": 0,
+     "tech": 0
+    }
+   ]
+  },
+  {
+   "company": "Honeybook",
+   "type": "חברת מוצר",
+   "best": {
+    "ats": "ashby",
+    "token": "honeybook",
+    "ok": true,
+    "total": 7,
+    "israel": 3,
+    "tech": 1
+   },
+   "all": [
+    {
+     "ats": "ashby",
+     "token": "honeybook",
+     "ok": true,
+     "total": 7,
+     "israel": 3,
+     "tech": 1
+    }
+   ]
+  },
+  {
+   "company": "Lusha",
+   "type": "חברת מוצר",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Island",
+   "type": "סייבר",
+   "best": {
+    "ats": "greenhouse",
+    "token": "island",
+    "ok": true,
+    "total": 30,
+    "israel": 12,
+    "tech": 10
+   },
+   "all": [
+    {
+     "ats": "greenhouse",
+     "token": "island",
+     "ok": true,
+     "total": 30,
+     "israel": 12,
+     "tech": 10
+    }
+   ]
+  },
+  {
+   "company": "Redis",
+   "type": "חברת מוצר",
+   "best": {
+    "ats": "ashby",
+    "token": "redis",
+    "ok": true,
+    "total": 28,
+    "israel": 0,
+    "tech": 0
+   },
+   "all": [
+    {
+     "ats": "ashby",
+     "token": "redis",
+     "ok": true,
+     "total": 28,
+     "israel": 0,
+     "tech": 0
+    }
+   ]
+  },
+  {
+   "company": "Nayax",
+   "type": "חברת מוצר",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Earnix",
+   "type": "חברת מוצר",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Zesty",
+   "type": "סטארטאפ",
+   "best": {
+    "ats": "greenhouse",
+    "token": "zestyai",
+    "ok": true,
+    "total": 7,
+    "israel": 0,
+    "tech": 0
+   },
+   "all": [
+    {
+     "ats": "greenhouse",
+     "token": "zestyai",
+     "ok": true,
+     "total": 7,
+     "israel": 0,
+     "tech": 0
+    }
+   ]
+  },
+  {
+   "company": "Hailo",
+   "type": "חומרה",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "JFrog",
+   "type": "חברת מוצר",
+   "best": {
+    "ats": "greenhouse",
+    "token": "jfrog",
+    "ok": true,
+    "total": 63,
+    "israel": 18,
+    "tech": 12
+   },
+   "all": [
+    {
+     "ats": "greenhouse",
+     "token": "jfrog",
+     "ok": true,
+     "total": 63,
+     "israel": 18,
+     "tech": 12
+    }
+   ]
+  },
+  {
+   "company": "Lightricks",
+   "type": "חברת מוצר",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Armis",
+   "type": "סייבר",
+   "best": {
+    "ats": "smartrecruiters",
+    "token": "armis",
+    "ok": true,
+    "total": 2,
+    "israel": 2,
+    "tech": 2
+   },
+   "all": [
+    {
+     "ats": "smartrecruiters",
+     "token": "armis",
+     "ok": true,
+     "total": 2,
+     "israel": 2,
+     "tech": 2
+    },
+    {
+     "ats": "smartrecruiters",
+     "token": "Armis",
+     "ok": true,
+     "total": 2,
+     "israel": 2,
+     "tech": 2
+    }
+   ]
+  },
+  {
+   "company": "Playtika",
+   "type": "משחקים",
+   "best": {
+    "ats": "greenhouse",
+    "token": "playtikaltd",
+    "ok": true,
+    "total": 14,
+    "israel": 9,
+    "tech": 5
+   },
+   "all": [
+    {
+     "ats": "greenhouse",
+     "token": "playtikaltd",
+     "ok": true,
+     "total": 14,
+     "israel": 9,
+     "tech": 5
+    }
+   ]
+  },
+  {
+   "company": "Check Point",
+   "type": "סייבר",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "monday.com",
+   "type": "חברת מוצר",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Fiverr",
+   "type": "חברת מוצר",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "CyberArk",
+   "type": "סייבר",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Aqua Security",
+   "type": "סייבר",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Orca Security",
+   "type": "סייבר",
+   "best": {
+    "ats": "greenhouse",
+    "token": "orcasecurity",
+    "ok": true,
+    "total": 10,
+    "israel": 2,
+    "tech": 2
+   },
+   "all": [
+    {
+     "ats": "greenhouse",
+     "token": "orcasecurity",
+     "ok": true,
+     "total": 10,
+     "israel": 2,
+     "tech": 2
+    },
+    {
+     "ats": "ashby",
+     "token": "orca",
+     "ok": true,
+     "total": 2,
+     "israel": 0,
+     "tech": 0
+    },
+    {
+     "ats": "greenhouse",
+     "token": "orca",
+     "ok": true,
+     "total": 1,
+     "israel": 0,
+     "tech": 0
+    }
+   ]
+  },
+  {
+   "company": "Silverfort",
+   "type": "סייבר",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Pentera",
+   "type": "סייבר",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Claroty",
+   "type": "סייבר",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Upwind",
+   "type": "סייבר",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Oligo Security",
+   "type": "סייבר",
+   "best": {
+    "ats": "ashby",
+    "token": "oligo",
+    "ok": true,
+    "total": 4,
+    "israel": 0,
+    "tech": 0
+   },
+   "all": [
+    {
+     "ats": "ashby",
+     "token": "oligo",
+     "ok": true,
+     "total": 4,
+     "israel": 0,
+     "tech": 0
+    }
+   ]
+  },
+  {
+   "company": "Aidoc",
+   "type": "חברת מוצר",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Tabnine",
+   "type": "סטארטאפ",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "AI21 Labs",
+   "type": "סטארטאפ",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "D-ID",
+   "type": "סטארטאפ",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Riverside",
+   "type": "סטארטאפ",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Port",
+   "type": "סטארטאפ",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Kaltura",
+   "type": "חברת מוצר",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Bringg",
+   "type": "חברת מוצר",
+   "best": {
+    "ats": "greenhouse",
+    "token": "bringg",
+    "ok": true,
+    "total": 2,
+    "israel": 0,
+    "tech": 0
+   },
+   "all": [
+    {
+     "ats": "greenhouse",
+     "token": "bringg",
+     "ok": true,
+     "total": 2,
+     "israel": 0,
+     "tech": 0
+    }
+   ]
+  },
+  {
+   "company": "Innoviz",
+   "type": "חומרה",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Sapiens",
+   "type": "בית תוכנה",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Mobileye",
+   "type": "חומרה",
+   "best": {
+    "ats": "lever",
+    "token": "mobileye",
+    "eu": true,
+    "ok": true,
+    "total": 169,
+    "israel": 151,
+    "tech": 126
+   },
+   "all": [
+    {
+     "ats": "lever",
+     "token": "mobileye",
+     "eu": true,
+     "ok": true,
+     "total": 169,
+     "israel": 151,
+     "tech": 126
+    }
+   ]
+  },
+  {
+   "company": "NVIDIA",
+   "type": "חומרה",
+   "best": {
+    "ats": "workday",
+    "token": "nvidia.wd5.myworkdayjobs.com|nvidia|NVIDIAExternalCareerSite",
+    "ok": true,
+    "total": 40,
+    "israel": 40,
+    "tech": 32
+   },
+   "all": [
+    {
+     "ats": "workday",
+     "token": "nvidia.wd5.myworkdayjobs.com|nvidia|NVIDIAExternalCareerSite",
+     "ok": true,
+     "total": 40,
+     "israel": 40,
+     "tech": 32
+    }
+   ]
+  },
+  {
+   "company": "Intel",
+   "type": "חומרה",
+   "best": {
+    "ats": "workday",
+    "token": "intel.wd1.myworkdayjobs.com|intel|External",
+    "ok": true,
+    "total": 20,
+    "israel": 19,
+    "tech": 12
+   },
+   "all": [
+    {
+     "ats": "workday",
+     "token": "intel.wd1.myworkdayjobs.com|intel|External",
+     "ok": true,
+     "total": 20,
+     "israel": 19,
+     "tech": 12
+    }
+   ]
+  },
+  {
+   "company": "Applied Materials",
+   "type": "חומרה",
+   "best": {
+    "ats": "workday",
+    "token": "amat.wd1.myworkdayjobs.com|amat|External",
+    "ok": true,
+    "total": 40,
+    "israel": 40,
+    "tech": 26
+   },
+   "all": [
+    {
+     "ats": "workday",
+     "token": "amat.wd1.myworkdayjobs.com|amat|External",
+     "ok": true,
+     "total": 40,
+     "israel": 40,
+     "tech": 26
+    }
+   ]
+  },
+  {
+   "company": "Marvell",
+   "type": "חומרה",
+   "best": {
+    "ats": "workday",
+    "token": "marvell.wd1.myworkdayjobs.com|marvell|MarvellCareers",
+    "ok": true,
+    "total": 13,
+    "israel": 13,
+    "tech": 10
+   },
+   "all": [
+    {
+     "ats": "workday",
+     "token": "marvell.wd1.myworkdayjobs.com|marvell|MarvellCareers",
+     "ok": true,
+     "total": 13,
+     "israel": 13,
+     "tech": 10
+    }
+   ]
+  },
+  {
+   "company": "KLA",
+   "type": "חומרה",
+   "best": {
+    "ats": "workday",
+    "token": "kla.wd1.myworkdayjobs.com|kla|Search",
+    "ok": true,
+    "total": 40,
+    "israel": 40,
+    "tech": 24
+   },
+   "all": [
+    {
+     "ats": "workday",
+     "token": "kla.wd1.myworkdayjobs.com|kla|Search",
+     "ok": true,
+     "total": 40,
+     "israel": 40,
+     "tech": 24
+    }
+   ]
+  },
+  {
+   "company": "NICE",
+   "type": "בית תוכנה",
+   "best": {
+    "ats": "greenhouse",
+    "token": "nice",
+    "ok": true,
+    "total": 185,
+    "israel": 22,
+    "tech": 12
+   },
+   "all": [
+    {
+     "ats": "greenhouse",
+     "token": "nice",
+     "ok": true,
+     "total": 185,
+     "israel": 22,
+     "tech": 12
+    }
+   ]
+  },
+  {
+   "company": "Amdocs",
+   "type": "בית תוכנה",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Elbit Systems",
+   "type": "ביטחוני טכנולוגי",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Nexar",
+   "type": "סטארטאפ",
+   "best": null,
+   "all": []
+  },
+  {
+   "company": "Melio",
+   "type": "פינטק",
+   "best": {
+    "ats": "greenhouse",
+    "token": "melio",
+    "ok": true,
+    "total": 24,
+    "israel": 9,
+    "tech": 9
+   },
+   "all": [
+    {
+     "ats": "greenhouse",
+     "token": "melio",
+     "ok": true,
+     "total": 24,
+     "israel": 9,
+     "tech": 9
+    }
+   ]
+  },
+  {
+   "company": "Yotpo",
+   "type": "חברת מוצר",
+   "best": {
+    "ats": "greenhouse",
+    "token": "yotpo",
+    "ok": true,
+    "total": 16,
+    "israel": 6,
+    "tech": 5
+   },
+   "all": [
+    {
+     "ats": "greenhouse",
+     "token": "yotpo",
+     "ok": true,
+     "total": 16,
+     "israel": 6,
+     "tech": 5
+    }
+   ]
+  },
+  {
+   "company": "Torq",
+   "type": "סייבר",
+   "best": {
+    "ats": "greenhouse",
+    "token": "torq",
+    "ok": true,
+    "total": 25,
+    "israel": 5,
+    "tech": 4
+   },
+   "all": [
+    {
+     "ats": "greenhouse",
+     "token": "torq",
+     "ok": true,
+     "total": 25,
+     "israel": 5,
+     "tech": 4
+    }
+   ]
+  }
+ ]
+}
