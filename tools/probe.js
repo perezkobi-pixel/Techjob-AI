@@ -52,7 +52,14 @@ function fingerprints(text) {
   }
   // Comeet widget tokens
   const tok = text.match(/comeet[\s\S]{0,400}?token["'\s:=]+["']?([A-F0-9]{12,})/i);
-  if (tok) (out.comeet_token = out.comeet_token || new Set()).add(tok[1]);
+  if (tok) {
+    (out.comeet_token = out.comeet_token || new Set()).add(tok[1]);
+    const i = text.indexOf(tok[1]);
+    const near = text.slice(Math.max(0, i - 1500), i + 1500);
+    const uid = near.match(/(?:company[-_ ]?uid|companyUid|company_id|uid)["'\s:=]+["']?([0-9A-F]{2}\.[0-9A-F]{3})/i) || near.match(/["'\/]([0-9A-F]{2}\.[0-9A-F]{3})["'\/]/);
+    if (uid) (out.comeet_uid = out.comeet_uid || new Set()).add(uid[1]);
+    (out.comeet_snippet = out.comeet_snippet || new Set()).add(near.replace(/\s+/g, ' ').slice(1000, 2000));
+  }
   return Object.fromEntries(Object.entries(out).map(([k, v]) => [k, [...v].slice(0, 5)]));
 }
 function jobLinks(html, base) {
