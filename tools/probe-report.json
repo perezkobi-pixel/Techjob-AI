@@ -1,0 +1,4376 @@
+{
+ "ranAt": "2026-10-20T14:48:17.186Z",
+ "report": [
+  {
+   "company": "monday.com",
+   "type": "חברת מוצר",
+   "domain": "monday.com",
+   "found": {
+    "ashby": [
+     "monday.com"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.monday.com/careers",
+     200,
+     "https://monday.com/careers"
+    ],
+    [
+     "https://monday.com/careers/ec17200a-4310-4a4d-b6dc-f7639c55087e",
+     200
+    ],
+    [
+     "https://monday.com/careers/bcf7ef2f-fd74-40d7-8a13-afca3d3281bf",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Fiverr",
+   "type": "חברת מוצר",
+   "domain": "fiverr.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.fiverr.com/careers",
+     403
+    ],
+    [
+     "https://fiverr.com/careers",
+     403,
+     "https://www.fiverr.com/careers"
+    ],
+    [
+     "https://careers.fiverr.com"
+    ],
+    [
+     "https://www.fiverr.com/jobs",
+     403
+    ]
+   ]
+  },
+  {
+   "company": "CyberArk",
+   "type": "סייבר",
+   "domain": "cyberark.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.cyberark.com/careers",
+     200,
+     "https://www.paloaltonetworks.com/idira"
+    ],
+    [
+     "https://cyberark.com/careers",
+     200,
+     "https://www.paloaltonetworks.com/idira"
+    ],
+    [
+     "https://careers.cyberark.com",
+     200,
+     "https://www.paloaltonetworks.com/idira"
+    ],
+    [
+     "https://www.cyberark.com/jobs",
+     200,
+     "https://www.paloaltonetworks.com/idira"
+    ]
+   ]
+  },
+  {
+   "company": "Check Point",
+   "type": "סייבר",
+   "domain": "checkpoint.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.checkpoint.com/careers",
+     200,
+     "https://www.checkpoint.com/careers/"
+    ],
+    [
+     "https://www.checkpoint.com/careers/programs/",
+     200
+    ],
+    [
+     "https://www.checkpoint.com/careers/faq/",
+     200
+    ],
+    [
+     "https://checkpoint.com/careers",
+     200,
+     "https://www.checkpoint.com/careers/"
+    ],
+    [
+     "https://www.checkpoint.com/careers/programs/",
+     200
+    ],
+    [
+     "https://www.checkpoint.com/careers/faq/",
+     200
+    ],
+    [
+     "https://careers.checkpoint.com",
+     403,
+     "https://careers.checkpoint.com/"
+    ],
+    [
+     "https://www.checkpoint.com/jobs",
+     403,
+     "https://careers.checkpoint.com/"
+    ]
+   ]
+  },
+  {
+   "company": "Amdocs",
+   "type": "בית תוכנה",
+   "domain": "amdocs.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.amdocs.com/careers",
+     200,
+     "https://www.amdocs.com/careers/home"
+    ],
+    [
+     "https://www.amdocs.com/careers/home",
+     200
+    ],
+    [
+     "https://www.amdocs.com/careers/locations",
+     200
+    ],
+    [
+     "https://www.amdocs.com/careers/fields-of-work",
+     200
+    ],
+    [
+     "https://amdocs.com/careers",
+     200,
+     "https://www.amdocs.com/careers/home"
+    ],
+    [
+     "https://www.amdocs.com/careers/home",
+     200
+    ],
+    [
+     "https://www.amdocs.com/careers/locations",
+     200
+    ],
+    [
+     "https://www.amdocs.com/careers/fields-of-work",
+     200
+    ],
+    [
+     "https://careers.amdocs.com"
+    ],
+    [
+     "https://www.amdocs.com/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Elbit Systems",
+   "type": "ביטחוני טכנולוגי",
+   "domain": "elbitsystems.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.elbitsystems.com/careers",
+     403
+    ],
+    [
+     "https://elbitsystems.com/careers",
+     403,
+     "https://www.elbitsystems.com/careers"
+    ],
+    [
+     "https://careers.elbitsystems.com"
+    ],
+    [
+     "https://www.elbitsystems.com/jobs",
+     200,
+     "https://www.elbitsystems.com/news"
+    ]
+   ]
+  },
+  {
+   "company": "Outbrain",
+   "type": "חברת מוצר",
+   "domain": "outbrain.com",
+   "found": {
+    "greenhouse": [
+     "teads1"
+    ],
+    "greenhouse_eu": [
+     "teads1"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.outbrain.com/careers",
+     200,
+     "https://www.teads.com/teads-careers/"
+    ],
+    [
+     "https://www.teads.com/teads-careers/job-openings/",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Cyera",
+   "type": "סייבר",
+   "domain": "cyera.io",
+   "found": {
+    "comeet": [
+     "cyera/17.008"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.cyera.io/careers",
+     200,
+     "https://www.cyera.com/careers"
+    ]
+   ],
+   "comeetPage": {
+    "url": "https://www.comeet.com/jobs/cyera/17.008",
+    "status": 200,
+    "length": 2106968,
+    "found": [
+     "COMPANY_POSITIONS_DATA",
+     "COMPANY_DATA",
+     "positions",
+     "\"uid\"",
+     "url_active_page",
+     "careers-api",
+     "token"
+    ],
+    "snippet": "//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css\">\n    <script type=\"text/javascript\" >\n       var serverVersion=\"rc-312-14\";\n       var COMPANY_DATA ;\n       var USER_DATA;\n       var COMPANY_POSITIONS_DATA ;\n       var POSITION_DATA ;\n       var CANDIDATE_DATA;\n       var RECAPTCHA_ENABLED;\n       var RECAPTCHA_SITE_KEY;\n       var DETECTED_COUNTRY;\n\n\n       COMPANY_DATA = {\"name\": \"Cyera\", \"location\": \"Israel\", \"logos\": {\"small\": {\"url\": \"https://www.comeet.co/pub/cyera/17.008/logo?size=small\\u0026last-modified=1772466300\", \"width\": 100, \"height\": 100}, \"medium\": {\"url\": \"https://www.comeet.co/pub/cyera/17.008/logo?size=medium\\u0026last-modified=1772466300\", \"width\": 300, \"height\": 300}, \"original\": {\"url\": \"https://www.comeet.co/pub/cyera/17.008/logo?size=original\\u0026last-modified=1772466300\", \"width\": 1200, \"height\": 630}}, \"website\": \"www.cyera.com\", \"locale\": {\"label\": \"EU\", \"time-format\": 2}, \"has_verified_comeet_badge\": false, \"company_picture_url\": \"https://comeet-euw-app.s3.amazonaws.com/1816/5a7c33c0150dd0a963e3224de0fe2495e5f40134\", \"description\": null, "
+   }
+  },
+  {
+   "company": "Claroty",
+   "type": "סייבר",
+   "domain": "claroty.com",
+   "found": {
+    "comeet_token": [
+     "2F4EC42F42F45E814AC1A945E814AC5E8"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.claroty.com/careers",
+     200
+    ],
+    [
+     "https://www.claroty.com/open-positions",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Pentera",
+   "type": "סייבר",
+   "domain": "pentera.io",
+   "found": {
+    "comeet_token": [
+     "5CD1D013435289B343501D012E682E68289B"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.pentera.io/careers",
+     200,
+     "https://pentera.io/careers/"
+    ]
+   ]
+  },
+  {
+   "company": "Silverfort",
+   "type": "סייבר",
+   "domain": "silverfort.com",
+   "found": {
+    "comeet_token": [
+     "45715B315B38AE22B8D051A0A457D051E61"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.silverfort.com/careers",
+     200,
+     "https://www.silverfort.com/careers/"
+    ]
+   ]
+  },
+  {
+   "company": "Aqua Security",
+   "type": "סייבר",
+   "domain": "aquasec.com",
+   "found": {
+    "comeet_token": [
+     "191644966966644E194B3191644644"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.aquasec.com/careers",
+     200,
+     "https://www.aquasec.com/careers/"
+    ]
+   ]
+  },
+  {
+   "company": "Upwind",
+   "type": "סייבר",
+   "domain": "upwind.io",
+   "found": {
+    "comeet_token": [
+     "94440DC0944094401BCC12882510"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.upwind.io/careers",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Aidoc",
+   "type": "חברת מוצר",
+   "domain": "aidoc.com",
+   "found": {
+    "greenhouse": [
+     "aidocmedical"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.aidoc.com/careers",
+     200,
+     "https://www.aidoc.com/about/careers/"
+    ]
+   ]
+  },
+  {
+   "company": "Tabnine",
+   "type": "סטארטאפ",
+   "domain": "tabnine.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.tabnine.com/careers"
+    ],
+    [
+     "https://tabnine.com/careers"
+    ],
+    [
+     "https://careers.tabnine.com"
+    ],
+    [
+     "https://www.tabnine.com/jobs",
+     502
+    ]
+   ]
+  },
+  {
+   "company": "AI21 Labs",
+   "type": "סטארטאפ",
+   "domain": "ai21.com",
+   "found": {
+    "comeet_token": [
+     "6E12946DC230276E13DE93708294637083708"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.ai21.com/careers",
+     200,
+     "https://www.ai21.com/careers/"
+    ]
+   ]
+  },
+  {
+   "company": "D-ID",
+   "type": "סטארטאפ",
+   "domain": "d-id.com",
+   "found": {
+    "workable": [
+     "j"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.d-id.com/careers",
+     200,
+     "https://www.d-id.com/careers/"
+    ]
+   ]
+  },
+  {
+   "company": "Riverside",
+   "type": "סטארטאפ",
+   "domain": "riverside.fm",
+   "found": {
+    "comeet": [
+     "riverside-fm/66.009"
+    ],
+    "comeet_token": [
+     "66926766692CDF00669CD22CDF133B"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.riverside.fm/careers",
+     200,
+     "https://careers.riverside.com/"
+    ]
+   ],
+   "comeetPage": {
+    "url": "https://www.comeet.com/jobs/riverside-fm/66.009",
+    "status": 200,
+    "length": 158020,
+    "found": [
+     "COMPANY_POSITIONS_DATA",
+     "COMPANY_DATA",
+     "positions",
+     "\"uid\"",
+     "url_active_page",
+     "careers-api",
+     "token"
+    ],
+    "snippet": "//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css\">\n    <script type=\"text/javascript\" >\n       var serverVersion=\"rc-312-14\";\n       var COMPANY_DATA ;\n       var USER_DATA;\n       var COMPANY_POSITIONS_DATA ;\n       var POSITION_DATA ;\n       var CANDIDATE_DATA;\n       var RECAPTCHA_ENABLED;\n       var RECAPTCHA_SITE_KEY;\n       var DETECTED_COUNTRY;\n\n\n       COMPANY_DATA = {\"name\": \"riverside.fm\", \"location\": \"Israel\", \"logos\": {\"small\": {\"url\": \"https://www.comeet.co/pub/riverside-fm/66.009/logo?size=small\\u0026last-modified=1634043113\", \"width\": 100, \"height\": 100}, \"medium\": {\"url\": \"https://www.comeet.co/pub/riverside-fm/66.009/logo?size=medium\\u0026last-modified=1634043113\", \"width\": 300, \"height\": 300}, \"original\": {\"url\": \"https://www.comeet.co/pub/riverside-fm/66.009/logo?size=original\\u0026last-modified=1634043113\", \"width\": 1600, \"height\": 836}}, \"website\": \"https://riverside.com\", \"locale\": {\"label\": \"EU\", \"time-format\": 2}, \"has_verified_comeet_badge\": false, \"company_picture_url\": \"https://comeet-euw-app.s3.amazonaws.com/1641/eea6c37c22cfdc1407da9c3bfc16"
+   }
+  },
+  {
+   "company": "Port",
+   "type": "סטארטאפ",
+   "domain": "port.io",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.port.io/careers",
+     200
+    ],
+    [
+     "https://port.io/careers",
+     200,
+     "https://www.port.io/careers"
+    ],
+    [
+     "https://careers.port.io"
+    ],
+    [
+     "https://www.port.io/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Kaltura",
+   "type": "חברת מוצר",
+   "domain": "kaltura.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.kaltura.com/careers",
+     403,
+     "https://corp.kaltura.com/"
+    ],
+    [
+     "https://kaltura.com/careers",
+     200,
+     "https://kmc.kaltura.com/index.php/kmc"
+    ],
+    [
+     "https://careers.kaltura.com"
+    ],
+    [
+     "https://www.kaltura.com/jobs",
+     403,
+     "https://corp.kaltura.com/"
+    ]
+   ]
+  },
+  {
+   "company": "Innoviz",
+   "type": "חומרה",
+   "domain": "innoviz.tech",
+   "found": {
+    "comeet_token": [
+     "25495012A0104C012A0104C6FCBA40"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.innoviz.tech/careers",
+     200,
+     "https://innoviz.tech/careers"
+    ],
+    [
+     "https://innoviz.tech/join-us",
+     200
+    ],
+    [
+     "https://innoviz.tech/join-us/co/rd/all",
+     200
+    ],
+    [
+     "https://innoviz.tech/join-us/co/business/all",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Sapiens",
+   "type": "בית תוכנה",
+   "domain": "sapiens.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.sapiens.com/careers",
+     200,
+     "https://sapiens.careers.hibob.com/"
+    ],
+    [
+     "https://sapiens.com/careers",
+     200,
+     "https://sapiens.careers.hibob.com/"
+    ],
+    [
+     "https://careers.sapiens.com",
+     200,
+     "https://sapiens.careers.hibob.com/"
+    ],
+    [
+     "https://www.sapiens.com/jobs",
+     404,
+     "https://sapiens.com/jobs"
+    ]
+   ]
+  },
+  {
+   "company": "Nexar",
+   "type": "סטארטאפ",
+   "domain": "getnexar.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.getnexar.com/careers",
+     200,
+     "https://careers.empiricearth.com/"
+    ],
+    [
+     "https://careers.empiricearth.com/jobs.rss",
+     200
+    ],
+    [
+     "https://careers.empiricearth.com/jobs",
+     200
+    ],
+    [
+     "https://careers.empiricearth.com/jobs/8466800-automotive-business-development-director",
+     200
+    ],
+    [
+     "https://getnexar.com/careers",
+     200,
+     "https://careers.empiricearth.com/"
+    ],
+    [
+     "https://careers.empiricearth.com/jobs.rss",
+     200
+    ],
+    [
+     "https://careers.empiricearth.com/jobs",
+     200
+    ],
+    [
+     "https://careers.empiricearth.com/jobs/8466800-automotive-business-development-director",
+     200
+    ],
+    [
+     "https://careers.getnexar.com",
+     200,
+     "https://careers.empiricearth.com/"
+    ],
+    [
+     "https://careers.empiricearth.com/jobs.rss",
+     200
+    ],
+    [
+     "https://careers.empiricearth.com/jobs",
+     200
+    ],
+    [
+     "https://careers.empiricearth.com/jobs/8466800-automotive-business-development-director",
+     200
+    ],
+    [
+     "https://www.getnexar.com/jobs",
+     200,
+     "https://careers.empiricearth.com/"
+    ],
+    [
+     "https://careers.empiricearth.com/jobs.rss",
+     200
+    ],
+    [
+     "https://careers.empiricearth.com/jobs",
+     200
+    ],
+    [
+     "https://careers.empiricearth.com/jobs/8466800-automotive-business-development-director",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Rapyd",
+   "type": "פינטק",
+   "domain": "rapyd.net",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.rapyd.net/careers",
+     404
+    ],
+    [
+     "https://rapyd.net/careers",
+     404,
+     "https://www.rapyd.net/careers"
+    ],
+    [
+     "https://careers.rapyd.net"
+    ],
+    [
+     "https://www.rapyd.net/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Papaya Global",
+   "type": "חברת מוצר",
+   "domain": "papayaglobal.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.papayaglobal.com/careers",
+     403
+    ],
+    [
+     "https://papayaglobal.com/careers",
+     403
+    ],
+    [
+     "https://careers.papayaglobal.com",
+     200,
+     "https://careers.papayaglobal.com/"
+    ],
+    [
+     "https://www.papayaglobal.com/jobs",
+     403
+    ]
+   ]
+  },
+  {
+   "company": "Coralogix",
+   "type": "חברת מוצר",
+   "domain": "coralogix.com",
+   "found": {
+    "comeet_token": [
+     "604241801E141E1460430200604604"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.coralogix.com/careers",
+     200,
+     "https://coralogix.com/careers/"
+    ],
+    [
+     "https://coralogix.com/careers/co/bucharest-romania/96.273/team-lead-technical-account-manager/all/",
+     200
+    ],
+    [
+     "https://coralogix.com/careers/co/ramat-gan-israel/4B.75E/team-lead-technical-account-manager-il/all/",
+     200
+    ],
+    [
+     "https://coralogix.com/careers/co/texas/7B.462/team-lead-technical-account-manager-us/all/",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Lusha",
+   "type": "חברת מוצר",
+   "domain": "lusha.com",
+   "found": {
+    "comeet_token": [
+     "37B11676F61F53DEC6F606F61BD8185D"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.lusha.com/careers",
+     200,
+     "https://www.lusha.com/careers/"
+    ],
+    [
+     "https://www.lusha.com/careers/co/tel-aviv/46.07A/ai-and-knowledge-manager-maternity-leave-replacement/",
+     200
+    ],
+    [
+     "https://www.lusha.com/careers/co/tel-aviv/3B.D68/bi-data-engineering-team-lead/",
+     200
+    ],
+    [
+     "https://www.lusha.com/careers/co/tel-aviv/D2.472/full-stack-developer/",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Nayax",
+   "type": "חברת מוצר",
+   "domain": "nayax.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.nayax.com/careers",
+     403
+    ],
+    [
+     "https://nayax.com/careers",
+     403,
+     "https://www.nayax.com/careers"
+    ],
+    [
+     "https://careers.nayax.com"
+    ],
+    [
+     "https://www.nayax.com/jobs",
+     403
+    ]
+   ]
+  },
+  {
+   "company": "Earnix",
+   "type": "חברת מוצר",
+   "domain": "earnix.com",
+   "found": {
+    "comeet": [
+     "earnix/93.00B"
+    ],
+    "comeet_token": [
+     "39B1207AD1AD1736736120739B193D736"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.earnix.com/careers",
+     200,
+     "https://earnix.com/our-story/careers/"
+    ],
+    [
+     "https://earnix.com/our-story/careers/united-states/",
+     200
+    ],
+    [
+     "https://earnix.com/our-story/careers/israel/",
+     200
+    ],
+    [
+     "https://earnix.com/our-story/careers/united-kingdom/",
+     200
+    ]
+   ],
+   "comeetPage": {
+    "url": "https://www.comeet.com/jobs/earnix/93.00B",
+    "status": 200,
+    "length": 162942,
+    "found": [
+     "COMPANY_POSITIONS_DATA",
+     "COMPANY_DATA",
+     "positions",
+     "\"uid\"",
+     "url_active_page",
+     "careers-api",
+     "token"
+    ],
+    "snippet": "//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css\">\n    <script type=\"text/javascript\" >\n       var serverVersion=\"rc-312-14\";\n       var COMPANY_DATA ;\n       var USER_DATA;\n       var COMPANY_POSITIONS_DATA ;\n       var POSITION_DATA ;\n       var CANDIDATE_DATA;\n       var RECAPTCHA_ENABLED;\n       var RECAPTCHA_SITE_KEY;\n       var DETECTED_COUNTRY;\n\n\n       COMPANY_DATA = {\"name\": \"Earnix\", \"location\": \"Israel\", \"logos\": {\"small\": {\"url\": \"https://www.comeet.co/pub/earnix/93.00B/logo?size=small\\u0026last-modified=1646581646\", \"width\": 100, \"height\": 100}, \"medium\": {\"url\": \"https://www.comeet.co/pub/earnix/93.00B/logo?size=medium\\u0026last-modified=1646581646\", \"width\": 300, \"height\": 300}, \"original\": {\"url\": \"https://www.comeet.co/pub/earnix/93.00B/logo?size=original\\u0026last-modified=1646581646\", \"width\": 1200, \"height\": 627}}, \"website\": \"www.earnix.com/careers\", \"locale\": {\"label\": \"EU\", \"time-format\": 2}, \"has_verified_comeet_badge\": false, \"company_picture_url\": \"https://comeet-euw-app.s3.amazonaws.com/923/407b2729aa6d4ae64f6a2b969485cd1b45c40c67\", \"descript"
+   }
+  },
+  {
+   "company": "Hailo",
+   "type": "חומרה",
+   "domain": "hailo.ai",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.hailo.ai/careers",
+     200,
+     "https://hailo.ai/company-overview/careers/"
+    ],
+    [
+     "https://hailo.ai/company-overview/careers/hailo-has-amazing-openings/07.432/",
+     200
+    ],
+    [
+     "https://hailo.ai/careers",
+     200,
+     "https://hailo.ai/company-overview/careers/"
+    ],
+    [
+     "https://hailo.ai/company-overview/careers/hailo-has-amazing-openings/07.432/",
+     200
+    ],
+    [
+     "https://careers.hailo.ai"
+    ],
+    [
+     "https://www.hailo.ai/jobs",
+     404,
+     "https://hailo.ai/jobs"
+    ]
+   ]
+  },
+  {
+   "company": "HiBob",
+   "type": "חברת מוצר",
+   "domain": "hibob.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.hibob.com/careers",
+     200,
+     "https://www.hibob.com/careers/"
+    ],
+    [
+     "https://hibob.com/careers",
+     200,
+     "https://www.hibob.com/careers/"
+    ],
+    [
+     "https://careers.hibob.com",
+     200,
+     "https://www.hibob.com/careers/"
+    ],
+    [
+     "https://www.hibob.com/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Lightricks",
+   "type": "חברת מוצר",
+   "domain": "lightricks.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.lightricks.com/careers",
+     200,
+     "https://careers.lightricks.com/"
+    ],
+    [
+     "https://lightricks.com/careers",
+     200,
+     "https://careers.lightricks.com/"
+    ],
+    [
+     "https://careers.lightricks.com",
+     200,
+     "https://careers.lightricks.com/"
+    ],
+    [
+     "https://www.lightricks.com/jobs",
+     200,
+     "https://careers.lightricks.com/"
+    ]
+   ]
+  },
+  {
+   "company": "Moon Active",
+   "type": "משחקים",
+   "domain": "moonactive.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.moonactive.com/careers",
+     200,
+     "https://www.moonactive.com/careers/"
+    ],
+    [
+     "https://moonactive.com/careers",
+     200,
+     "https://www.moonactive.com/careers/"
+    ],
+    [
+     "https://careers.moonactive.com"
+    ],
+    [
+     "https://www.moonactive.com/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Plarium",
+   "type": "משחקים",
+   "domain": "plarium.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.plarium.com/careers",
+     404,
+     "https://plarium.com/careers"
+    ],
+    [
+     "https://plarium.com/careers",
+     404
+    ],
+    [
+     "https://careers.plarium.com"
+    ],
+    [
+     "https://www.plarium.com/jobs",
+     404,
+     "https://plarium.com/jobs"
+    ]
+   ]
+  },
+  {
+   "company": "Playtech",
+   "type": "משחקים",
+   "domain": "playtech.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.playtech.com/careers",
+     404
+    ],
+    [
+     "https://playtech.com/careers",
+     404,
+     "https://www.playtech.com/careers"
+    ],
+    [
+     "https://careers.playtech.com"
+    ],
+    [
+     "https://www.playtech.com/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Unity",
+   "type": "חברת מוצר",
+   "domain": "unity.com",
+   "found": {
+    "workday": [
+     "unitytech.wd1.myworkdayjobs.com|unitytech|Unity"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.unity.com/careers",
+     200,
+     "https://unity.com/careers"
+    ],
+    [
+     "https://unity.com/careers/positions",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Varonis",
+   "type": "סייבר",
+   "domain": "varonis.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.varonis.com/careers",
+     200
+    ],
+    [
+     "https://varonis.com/careers",
+     200,
+     "https://www.varonis.com/careers"
+    ],
+    [
+     "https://careers.varonis.com",
+     200,
+     "https://careers.varonis.com/"
+    ],
+    [
+     "https://www.varonis.com/jobs",
+     200,
+     "https://www.varonis.com/"
+    ]
+   ]
+  },
+  {
+   "company": "Radware",
+   "type": "סייבר",
+   "domain": "radware.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.radware.com/careers",
+     200
+    ],
+    [
+     "https://radware.com/careers",
+     200,
+     "https://www.radware.com/careers"
+    ],
+    [
+     "https://careers.radware.com"
+    ],
+    [
+     "https://www.radware.com/jobs",
+     200,
+     "http://validate.perfdrive.com/?ssa=c8740cc5-bd79-449a-a08b-b21d67deb8ac&ssb=40497260526&ssc=https%3A%2F%2Fwww.radware.com%2Fjobs%2F&ssi=772aaa3e-bsff-444c-8db7-73ab28fdd2cd&ssk=support@shieldsquare.com&ssm=10646400298359125101433125970268&ssn=6c89830cf08871070ed09ecc4834816e3eb4828e9c7b-44ad-4061-a3767c&sso=52342d09-7d9d99e87656c187f7ad941fc98d59b3a78ea200ce4c1ac7&ssp=42497245641792503942179258160669488&ssq=63698250731866492964507318909175285137672&ssr=MTcyLjIxMi4yMDUuMjE=&sst=Mozilla/5.0%20(compatible;%20TechJobAI-probe/1.0)&ssu=&ssv=&ssw=&ssx=eyJyZCI6InJhZHdhcmUuY29tIiwidXpteCI6IjdmYzAwMDdmOTgyMjU4LTkzOTgtNGM1MC05NDY4LWE4YTQ4YjdlNmIwYjEtMTc5MjUwNzMxODk4NzAtMDBhOWI0YTA2YTQ0ODYyMWQ2MjEwIiwiX191em1mIjoiN2Y5MDAwODI4ZTljN2ItNDRhZC00MDYxLWFkMDktN2Q5ZDk5ZTg3NjU2MS0xNzkyNTA3MzE4OTg4MC0wMDVhMjRjODIyY2VmZDIxMTVjMTAifQ=="
+    ]
+   ]
+  },
+  {
+   "company": "Allot",
+   "type": "סייבר",
+   "domain": "allot.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.allot.com/careers",
+     200,
+     "https://www.allot.com/careers/"
+    ],
+    [
+     "https://www.allot.com/resources/pages/careers/header.webp",
+     200
+    ],
+    [
+     "https://www.allot.com/careers/search/",
+     200
+    ],
+    [
+     "https://allot.com/careers",
+     200,
+     "https://www.allot.com/careers/"
+    ],
+    [
+     "https://www.allot.com/resources/pages/careers/header.webp",
+     200
+    ],
+    [
+     "https://www.allot.com/careers/search/",
+     200
+    ],
+    [
+     "https://careers.allot.com"
+    ],
+    [
+     "https://www.allot.com/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "AudioCodes",
+   "type": "חברת מוצר",
+   "domain": "audiocodes.com",
+   "found": {
+    "comeet_token": [
+     "5841B942C2058431A4108C269C108C0108C"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.audiocodes.com/careers",
+     200
+    ],
+    [
+     "https://www.audiocodes.com/css/compiled/blocks/positions-block.min.css",
+     200
+    ],
+    [
+     "https://www.audiocodes.com/careers/positions/61E6D",
+     200
+    ],
+    [
+     "https://www.audiocodes.com/careers/positions/61E6D-3A108",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "CEVA",
+   "type": "חומרה",
+   "domain": "ceva-ip.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.ceva-ip.com/careers",
+     404
+    ],
+    [
+     "https://ceva-ip.com/careers",
+     404,
+     "https://www.ceva-ip.com/careers"
+    ],
+    [
+     "https://careers.ceva-ip.com"
+    ],
+    [
+     "https://www.ceva-ip.com/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Tower Semiconductor",
+   "type": "חומרה",
+   "domain": "towersemi.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.towersemi.com/careers",
+     404,
+     "https://towersemi.com/careers"
+    ],
+    [
+     "https://towersemi.com/careers",
+     404
+    ],
+    [
+     "https://careers.towersemi.com",
+     200,
+     "https://careers.towersemi.com/"
+    ],
+    [
+     "https://careers.towersemi.com/wp-content/plugins/cs-tower-sf/assets/css/sf-job-description/index.css",
+     200
+    ],
+    [
+     "https://careers.towersemi.com/subscribe-to-job-alerts/",
+     200
+    ],
+    [
+     "https://careers.towersemi.com/search-jobs/",
+     404
+    ],
+    [
+     "https://www.towersemi.com/jobs",
+     404,
+     "https://towersemi.com/jobs"
+    ]
+   ]
+  },
+  {
+   "company": "Nova",
+   "type": "חומרה",
+   "domain": "novami.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.novami.com/careers",
+     200,
+     "https://www.novami.com/investors/press-releases/samsung-and-nova-publish-joint-research-at-spie-advanced-lithography-conference/"
+    ],
+    [
+     "https://www.novami.com/careers/working-at-nova/",
+     200
+    ],
+    [
+     "https://novami.com/careers",
+     200,
+     "https://www.novami.com/investors/press-releases/samsung-and-nova-publish-joint-research-at-spie-advanced-lithography-conference/"
+    ],
+    [
+     "https://www.novami.com/careers/working-at-nova/",
+     200
+    ],
+    [
+     "https://careers.novami.com"
+    ],
+    [
+     "https://www.novami.com/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Camtek",
+   "type": "חומרה",
+   "domain": "camtek.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.camtek.com/careers",
+     200,
+     "https://www.camtek.com/careers/"
+    ],
+    [
+     "https://camtek.com/careers"
+    ],
+    [
+     "https://careers.camtek.com"
+    ],
+    [
+     "https://www.camtek.com/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Kornit Digital",
+   "type": "חומרה",
+   "domain": "kornit.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.kornit.com/careers",
+     403
+    ],
+    [
+     "https://kornit.com/careers",
+     403
+    ],
+    [
+     "https://careers.kornit.com",
+     403,
+     "https://careers.kornit.com/"
+    ],
+    [
+     "https://www.kornit.com/jobs",
+     403
+    ]
+   ]
+  },
+  {
+   "company": "Stratasys",
+   "type": "חומרה",
+   "domain": "stratasys.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.stratasys.com/careers",
+     404,
+     "https://www.stratasys.com/careers/"
+    ],
+    [
+     "https://stratasys.com/careers",
+     404,
+     "https://www.stratasys.com/careers/"
+    ],
+    [
+     "https://careers.stratasys.com",
+     200,
+     "https://careers.stratasys.com/"
+    ],
+    [
+     "https://careers.stratasys.com/viewalljobs/",
+     200
+    ],
+    [
+     "https://www.stratasys.com/jobs",
+     404,
+     "https://www.stratasys.com/jobs/"
+    ]
+   ]
+  },
+  {
+   "company": "Cognyte",
+   "type": "סייבר",
+   "domain": "cognyte.com",
+   "found": {
+    "comeet": [
+     "cognyte/F2.009"
+    ],
+    "comeet_token": [
+     "2F9EDD2F92F911D61AC12F914CF11D62F9"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.cognyte.com/careers",
+     200,
+     "https://www.cognyte.com/careers/"
+    ]
+   ],
+   "comeetPage": {
+    "url": "https://www.comeet.com/jobs/cognyte/F2.009",
+    "status": 200,
+    "length": 310589,
+    "found": [
+     "COMPANY_POSITIONS_DATA",
+     "COMPANY_DATA",
+     "positions",
+     "\"uid\"",
+     "url_active_page",
+     "careers-api",
+     "token"
+    ],
+    "snippet": "//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css\">\n    <script type=\"text/javascript\" >\n       var serverVersion=\"rc-312-14\";\n       var COMPANY_DATA ;\n       var USER_DATA;\n       var COMPANY_POSITIONS_DATA ;\n       var POSITION_DATA ;\n       var CANDIDATE_DATA;\n       var RECAPTCHA_ENABLED;\n       var RECAPTCHA_SITE_KEY;\n       var DETECTED_COUNTRY;\n\n\n       COMPANY_DATA = {\"name\": \"Cognyte\", \"location\": \"Israel\", \"logos\": {\"small\": {\"url\": \"https://www.comeet.co/pub/cognyte/F2.009/logo?size=small\\u0026last-modified=1647441440\", \"width\": 100, \"height\": 100}, \"medium\": {\"url\": \"https://www.comeet.co/pub/cognyte/F2.009/logo?size=medium\\u0026last-modified=1647441440\", \"width\": 300, \"height\": 300}, \"original\": {\"url\": \"https://www.comeet.co/pub/cognyte/F2.009/logo?size=original\\u0026last-modified=1647441440\", \"width\": 1200, \"height\": 447}}, \"website\": \"https://www.cognyte.com/\", \"locale\": {\"label\": \"EN_US\", \"time-format\": 1}, \"has_verified_comeet_badge\": false, \"company_picture_url\": \"https://comeet-euw-app.s3.amazonaws.com/761/d2807bcdae5801ce614283117374dac124599a90\", "
+   }
+  },
+  {
+   "company": "Verint",
+   "type": "בית תוכנה",
+   "domain": "verint.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.verint.com/careers",
+     200,
+     "https://www.verint.com/careers/"
+    ],
+    [
+     "https://verint.com/careers",
+     200,
+     "https://www.verint.com/careers/"
+    ],
+    [
+     "https://careers.verint.com"
+    ],
+    [
+     "https://www.verint.com/jobs",
+     404,
+     "https://www.verint.com/jobs/"
+    ]
+   ]
+  },
+  {
+   "company": "WSC Sports",
+   "type": "חברת מוצר",
+   "domain": "wsc-sports.com",
+   "found": {
+    "comeet_token": [
+     "39711F3AC5AC539701CB81CB8204FE5C"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.wsc-sports.com/careers",
+     200,
+     "https://wsc-sports.com/careers/"
+    ]
+   ]
+  },
+  {
+   "company": "Cellebrite",
+   "type": "סייבר",
+   "domain": "cellebrite.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.cellebrite.com/careers",
+     403
+    ],
+    [
+     "https://cellebrite.com/careers",
+     404
+    ],
+    [
+     "https://careers.cellebrite.com"
+    ],
+    [
+     "https://www.cellebrite.com/jobs",
+     403
+    ]
+   ]
+  },
+  {
+   "company": "Ironscales",
+   "type": "סייבר",
+   "domain": "ironscales.com",
+   "found": {
+    "comeet": [
+     "ironscales/1A.007"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.ironscales.com/careers",
+     200,
+     "https://ironscales.com/careers"
+    ]
+   ],
+   "comeetPage": {
+    "url": "https://www.comeet.com/jobs/ironscales/1A.007",
+    "status": 200,
+    "length": 159047,
+    "found": [
+     "COMPANY_POSITIONS_DATA",
+     "COMPANY_DATA",
+     "positions",
+     "\"uid\"",
+     "url_active_page",
+     "careers-api",
+     "token"
+    ],
+    "snippet": "//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css\">\n    <script type=\"text/javascript\" >\n       var serverVersion=\"rc-312-14\";\n       var COMPANY_DATA ;\n       var USER_DATA;\n       var COMPANY_POSITIONS_DATA ;\n       var POSITION_DATA ;\n       var CANDIDATE_DATA;\n       var RECAPTCHA_ENABLED;\n       var RECAPTCHA_SITE_KEY;\n       var DETECTED_COUNTRY;\n\n\n       COMPANY_DATA = {\"name\": \"IRONSCALES\", \"location\": \"Israel\", \"logos\": {\"small\": {\"url\": \"https://www.comeet.co/pub/ironscales/1A.007/logo?size=small\\u0026last-modified=1736944357\", \"width\": 100, \"height\": 100}, \"medium\": {\"url\": \"https://www.comeet.co/pub/ironscales/1A.007/logo?size=medium\\u0026last-modified=1736944357\", \"width\": 300, \"height\": 300}, \"original\": {\"url\": \"https://www.comeet.co/pub/ironscales/1A.007/logo?size=original\\u0026last-modified=1736944357\", \"width\": 1200, \"height\": 630}}, \"website\": \"https://ironscales.com/\", \"locale\": {\"label\": \"EU\", \"time-format\": 2}, \"has_verified_comeet_badge\": false, \"company_picture_url\": \"https://comeet-euw-app.s3.amazonaws.com/2583/31a81f34772b95fe5d61067815b9d86418"
+   }
+  },
+  {
+   "company": "Salt Security",
+   "type": "סייבר",
+   "domain": "salt.security",
+   "found": {
+    "greenhouse": [
+     "saltsecurity"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.salt.security/careers",
+     200,
+     "https://salt.security/careers"
+    ]
+   ]
+  },
+  {
+   "company": "WalkMe",
+   "type": "חברת מוצר",
+   "domain": "walkme.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.walkme.com/careers",
+     200,
+     "https://www.walkme.com/careers/"
+    ],
+    [
+     "https://www.walkme.com/careers/positions/",
+     200
+    ],
+    [
+     "https://walkme.com/careers",
+     200,
+     "https://www.walkme.com/careers/"
+    ],
+    [
+     "https://www.walkme.com/careers/positions/",
+     200
+    ],
+    [
+     "https://careers.walkme.com"
+    ],
+    [
+     "https://www.walkme.com/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Sisense",
+   "type": "חברת מוצר",
+   "domain": "sisense.com",
+   "found": {
+    "ashby": [
+     "sisense"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.sisense.com/careers",
+     200,
+     "https://www.sisense.com/about/careers/"
+    ]
+   ]
+  },
+  {
+   "company": "Bigabid",
+   "type": "סטארטאפ",
+   "domain": "bigabid.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.bigabid.com/careers",
+     403
+    ],
+    [
+     "https://bigabid.com/careers",
+     403
+    ],
+    [
+     "https://careers.bigabid.com"
+    ],
+    [
+     "https://www.bigabid.com/jobs",
+     403
+    ]
+   ]
+  },
+  {
+   "company": "Palo Alto Networks",
+   "type": "סייבר",
+   "domain": "paloaltonetworks.com",
+   "found": {
+    "workday": [
+     "paloaltonetworks.wd5.myworkdayjobs.com|paloaltonetworks|panwexternalcareers"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.paloaltonetworks.com/careers",
+     200,
+     "https://jobs.paloaltonetworks.com/en"
+    ]
+   ]
+  },
+  {
+   "company": "Akamai",
+   "type": "תאגיד בינלאומי",
+   "domain": "akamai.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.akamai.com/careers",
+     200
+    ],
+    [
+     "https://www.akamai.com/careers/working-at-akamai",
+     200
+    ],
+    [
+     "https://www.akamai.com/careers/students-and-recent-graduates",
+     200
+    ],
+    [
+     "https://www.akamai.com/careers/workplace-diversity",
+     200
+    ],
+    [
+     "https://akamai.com/careers",
+     200,
+     "https://www.akamai.com/careers"
+    ],
+    [
+     "https://www.akamai.com/careers/working-at-akamai",
+     200
+    ],
+    [
+     "https://www.akamai.com/careers/students-and-recent-graduates",
+     200
+    ],
+    [
+     "https://www.akamai.com/careers/workplace-diversity",
+     200
+    ],
+    [
+     "https://careers.akamai.com"
+    ],
+    [
+     "https://www.akamai.com/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Qualcomm",
+   "type": "חומרה",
+   "domain": "qualcomm.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.qualcomm.com/careers",
+     200,
+     "https://www.qualcomm.com/company/careers"
+    ],
+    [
+     "https://qualcomm.com/careers",
+     200,
+     "https://www.qualcomm.com/company/careers"
+    ],
+    [
+     "https://careers.qualcomm.com",
+     200,
+     "https://careers.qualcomm.com/careers"
+    ],
+    [
+     "https://www.qualcomm.com/jobs",
+     200,
+     "https://www.qualcomm.com/company/careers"
+    ]
+   ]
+  },
+  {
+   "company": "Broadcom",
+   "type": "חומרה",
+   "domain": "broadcom.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.broadcom.com/careers",
+     200,
+     "https://www.broadcom.com/company/careers"
+    ],
+    [
+     "https://broadcom.com/careers",
+     200,
+     "https://www.broadcom.com/company/careers"
+    ],
+    [
+     "https://careers.broadcom.com"
+    ],
+    [
+     "https://www.broadcom.com/jobs",
+     200,
+     "https://www.broadcom.com/company/careers"
+    ]
+   ]
+  },
+  {
+   "company": "Western Digital",
+   "type": "חומרה",
+   "domain": "westerndigital.com",
+   "found": {
+    "smartrecruiters": [
+     "WesternDigital"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.westerndigital.com/careers",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "HP Indigo",
+   "type": "תאגיד בינלאומי",
+   "domain": "hp.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.hp.com/careers",
+     404,
+     "https://jobs.hp.com/en-us/?jumpid=va_i49ajvd8tq"
+    ],
+    [
+     "https://hp.com/careers",
+     404,
+     "https://jobs.hp.com/en-us/?jumpid=va_i49ajvd8tq"
+    ],
+    [
+     "https://careers.hp.com"
+    ],
+    [
+     "https://www.hp.com/jobs",
+     404,
+     "https://jobs.hp.com/en-us/?jumpid=va_i49ajvd8tq"
+    ]
+   ]
+  },
+  {
+   "company": "Salesforce",
+   "type": "תאגיד בינלאומי",
+   "domain": "salesforce.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.salesforce.com/careers",
+     200,
+     "https://www.salesforce.com/company/careers/"
+    ],
+    [
+     "https://www.salesforce.com/company/careers/university/",
+     200
+    ],
+    [
+     "https://www.salesforce.com/company/careers/jobs/",
+     200
+    ],
+    [
+     "https://www.salesforce.com/company/careers/teams/tech-and-product/",
+     200
+    ],
+    [
+     "https://salesforce.com/careers",
+     200,
+     "https://www.salesforce.com/company/careers/"
+    ],
+    [
+     "https://www.salesforce.com/company/careers/university/",
+     200
+    ],
+    [
+     "https://www.salesforce.com/company/careers/jobs/",
+     200
+    ],
+    [
+     "https://www.salesforce.com/company/careers/teams/tech-and-product/",
+     200
+    ],
+    [
+     "https://careers.salesforce.com",
+     200,
+     "https://www.salesforce.com/company/careers/"
+    ],
+    [
+     "https://www.salesforce.com/company/careers/university/",
+     200
+    ],
+    [
+     "https://www.salesforce.com/company/careers/jobs/",
+     200
+    ],
+    [
+     "https://www.salesforce.com/company/careers/teams/tech-and-product/",
+     200
+    ],
+    [
+     "https://www.salesforce.com/jobs",
+     200,
+     "https://www.salesforce.com/company/careers/"
+    ],
+    [
+     "https://www.salesforce.com/company/careers/university/",
+     200
+    ],
+    [
+     "https://www.salesforce.com/company/careers/jobs/",
+     200
+    ],
+    [
+     "https://www.salesforce.com/company/careers/teams/tech-and-product/",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "ServiceNow",
+   "type": "תאגיד בינלאומי",
+   "domain": "servicenow.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.servicenow.com/careers",
+     200,
+     "https://careers.servicenow.com/"
+    ],
+    [
+     "https://careers.servicenow.com/jobs/",
+     200
+    ],
+    [
+     "https://careers.servicenow.com/jobs/saved-jobs/",
+     200
+    ],
+    [
+     "https://servicenow.com/careers",
+     200,
+     "https://careers.servicenow.com/"
+    ],
+    [
+     "https://careers.servicenow.com/jobs/",
+     200
+    ],
+    [
+     "https://careers.servicenow.com/jobs/saved-jobs/",
+     200
+    ],
+    [
+     "https://careers.servicenow.com",
+     200,
+     "https://careers.servicenow.com/"
+    ],
+    [
+     "https://careers.servicenow.com/jobs/",
+     200
+    ],
+    [
+     "https://careers.servicenow.com/jobs/saved-jobs/",
+     200
+    ],
+    [
+     "https://www.servicenow.com/jobs"
+    ]
+   ]
+  },
+  {
+   "company": "Red Hat",
+   "type": "תאגיד בינלאומי",
+   "domain": "redhat.com",
+   "found": {
+    "workday": [
+     "redhat.wd5.myworkdayjobs.com|redhat|jobs"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.redhat.com/careers",
+     200,
+     "https://www.redhat.com/en/jobs"
+    ]
+   ]
+  },
+  {
+   "company": "Dell Technologies",
+   "type": "תאגיד בינלאומי",
+   "domain": "dell.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.dell.com/careers",
+     200,
+     "https://enterpriseplatform.dell.com/hcmUI/CandidateExperience/en/sites/careers"
+    ],
+    [
+     "https://enterpriseplatform.dell.com/hcmUI/CandidateExperience/en/sites/careers/join-talent-community",
+     200
+    ],
+    [
+     "https://enterpriseplatform.dell.com/hcmUI/CandidateExperience/en/sites/careers/my-profile/sign-in",
+     200
+    ],
+    [
+     "https://enterpriseplatform.dell.com/hcmUI/CandidateExperience/en/sites/careers/pages/equal-employment-opportunity-policy-statement",
+     200
+    ],
+    [
+     "https://dell.com/careers",
+     200,
+     "https://enterpriseplatform.dell.com/hcmUI/CandidateExperience/en/sites/careers"
+    ],
+    [
+     "https://enterpriseplatform.dell.com/hcmUI/CandidateExperience/en/sites/careers/join-talent-community",
+     200
+    ],
+    [
+     "https://enterpriseplatform.dell.com/hcmUI/CandidateExperience/en/sites/careers/my-profile/sign-in",
+     200
+    ],
+    [
+     "https://enterpriseplatform.dell.com/hcmUI/CandidateExperience/en/sites/careers/pages/equal-employment-opportunity-policy-statement",
+     200
+    ],
+    [
+     "https://careers.dell.com"
+    ],
+    [
+     "https://www.dell.com/jobs",
+     200,
+     "https://www.dell.com/en-us"
+    ]
+   ]
+  },
+  {
+   "company": "Microsoft",
+   "type": "תאגיד בינלאומי",
+   "domain": "microsoft.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.microsoft.com/careers",
+     200,
+     "https://www.bing.com/?ref=aka&shorturl=9849952"
+    ],
+    [
+     "https://microsoft.com/careers",
+     200,
+     "https://www.bing.com/?ref=aka&shorturl=9849952"
+    ],
+    [
+     "https://careers.microsoft.com",
+     200,
+     "https://careers.microsoft.com/v2/global/en/home.html"
+    ],
+    [
+     "https://www.microsoft.com/jobs",
+     200,
+     "https://www.bing.com/?ref=aka&shorturl=9849952"
+    ]
+   ]
+  },
+  {
+   "company": "Google",
+   "type": "תאגיד בינלאומי",
+   "domain": "google.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.google.com/careers",
+     200,
+     "https://www.google.com/about/careers/applications/"
+    ],
+    [
+     "https://www.google.com/about/careers/applications/",
+     200
+    ],
+    [
+     "https://www.google.com/about/careers/applications/eeo/",
+     200
+    ],
+    [
+     "https://www.google.com/about/careers/applications/privacy-policy",
+     200
+    ],
+    [
+     "https://google.com/careers",
+     200,
+     "https://www.google.com/about/careers/applications/"
+    ],
+    [
+     "https://www.google.com/about/careers/applications/",
+     200
+    ],
+    [
+     "https://www.google.com/about/careers/applications/eeo/",
+     200
+    ],
+    [
+     "https://www.google.com/about/careers/applications/privacy-policy",
+     200
+    ],
+    [
+     "https://careers.google.com",
+     200,
+     "https://www.google.com/about/careers/applications/"
+    ],
+    [
+     "https://www.google.com/about/careers/applications/",
+     200
+    ],
+    [
+     "https://www.google.com/about/careers/applications/eeo/",
+     200
+    ],
+    [
+     "https://www.google.com/about/careers/applications/privacy-policy",
+     200
+    ],
+    [
+     "https://www.google.com/jobs",
+     200,
+     "https://jobs.google.com/about/"
+    ]
+   ]
+  },
+  {
+   "company": "Meta",
+   "type": "תאגיד בינלאומי",
+   "domain": "metacareers.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.metacareers.com/careers",
+     500
+    ],
+    [
+     "https://metacareers.com/careers",
+     500,
+     "https://www.metacareers.com/careers"
+    ],
+    [
+     "https://careers.metacareers.com"
+    ],
+    [
+     "https://www.metacareers.com/jobs",
+     200,
+     "https://www.metacareers.com/jobsearch/"
+    ],
+    [
+     "https://www.metacareers.com/jobsearch/",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Amazon",
+   "type": "תאגיד בינלאומי",
+   "domain": "amazon.jobs",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.amazon.jobs/careers",
+     404
+    ],
+    [
+     "https://amazon.jobs/careers",
+     404
+    ],
+    [
+     "https://careers.amazon.jobs"
+    ],
+    [
+     "https://www.amazon.jobs/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Apple",
+   "type": "תאגיד בינלאומי",
+   "domain": "apple.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.apple.com/careers",
+     200,
+     "https://www.apple.com/careers/us/"
+    ],
+    [
+     "https://www.apple.com/careers/us/",
+     200
+    ],
+    [
+     "https://www.apple.com/careers/ae/",
+     200
+    ],
+    [
+     "https://www.apple.com/careers/at/",
+     200
+    ],
+    [
+     "https://apple.com/careers",
+     200,
+     "https://www.apple.com/careers/us/"
+    ],
+    [
+     "https://www.apple.com/careers/us/",
+     200
+    ],
+    [
+     "https://www.apple.com/careers/ae/",
+     200
+    ],
+    [
+     "https://www.apple.com/careers/at/",
+     200
+    ],
+    [
+     "https://careers.apple.com",
+     404,
+     "https://www.apple.com/filenotfound"
+    ],
+    [
+     "https://www.apple.com/jobs",
+     200,
+     "https://www.apple.com/careers/us/"
+    ],
+    [
+     "https://www.apple.com/careers/us/",
+     200
+    ],
+    [
+     "https://www.apple.com/careers/ae/",
+     200
+    ],
+    [
+     "https://www.apple.com/careers/at/",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Booking.com",
+   "type": "תאגיד בינלאומי",
+   "domain": "booking.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.booking.com/careers",
+     200,
+     "https://careers.booking.com/"
+    ],
+    [
+     "https://booking.com/careers",
+     200,
+     "https://careers.booking.com/"
+    ],
+    [
+     "https://careers.booking.com",
+     200,
+     "https://careers.booking.com/"
+    ],
+    [
+     "https://www.booking.com/jobs",
+     200,
+     "https://careers.booking.com/"
+    ]
+   ]
+  },
+  {
+   "company": "PayPal",
+   "type": "פינטק",
+   "domain": "paypal.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.paypal.com/careers",
+     200,
+     "https://careers.pypl.com/home/"
+    ],
+    [
+     "https://paypal.com/careers",
+     200,
+     "https://careers.pypl.com/home/"
+    ],
+    [
+     "https://careers.paypal.com"
+    ],
+    [
+     "https://www.paypal.com/jobs",
+     200,
+     "https://careers.pypl.com/home/"
+    ]
+   ]
+  },
+  {
+   "company": "eToro",
+   "type": "פינטק",
+   "domain": "etoro.com",
+   "found": {
+    "comeet_token": [
+     "14952452466D3DB7B61495240B91"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.etoro.com/careers",
+     200,
+     "https://www.etoro.com/about/careers/"
+    ]
+   ]
+  },
+  {
+   "company": "Plus500",
+   "type": "פינטק",
+   "domain": "plus500.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.plus500.com/careers"
+    ],
+    [
+     "https://plus500.com/careers"
+    ],
+    [
+     "https://careers.plus500.com",
+     200,
+     "https://careers.plus500.com/"
+    ],
+    [
+     "https://www.plus500.com/jobs",
+     403
+    ]
+   ]
+  },
+  {
+   "company": "Pagaya",
+   "type": "פינטק",
+   "domain": "pagaya.com",
+   "found": {
+    "greenhouse": [
+     "pagaya",
+     "pagayais"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.pagaya.com/careers",
+     200,
+     "https://pagaya.com/careers"
+    ]
+   ]
+  },
+  {
+   "company": "Melio",
+   "type": "פינטק",
+   "domain": "meliopayments.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.meliopayments.com/careers",
+     200,
+     "https://www.lifeatmelio.com/"
+    ],
+    [
+     "https://meliopayments.com/careers",
+     200,
+     "https://www.lifeatmelio.com/"
+    ],
+    [
+     "https://careers.meliopayments.com",
+     200,
+     "https://careers.meliopayments.com/"
+    ],
+    [
+     "https://www.meliopayments.com/jobs",
+     404,
+     "https://melio.com/jobs"
+    ]
+   ]
+  },
+  {
+   "company": "Tipalti",
+   "type": "פינטק",
+   "domain": "tipalti.com",
+   "found": {
+    "greenhouse": [
+     "tipaltisolutions"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.tipalti.com/careers",
+     200,
+     "https://tipalti.com/company/careers/"
+    ],
+    [
+     "https://tipalti.com/company/jobs/",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Hippo",
+   "type": "פינטק",
+   "domain": "hippo.com",
+   "found": {
+    "greenhouse": [
+     "hippo70"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.hippo.com/careers",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Nuvei",
+   "type": "פינטק",
+   "domain": "nuvei.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.nuvei.com/careers",
+     200
+    ],
+    [
+     "https://nuvei.com/careers",
+     200,
+     "https://www.nuvei.com/careers"
+    ],
+    [
+     "https://careers.nuvei.com"
+    ],
+    [
+     "https://www.nuvei.com/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Sunbit",
+   "type": "פינטק",
+   "domain": "sunbit.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.sunbit.com/careers",
+     200,
+     "https://sunbit.com/careers/"
+    ],
+    [
+     "https://sunbit.com/careers",
+     200,
+     "https://sunbit.com/careers/"
+    ],
+    [
+     "https://careers.sunbit.com",
+     404,
+     "https://careers.sunbit.com/"
+    ],
+    [
+     "https://www.sunbit.com/jobs",
+     404,
+     "https://sunbit.com/jobs"
+    ]
+   ]
+  },
+  {
+   "company": "Atera",
+   "type": "חברת מוצר",
+   "domain": "atera.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.atera.com/careers",
+     403
+    ],
+    [
+     "https://atera.com/careers",
+     403,
+     "https://www.atera.com/careers"
+    ],
+    [
+     "https://careers.atera.com"
+    ],
+    [
+     "https://www.atera.com/jobs",
+     403
+    ]
+   ]
+  },
+  {
+   "company": "Optibus",
+   "type": "חברת מוצר",
+   "domain": "optibus.com",
+   "found": {
+    "comeet_token": [
+     "1DC770D04770594B281DC3B83B81DC"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.optibus.com/careers",
+     200,
+     "https://optibus.com/company/careers/"
+    ],
+    [
+     "https://optibus.com/ext/optibus-general/pages/careers/page-style.css",
+     200
+    ],
+    [
+     "https://optibus.com/company/careers/jobs/",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Guesty",
+   "type": "חברת מוצר",
+   "domain": "guesty.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.guesty.com/careers",
+     200,
+     "https://www.guesty.com/careers/"
+    ],
+    [
+     "https://www.guesty.com/careers-open-positions/co/canada/2F.276/accounting-technical-program-manager/",
+     200
+    ],
+    [
+     "https://www.guesty.com/careers-open-positions/co/canada/06.271/business-development-representative/",
+     200
+    ],
+    [
+     "https://www.guesty.com/careers-open-positions/co/new-york/06.271-4F.406/business-development-representative/",
+     200
+    ],
+    [
+     "https://guesty.com/careers",
+     200,
+     "https://www.guesty.com/careers/"
+    ],
+    [
+     "https://www.guesty.com/careers-open-positions/co/canada/2F.276/accounting-technical-program-manager/",
+     200
+    ],
+    [
+     "https://www.guesty.com/careers-open-positions/co/canada/06.271/business-development-representative/",
+     200
+    ],
+    [
+     "https://www.guesty.com/careers-open-positions/co/new-york/06.271-4F.406/business-development-representative/",
+     200
+    ],
+    [
+     "https://careers.guesty.com"
+    ],
+    [
+     "https://www.guesty.com/jobs",
+     200,
+     "https://www.guesty.com/careers/"
+    ],
+    [
+     "https://www.guesty.com/careers-open-positions/co/canada/2F.276/accounting-technical-program-manager/",
+     200
+    ],
+    [
+     "https://www.guesty.com/careers-open-positions/co/canada/06.271/business-development-representative/",
+     200
+    ],
+    [
+     "https://www.guesty.com/careers-open-positions/co/new-york/06.271-4F.406/business-development-representative/",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Tabit",
+   "type": "חברת מוצר",
+   "domain": "tabit.cloud",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.tabit.cloud/careers",
+     200,
+     "https://www.tabit.cloud/"
+    ],
+    [
+     "https://tabit.cloud/careers",
+     200,
+     "https://www.tabit.cloud/"
+    ],
+    [
+     "https://careers.tabit.cloud"
+    ],
+    [
+     "https://www.tabit.cloud/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Wix",
+   "type": "חברת מוצר",
+   "domain": "wix.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.wix.com/careers",
+     200,
+     "https://careers.wix.com/"
+    ],
+    [
+     "https://wix.com/careers",
+     200,
+     "https://careers.wix.com/"
+    ],
+    [
+     "https://careers.wix.com",
+     200,
+     "https://careers.wix.com/"
+    ],
+    [
+     "https://www.wix.com/jobs",
+     200,
+     "https://careers.wix.com/"
+    ]
+   ]
+  },
+  {
+   "company": "Elementor",
+   "type": "חברת מוצר",
+   "domain": "elementor.com",
+   "found": {
+    "comeet_token": [
+     "3AF126BB0D161A3AF161A00B0D126B"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.elementor.com/careers",
+     200,
+     "https://elementor.careers/explore/"
+    ]
+   ]
+  },
+  {
+   "company": "Bizzabo",
+   "type": "חברת מוצר",
+   "domain": "bizzabo.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.bizzabo.com/careers",
+     403
+    ],
+    [
+     "https://bizzabo.com/careers",
+     403,
+     "https://www.bizzabo.com/careers"
+    ],
+    [
+     "https://careers.bizzabo.com"
+    ],
+    [
+     "https://www.bizzabo.com/jobs",
+     403
+    ]
+   ]
+  },
+  {
+   "company": "Artlist",
+   "type": "חברת מוצר",
+   "domain": "artlist.io",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.artlist.io/careers",
+     403,
+     "https://artlist.io/careers"
+    ],
+    [
+     "https://artlist.io/careers",
+     403
+    ],
+    [
+     "https://careers.artlist.io"
+    ],
+    [
+     "https://www.artlist.io/jobs",
+     403,
+     "https://artlist.io/jobs"
+    ]
+   ]
+  },
+  {
+   "company": "Lemonade",
+   "type": "חברת מוצר",
+   "domain": "lemonade.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.lemonade.com/careers",
+     404
+    ],
+    [
+     "https://lemonade.com/careers",
+     404,
+     "https://www.lemonade.com/careers"
+    ],
+    [
+     "https://careers.lemonade.com"
+    ],
+    [
+     "https://www.lemonade.com/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "ThetaRay",
+   "type": "סייבר",
+   "domain": "thetaray.com",
+   "found": {
+    "comeet": [
+     "thetaray/72.00F"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.thetaray.com/careers",
+     200,
+     "https://thetaray.com/careers/"
+    ]
+   ],
+   "comeetPage": {
+    "url": "https://www.comeet.com/jobs/thetaray/72.00F",
+    "status": 200,
+    "length": 163566,
+    "found": [
+     "COMPANY_POSITIONS_DATA",
+     "COMPANY_DATA",
+     "positions",
+     "\"uid\"",
+     "url_active_page",
+     "careers-api",
+     "token"
+    ],
+    "snippet": "//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css\">\n    <script type=\"text/javascript\" >\n       var serverVersion=\"rc-312-14\";\n       var COMPANY_DATA ;\n       var USER_DATA;\n       var COMPANY_POSITIONS_DATA ;\n       var POSITION_DATA ;\n       var CANDIDATE_DATA;\n       var RECAPTCHA_ENABLED;\n       var RECAPTCHA_SITE_KEY;\n       var DETECTED_COUNTRY;\n\n\n       COMPANY_DATA = {\"name\": \"Thetaray\", \"location\": \"Israel\", \"logos\": {\"small\": {\"url\": \"https://www.comeet.co/pub/thetaray/72.00F/logo?size=small\\u0026last-modified=1609928403\", \"width\": 100, \"height\": 100}, \"medium\": {\"url\": \"https://www.comeet.co/pub/thetaray/72.00F/logo?size=medium\\u0026last-modified=1609928403\", \"width\": 300, \"height\": 300}, \"original\": {\"url\": \"https://www.comeet.co/pub/thetaray/72.00F/logo?size=original\\u0026last-modified=1609928403\", \"width\": 842, \"height\": 542}}, \"website\": \"www.thetaray.com\", \"locale\": {\"label\": \"EN_US\", \"time-format\": 1}, \"has_verified_comeet_badge\": false, \"company_picture_url\": \"https://comeet-euw-app.s3.amazonaws.com/639/6a32d25e2feb68fd1b2a05ebb6163558ac78539e\", \"desc"
+   }
+  },
+  {
+   "company": "Imperva",
+   "type": "סייבר",
+   "domain": "imperva.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.imperva.com/careers",
+     200,
+     "https://www.imperva.com/company/careers/"
+    ],
+    [
+     "https://imperva.com/careers",
+     200,
+     "https://www.imperva.com/company/careers/"
+    ],
+    [
+     "https://careers.imperva.com",
+     200,
+     "https://www.imperva.com/Company/Careers/"
+    ],
+    [
+     "https://www.imperva.com/jobs",
+     200,
+     "https://www.imperva.com/403"
+    ]
+   ]
+  },
+  {
+   "company": "Snyk",
+   "type": "סייבר",
+   "domain": "snyk.io",
+   "found": {
+    "ashby": [
+     "Snyk"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.snyk.io/careers",
+     200,
+     "https://snyk.io/careers/"
+    ],
+    [
+     "https://snyk.io/careers/all-jobs/",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Sygnia",
+   "type": "סייבר",
+   "domain": "sygnia.co",
+   "found": {
+    "comeet_token": [
+     "87A32DC3B5687A196E2A6210F43B5610F43B56"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.sygnia.co/careers",
+     200,
+     "https://www.sygnia.co/careers/"
+    ]
+   ]
+  },
+  {
+   "company": "Team8",
+   "type": "סייבר",
+   "domain": "team8.vc",
+   "found": {
+    "comeet_token": [
+     "16358C6EF2C61631639B558C0429"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.team8.vc/careers",
+     200,
+     "https://team8.vc/careers/"
+    ],
+    [
+     "https://team8.vc/career/sawmills-ai/sawmills-ai-full-stack-engineer-fully-remote-position/",
+     200
+    ],
+    [
+     "https://team8.vc/career/sawmills-ai/sawmills-ai-be-engineer-fully-remote-position/",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "XM Cyber",
+   "type": "סייבר",
+   "domain": "xmcyber.com",
+   "found": {
+    "comeet_token": [
+     "51519692393A2A1454A2A145423930F3F"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.xmcyber.com/careers",
+     200,
+     "https://xmcyber.com/job-listing-old/"
+    ]
+   ]
+  },
+  {
+   "company": "Cato Networks",
+   "type": "סייבר",
+   "domain": "catonetworks.com",
+   "found": {
+    "greenhouse": [
+     "catonetworks"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.catonetworks.com/careers",
+     200,
+     "https://www.catonetworks.com/careers/"
+    ]
+   ]
+  },
+  {
+   "company": "Perimeter 81",
+   "type": "סייבר",
+   "domain": "perimeter81.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.perimeter81.com/careers",
+     202,
+     "https://sase.checkpoint.com/careers"
+    ],
+    [
+     "https://perimeter81.com/careers",
+     202,
+     "https://sase.checkpoint.com/careers"
+    ],
+    [
+     "https://careers.perimeter81.com",
+     200,
+     "https://careers.perimeter81.com/"
+    ],
+    [
+     "https://www.perimeter81.com/jobs",
+     202,
+     "https://sase.checkpoint.com/jobs"
+    ]
+   ]
+  },
+  {
+   "company": "Zimperium",
+   "type": "סייבר",
+   "domain": "zimperium.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.zimperium.com/careers",
+     404,
+     "https://zimperium.com/careers"
+    ],
+    [
+     "https://zimperium.com/careers",
+     404
+    ],
+    [
+     "https://careers.zimperium.com"
+    ],
+    [
+     "https://www.zimperium.com/jobs",
+     404,
+     "https://zimperium.com/jobs"
+    ]
+   ]
+  },
+  {
+   "company": "Ox Security",
+   "type": "סייבר",
+   "domain": "ox.security",
+   "found": {
+    "comeet_token": [
+     "8F635C447B035C42CCE2CCE23D83EBA35C48F6"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.ox.security/careers",
+     200,
+     "https://www.ox.security/careers/"
+    ],
+    [
+     "https://www.ox.security/careers-position/co/ramat-gan/B4.074/ai-security-team-leader-backend-focus/all",
+     200
+    ],
+    [
+     "https://www.ox.security/careers-position/co/poland/03.17E/backend-team-lead-scanner-b2b-contract/all",
+     200
+    ],
+    [
+     "https://www.ox.security/careers-position/co/armenia/03.17E-AF.606/backend-team-lead-scanner-b2b-contract/all",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Tufin",
+   "type": "סייבר",
+   "domain": "tufin.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.tufin.com/careers",
+     200
+    ],
+    [
+     "https://www.tufin.com/%60/open-position",
+     404
+    ],
+    [
+     "https://tufin.com/careers",
+     200,
+     "https://www.tufin.com/careers"
+    ],
+    [
+     "https://www.tufin.com/%60/open-position",
+     404
+    ],
+    [
+     "https://careers.tufin.com"
+    ],
+    [
+     "https://www.tufin.com/jobs",
+     200,
+     "https://www.tufin.com/careers"
+    ],
+    [
+     "https://www.tufin.com/%60/open-position",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "BigID",
+   "type": "סייבר",
+   "domain": "bigid.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.bigid.com/careers",
+     403,
+     "https://bigid.com/careers"
+    ],
+    [
+     "https://bigid.com/careers",
+     403
+    ],
+    [
+     "https://careers.bigid.com"
+    ],
+    [
+     "https://www.bigid.com/jobs",
+     403,
+     "https://bigid.com/jobs"
+    ]
+   ]
+  },
+  {
+   "company": "Wiliot",
+   "type": "חומרה",
+   "domain": "wiliot.com",
+   "found": {
+    "comeet_token": [
+     "6F329B2DE6379829B229B2037983E8B3E8B"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.wiliot.com/careers",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Valens",
+   "type": "חומרה",
+   "domain": "valens.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.valens.com/careers",
+     200,
+     "https://www.valens.com/positions/"
+    ],
+    [
+     "https://www.valens.com/positions/",
+     200
+    ],
+    [
+     "https://www.valens.com/positions/feed/",
+     200
+    ],
+    [
+     "https://www.valens.com/wp-content/themes/valens/dist/css-dist/archive-position.f126e4c56561156d19adbd957faf8b86.css",
+     200
+    ],
+    [
+     "https://valens.com/careers",
+     200,
+     "https://www.valens.com/positions/"
+    ],
+    [
+     "https://www.valens.com/positions/",
+     200
+    ],
+    [
+     "https://www.valens.com/positions/feed/",
+     200
+    ],
+    [
+     "https://www.valens.com/wp-content/themes/valens/dist/css-dist/archive-position.f126e4c56561156d19adbd957faf8b86.css",
+     200
+    ],
+    [
+     "https://careers.valens.com"
+    ],
+    [
+     "https://www.valens.com/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Autotalks",
+   "type": "חומרה",
+   "domain": "auto-talks.com",
+   "found": {
+    "comeet_token": [
+     "309F2D30991BF2D1B51C24C2412361B51"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.auto-talks.com/careers",
+     200,
+     "https://auto-talks.com/careers2/"
+    ]
+   ]
+  },
+  {
+   "company": "Arbe Robotics",
+   "type": "חומרה",
+   "domain": "arberobotics.com",
+   "found": {
+    "comeet_token": [
+     "6C12886D821B0414432886144328862F472F47"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.arberobotics.com/careers",
+     200,
+     "https://arberobotics.com/career/"
+    ]
+   ]
+  },
+  {
+   "company": "Imagry",
+   "type": "סטארטאפ",
+   "domain": "imagry.co",
+   "found": {
+    "comeet_token": [
+     "7BF2E7A1EFC1EFCF7E7BF36393DF826BB2E7A"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.imagry.co/careers",
+     200,
+     "https://imagry.co/jobs-at-imagry-autonomous-driving-software-company/"
+    ]
+   ]
+  },
+  {
+   "company": "Foretellix",
+   "type": "סטארטאפ",
+   "domain": "foretellix.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.foretellix.com/careers",
+     404
+    ],
+    [
+     "https://foretellix.com/careers",
+     404,
+     "https://www.foretellix.com/careers"
+    ],
+    [
+     "https://careers.foretellix.com"
+    ],
+    [
+     "https://www.foretellix.com/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Cognata",
+   "type": "סטארטאפ",
+   "domain": "cognata.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.cognata.com/careers",
+     200,
+     "https://www.cognata.com/"
+    ],
+    [
+     "https://cognata.com/careers",
+     200,
+     "https://www.cognata.com/"
+    ],
+    [
+     "https://careers.cognata.com"
+    ],
+    [
+     "https://www.cognata.com/jobs",
+     200,
+     "https://www.cognata.com/"
+    ]
+   ]
+  },
+  {
+   "company": "Rafael",
+   "type": "ביטחוני טכנולוגי",
+   "domain": "rafael.co.il",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.rafael.co.il/careers",
+     247
+    ],
+    [
+     "https://rafael.co.il/careers",
+     247,
+     "https://www.rafael.co.il/careers"
+    ],
+    [
+     "https://careers.rafael.co.il"
+    ],
+    [
+     "https://www.rafael.co.il/jobs",
+     247
+    ]
+   ]
+  },
+  {
+   "company": "IAI",
+   "type": "ביטחוני טכנולוגי",
+   "domain": "iai.co.il",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.iai.co.il/careers",
+     247
+    ],
+    [
+     "https://iai.co.il/careers",
+     247
+    ],
+    [
+     "https://careers.iai.co.il"
+    ],
+    [
+     "https://www.iai.co.il/jobs",
+     247
+    ]
+   ]
+  },
+  {
+   "company": "Ultra Security",
+   "type": "סייבר",
+   "domain": "ultra.security",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.ultra.security/careers",
+     200,
+     "https://ultra.security/careers"
+    ],
+    [
+     "https://ultra.security/careers/gtm-engineer",
+     200
+    ],
+    [
+     "https://ultra.security/careers/staff-engineer",
+     200
+    ],
+    [
+     "https://ultra.security/careers",
+     200
+    ],
+    [
+     "https://ultra.security/careers/gtm-engineer",
+     200
+    ],
+    [
+     "https://ultra.security/careers/staff-engineer",
+     200
+    ],
+    [
+     "https://careers.ultra.security"
+    ],
+    [
+     "https://www.ultra.security/jobs",
+     404,
+     "https://ultra.security/jobs"
+    ]
+   ]
+  },
+  {
+   "company": "Sentra",
+   "type": "סייבר",
+   "domain": "sentra.io",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.sentra.io/careers",
+     200,
+     "https://sentra.io/careers"
+    ],
+    [
+     "https://sentra.io/careers",
+     200
+    ],
+    [
+     "https://careers.sentra.io"
+    ],
+    [
+     "https://www.sentra.io/jobs",
+     200,
+     "https://sentra.io/careers"
+    ]
+   ]
+  },
+  {
+   "company": "Granulate",
+   "type": "סטארטאפ",
+   "domain": "granulate.io",
+   "found": {
+    "workday": [
+     "intel.wd1.myworkdayjobs.com|intel|External"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.granulate.io/careers"
+    ],
+    [
+     "https://granulate.io/careers",
+     200,
+     "https://www.intel.com/content/www/us/en/homepage.html"
+    ],
+    [
+     "https://www.intel.com/content/www/us/en/jobs/life-at-intel.html",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Run:ai",
+   "type": "סטארטאפ",
+   "domain": "run.ai",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.run.ai/careers",
+     404
+    ],
+    [
+     "https://run.ai/careers"
+    ],
+    [
+     "https://careers.run.ai",
+     200,
+     "https://careers.run.ai/"
+    ],
+    [
+     "https://www.run.ai/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Deci",
+   "type": "סטארטאפ",
+   "domain": "deci.ai",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.deci.ai/careers",
+     200,
+     "https://www.nvidia.com/en-us/"
+    ],
+    [
+     "https://deci.ai/careers",
+     200,
+     "https://www.nvidia.com/en-us/"
+    ],
+    [
+     "https://careers.deci.ai"
+    ],
+    [
+     "https://www.deci.ai/jobs",
+     200,
+     "https://www.nvidia.com/en-us/"
+    ]
+   ]
+  },
+  {
+   "company": "Pecan",
+   "type": "סטארטאפ",
+   "domain": "pecan.ai",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.pecan.ai/careers",
+     200,
+     "https://www.pecan.ai/careers/"
+    ],
+    [
+     "https://www.pecan.ai/careers/career-job/customer-facing-data-analyst/",
+     200
+    ],
+    [
+     "https://www.pecan.ai/careers/career-job/product-manager/",
+     200
+    ],
+    [
+     "https://www.pecan.ai/careers/career-job/solution-engineer/",
+     200
+    ],
+    [
+     "https://pecan.ai/careers",
+     200,
+     "https://www.pecan.ai/careers/"
+    ],
+    [
+     "https://www.pecan.ai/careers/career-job/customer-facing-data-analyst/",
+     200
+    ],
+    [
+     "https://www.pecan.ai/careers/career-job/product-manager/",
+     200
+    ],
+    [
+     "https://www.pecan.ai/careers/career-job/solution-engineer/",
+     200
+    ],
+    [
+     "https://careers.pecan.ai"
+    ],
+    [
+     "https://www.pecan.ai/jobs",
+     200,
+     "https://www.pecan.ai/careers/"
+    ],
+    [
+     "https://www.pecan.ai/careers/career-job/customer-facing-data-analyst/",
+     200
+    ],
+    [
+     "https://www.pecan.ai/careers/career-job/product-manager/",
+     200
+    ],
+    [
+     "https://www.pecan.ai/careers/career-job/solution-engineer/",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Hour One",
+   "type": "סטארטאפ",
+   "domain": "hourone.ai",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.hourone.ai/careers"
+    ],
+    [
+     "https://hourone.ai/careers"
+    ],
+    [
+     "https://careers.hourone.ai"
+    ],
+    [
+     "https://www.hourone.ai/jobs"
+    ]
+   ]
+  },
+  {
+   "company": "Taranis",
+   "type": "סטארטאפ",
+   "domain": "taranis.com",
+   "found": {
+    "comeet_token": [
+     "43314FF14FF043314FF10CC10CC25CB866"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.taranis.com/careers",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Nanox",
+   "type": "חומרה",
+   "domain": "nanox.vision",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.nanox.vision/careers",
+     403
+    ],
+    [
+     "https://nanox.vision/careers",
+     404
+    ],
+    [
+     "https://careers.nanox.vision"
+    ],
+    [
+     "https://www.nanox.vision/jobs",
+     403
+    ]
+   ]
+  },
+  {
+   "company": "Zebra Medical",
+   "type": "סטארטאפ",
+   "domain": "zebra-med.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.zebra-med.com/careers"
+    ],
+    [
+     "https://zebra-med.com/careers"
+    ],
+    [
+     "https://careers.zebra-med.com"
+    ],
+    [
+     "https://www.zebra-med.com/jobs"
+    ]
+   ]
+  },
+  {
+   "company": "Viz.ai",
+   "type": "סטארטאפ",
+   "domain": "viz.ai",
+   "found": {
+    "ashby": [
+     "Viz.ai"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.viz.ai/careers",
+     200
+    ],
+    [
+     "https://www.viz.ai/jobs",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Sight Diagnostics",
+   "type": "חומרה",
+   "domain": "sightdx.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.sightdx.com/careers",
+     404
+    ],
+    [
+     "https://sightdx.com/careers",
+     404,
+     "https://www.sightdx.com/careers"
+    ],
+    [
+     "https://careers.sightdx.com"
+    ],
+    [
+     "https://www.sightdx.com/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Gamida",
+   "type": "סטארטאפ",
+   "domain": "gamida.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.gamida.com/careers",
+     200
+    ],
+    [
+     "https://gamida.com/careers",
+     200
+    ],
+    [
+     "https://careers.gamida.com"
+    ],
+    [
+     "https://www.gamida.com/jobs",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Jit",
+   "type": "סייבר",
+   "domain": "jit.io",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.jit.io/careers"
+    ],
+    [
+     "https://jit.io/careers",
+     403
+    ],
+    [
+     "https://careers.jit.io"
+    ],
+    [
+     "https://www.jit.io/jobs"
+    ]
+   ]
+  },
+  {
+   "company": "Spot.io",
+   "type": "חברת מוצר",
+   "domain": "spot.io",
+   "found": {
+    "workday": [
+     "flexerasoftware.wd1.myworkdayjobs.com|flexerasoftware|FlexeraSoftware"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.spot.io/careers",
+     200,
+     "https://www.flexera.com/about-us/careers"
+    ]
+   ]
+  },
+  {
+   "company": "Zesty",
+   "type": "סטארטאפ",
+   "domain": "zesty.co",
+   "found": {
+    "comeet_token": [
+     "600240001E00030003000300024001E00"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.zesty.co/careers",
+     200,
+     "https://zesty.co/careers/"
+    ]
+   ]
+  },
+  {
+   "company": "Firefly",
+   "type": "סטארטאפ",
+   "domain": "firefly.ai",
+   "found": {
+    "comeet_token": [
+     "930372052B04980126024C024C02DF09304050"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.firefly.ai/careers",
+     200
+    ],
+    [
+     "https://www.firefly.ai/positions/position-80_37d",
+     200
+    ],
+    [
+     "https://www.firefly.ai/positions/position-6f_27a",
+     200
+    ],
+    [
+     "https://www.firefly.ai/positions/position-b0_d66",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Dazz",
+   "type": "סייבר",
+   "domain": "dazz.io",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.dazz.io/careers",
+     200,
+     "https://www.wiz.io/careers"
+    ],
+    [
+     "https://dazz.io/careers",
+     200,
+     "https://www.wiz.io/blog/wiz-to-acquire-dazz-transforming-risk-remediation-from-cloud-to-code"
+    ],
+    [
+     "https://careers.dazz.io"
+    ],
+    [
+     "https://www.dazz.io/jobs",
+     200,
+     "https://www.wiz.io/"
+    ]
+   ]
+  },
+  {
+   "company": "Wing Security",
+   "type": "סייבר",
+   "domain": "wing.security",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.wing.security/careers",
+     200,
+     "https://withwings.ai/"
+    ],
+    [
+     "https://wing.security/careers",
+     200,
+     "https://withwings.ai/"
+    ],
+    [
+     "https://careers.wing.security"
+    ],
+    [
+     "https://www.wing.security/jobs",
+     200,
+     "https://withwings.ai/"
+    ]
+   ]
+  },
+  {
+   "company": "Aim Security",
+   "type": "סייבר",
+   "domain": "aim.security",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.aim.security/careers",
+     403
+    ],
+    [
+     "https://aim.security/careers",
+     403
+    ],
+    [
+     "https://careers.aim.security"
+    ],
+    [
+     "https://www.aim.security/jobs",
+     403
+    ]
+   ]
+  },
+  {
+   "company": "Noma Security",
+   "type": "סייבר",
+   "domain": "noma.security",
+   "found": {
+    "comeet": [
+     "3A.005/0E.27B",
+     "3A.005/A0.760",
+     "3A.005/FD.062"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.noma.security/careers",
+     200,
+     "https://noma.security/careers"
+    ],
+    [
+     "https://noma.security/positions/position-0e_27b",
+     200
+    ],
+    [
+     "https://noma.security/positions/position-a0_760",
+     200
+    ],
+    [
+     "https://noma.security/positions/position-fd_062",
+     200
+    ]
+   ],
+   "comeetPage": {
+    "url": "https://www.comeet.com/jobs/3A.005/0E.27B",
+    "status": 200,
+    "length": 82714,
+    "found": [],
+    "snippet": "<!doctype html>\n<html ng-app=\"comeet\" lang=\"en-US\">\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n\t<style>.async-hide { opacity: 0 !important} </style>\n\n\t<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;\n\th.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};\n\t(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;\n\t})(window,document.documentElement,'async-hide','dataLayer',4000,\n\t{'GTM-M454VG2':true});</script>\n\n\n\n<script src=\""
+   }
+  },
+  {
+   "company": "Pillar Security",
+   "type": "סייבר",
+   "domain": "pillar.security",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.pillar.security/careers",
+     200
+    ],
+    [
+     "https://www.pillar.security/open-position/account-executivei-emea",
+     200
+    ],
+    [
+     "https://www.pillar.security/open-position/senior-software-engineer",
+     200
+    ],
+    [
+     "https://www.pillar.security/open-position/sales-engineer",
+     200
+    ],
+    [
+     "https://pillar.security/careers",
+     200,
+     "https://www.pillar.security/careers"
+    ],
+    [
+     "https://www.pillar.security/open-position/account-executivei-emea",
+     200
+    ],
+    [
+     "https://www.pillar.security/open-position/senior-software-engineer",
+     200
+    ],
+    [
+     "https://www.pillar.security/open-position/sales-engineer",
+     200
+    ],
+    [
+     "https://careers.pillar.security"
+    ],
+    [
+     "https://www.pillar.security/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Make",
+   "type": "חברת מוצר",
+   "domain": "make.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.make.com/careers",
+     200
+    ],
+    [
+     "https://make.com/careers",
+     200,
+     "https://www.make.com/careers"
+    ],
+    [
+     "https://careers.make.com"
+    ],
+    [
+     "https://www.make.com/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Cloudinary",
+   "type": "חברת מוצר",
+   "domain": "cloudinary.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.cloudinary.com/careers",
+     200,
+     "https://cloudinary.com/careers"
+    ],
+    [
+     "https://cloudinary.com/careers/jobs",
+     200
+    ],
+    [
+     "https://cloudinary.com/careers",
+     200
+    ],
+    [
+     "https://cloudinary.com/careers/jobs",
+     200
+    ],
+    [
+     "https://careers.cloudinary.com"
+    ],
+    [
+     "https://www.cloudinary.com/jobs",
+     200,
+     "https://cloudinary.com/careers"
+    ],
+    [
+     "https://cloudinary.com/careers/jobs",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Yotpo",
+   "type": "חברת מוצר",
+   "domain": "yotpo.com",
+   "found": {
+    "greenhouse": [
+     "yotpo"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.yotpo.com/careers",
+     200,
+     "https://www.yotpo.com/careers/"
+    ],
+    [
+     "https://www.yotpo.com/careers/gid-8159485/",
+     200
+    ],
+    [
+     "https://www.yotpo.com/careers/gid-8159437/",
+     200
+    ],
+    [
+     "https://www.yotpo.com/careers/gid-8286969/",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Lili",
+   "type": "פינטק",
+   "domain": "lili.co",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.lili.co/careers",
+     404,
+     "https://lili.co/careers"
+    ],
+    [
+     "https://lili.co/careers",
+     404
+    ],
+    [
+     "https://careers.lili.co"
+    ],
+    [
+     "https://www.lili.co/jobs",
+     404,
+     "https://lili.co/jobs"
+    ]
+   ]
+  },
+  {
+   "company": "Mixtiles",
+   "type": "סטארטאפ",
+   "domain": "mixtiles.com",
+   "found": {
+    "greenhouse": [
+     "mixtiles"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.mixtiles.com/careers",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Superplay",
+   "type": "משחקים",
+   "domain": "superplay.co",
+   "found": {
+    "comeet_token": [
+     "82330D228AF208C208C493B30D2208C38F538F5"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.superplay.co/careers",
+     200,
+     "https://www.superplay.co/careers/"
+    ]
+   ]
+  },
+  {
+   "company": "Playstudios Israel",
+   "type": "משחקים",
+   "domain": "playstudios.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.playstudios.com/careers",
+     200,
+     "https://www.playstudios.com/careers/"
+    ],
+    [
+     "https://playstudios.com/careers",
+     200,
+     "https://www.playstudios.com/careers/"
+    ],
+    [
+     "https://careers.playstudios.com"
+    ],
+    [
+     "https://www.playstudios.com/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Huuuge",
+   "type": "משחקים",
+   "domain": "huuugegames.com",
+   "found": {
+    "recruitee": [
+     "huuuge"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.huuugegames.com/careers",
+     200,
+     "https://huuugegames.com/careers"
+    ]
+   ]
+  },
+  {
+   "company": "Tiltan Games",
+   "type": "משחקים",
+   "domain": "tiltangames.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.tiltangames.com/careers",
+     404
+    ],
+    [
+     "https://tiltangames.com/careers",
+     404
+    ],
+    [
+     "https://careers.tiltangames.com"
+    ],
+    [
+     "https://www.tiltangames.com/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Fyber/Digital Turbine",
+   "type": "חברת מוצר",
+   "domain": "digitalturbine.com",
+   "found": {
+    "workday": [
+     "digitalturbine.wd501.myworkdayjobs.com|digitalturbine|Digital_Turbine_External_Careers"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.digitalturbine.com/careers",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "ironSource",
+   "type": "חברת מוצר",
+   "domain": "is.com",
+   "found": {
+    "workday": [
+     "unitytech.wd1.myworkdayjobs.com|unitytech|Unity"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.is.com/careers",
+     200,
+     "https://unity.com/careers"
+    ],
+    [
+     "https://unity.com/careers/positions",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Perion",
+   "type": "חברת מוצר",
+   "domain": "perion.com",
+   "found": {
+    "greenhouse": [
+     "perionnetworkltd"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.perion.com/careers",
+     200,
+     "https://perion.com/careers/"
+    ],
+    [
+     "https://perion.com/careers/junior-creative-animator/4710092006/",
+     200
+    ],
+    [
+     "https://perion.com/careers/machine-learning-engineer-outmax/4716234006/",
+     200
+    ],
+    [
+     "https://perion.com/careers/machine-learning-engineer-outmax/4699316006/",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Tremor/Nexxen",
+   "type": "חברת מוצר",
+   "domain": "nexxen.com",
+   "found": {
+    "greenhouse": [
+     "nexxen"
+    ],
+    "ashby": [
+     "nexxen"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.nexxen.com/careers",
+     200,
+     "https://nexxen.com/careers/"
+    ],
+    [
+     "https://nexxen.com/careers/careers-opportunities/",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Kenshoo/Skai",
+   "type": "חברת מוצר",
+   "domain": "skai.io",
+   "found": {
+    "comeet_token": [
+     "22A8A81150454CFC115022AAD2F26137A"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.skai.io/careers",
+     200,
+     "https://skai.io/company/careers/"
+    ],
+    [
+     "https://skai.io/press-releases/skai-launches-agent-connect-opening-its-omnichannel-marketing-infrastructure-to-external-ai-agents/",
+     200
+    ],
+    [
+     "https://skai.io/company/careers/chicago-united-states/digital-retail-media-specialist/",
+     200
+    ],
+    [
+     "https://skai.io/company/careers/los-angeles-united-states/digital-retail-media-specialist/",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Global-e",
+   "type": "חברת מוצר",
+   "domain": "global-e.com",
+   "found": {
+    "comeet_token": [
+     "262988131015727264C41572E4C10AE10AE"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.global-e.com/careers",
+     200,
+     "https://www.global-e.com/careers/"
+    ]
+   ]
+  },
+  {
+   "company": "Riskified",
+   "type": "חברת מוצר",
+   "domain": "riskified.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.riskified.com/careers",
+     200,
+     "https://www.riskified.com/careers/"
+    ],
+    [
+     "https://riskified.com/careers",
+     200,
+     "https://www.riskified.com/careers/"
+    ],
+    [
+     "https://careers.riskified.com"
+    ],
+    [
+     "https://www.riskified.com/jobs",
+     404,
+     "https://www.riskified.com/jobs/"
+    ]
+   ]
+  },
+  {
+   "company": "Forter",
+   "type": "חברת מוצר",
+   "domain": "forter.com",
+   "found": {
+    "greenhouse": [
+     "forter"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.forter.com/careers",
+     200,
+     "https://www.forter.com/careers/"
+    ],
+    [
+     "https://www.forter.com/careers/mobile-img.jpg",
+     404
+    ],
+    [
+     "https://www.forter.com/careers/desktop-img.jpg",
+     404
+    ],
+    [
+     "https://www.forter.com/job-opportunities/",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Nice",
+   "type": "בית תוכנה",
+   "domain": "nice.com",
+   "found": {
+    "greenhouse_eu": [
+     "nice"
+    ]
+   },
+   "fetched": [
+    [
+     "https://www.nice.com/careers",
+     200
+    ],
+    [
+     "https://www.nice.com/careers/apply",
+     200
+    ],
+    [
+     "https://www.nice.com/careers/a-warning-about-recruiting-scams",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Matrix",
+   "type": "בית תוכנה",
+   "domain": "matrix.co.il",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.matrix.co.il/careers",
+     404
+    ],
+    [
+     "https://matrix.co.il/careers",
+     404,
+     "https://www.matrix.co.il/careers"
+    ],
+    [
+     "https://careers.matrix.co.il"
+    ],
+    [
+     "https://www.matrix.co.il/jobs",
+     200,
+     "https://www.matrix.co.il/jobs/"
+    ],
+    [
+     "https://www.matrix.co.il/jobs/",
+     200
+    ],
+    [
+     "https://www.matrix.co.il/jobs/%d7%a2%d7%9e%d7%95%d7%93-%d7%94%d7%91%d7%99%d7%aa-2/feed/",
+     200
+    ],
+    [
+     "https://www.matrix.co.il/jobs/wp-json/oembed/1.0/embed",
+     400
+    ]
+   ]
+  },
+  {
+   "company": "Malam Team",
+   "type": "בית תוכנה",
+   "domain": "malamteam.com",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.malamteam.com/careers",
+     403
+    ],
+    [
+     "https://malamteam.com/careers",
+     403
+    ],
+    [
+     "https://careers.malamteam.com"
+    ],
+    [
+     "https://www.malamteam.com/jobs",
+     403
+    ]
+   ]
+  },
+  {
+   "company": "One Technologies",
+   "type": "בית תוכנה",
+   "domain": "one1.co.il",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.one1.co.il/careers",
+     200,
+     "https://www.one1.co.il/careers/"
+    ],
+    [
+     "https://one1.co.il/careers",
+     200,
+     "https://www.one1.co.il/careers/"
+    ],
+    [
+     "https://careers.one1.co.il"
+    ],
+    [
+     "https://www.one1.co.il/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Ness",
+   "type": "בית תוכנה",
+   "domain": "ness-tech.co.il",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.ness-tech.co.il/careers",
+     200
+    ],
+    [
+     "https://ness-tech.co.il/careers",
+     200,
+     "https://www.ness-tech.co.il/careers"
+    ],
+    [
+     "https://careers.ness-tech.co.il"
+    ],
+    [
+     "https://www.ness-tech.co.il/jobs",
+     200
+    ]
+   ]
+  },
+  {
+   "company": "Sela",
+   "type": "בית תוכנה",
+   "domain": "sela.co.il",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.sela.co.il/careers",
+     404
+    ],
+    [
+     "https://sela.co.il/careers",
+     404,
+     "https://www.sela.co.il/careers"
+    ],
+    [
+     "https://careers.sela.co.il"
+    ],
+    [
+     "https://www.sela.co.il/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Bynet",
+   "type": "בית תוכנה",
+   "domain": "bynet.co.il",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.bynet.co.il/careers",
+     404
+    ],
+    [
+     "https://bynet.co.il/careers",
+     404,
+     "https://www.bynet.co.il/careers"
+    ],
+    [
+     "https://careers.bynet.co.il"
+    ],
+    [
+     "https://www.bynet.co.il/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Bank Leumi",
+   "type": "תאגיד בינלאומי",
+   "domain": "leumi.co.il",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.leumi.co.il/careers",
+     404
+    ],
+    [
+     "https://leumi.co.il/careers",
+     404,
+     "https://www.leumi.co.il/careers"
+    ],
+    [
+     "https://careers.leumi.co.il"
+    ],
+    [
+     "https://www.leumi.co.il/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Bank Hapoalim",
+   "type": "תאגיד בינלאומי",
+   "domain": "bankhapoalim.co.il",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.bankhapoalim.co.il/careers",
+     404
+    ],
+    [
+     "https://bankhapoalim.co.il/careers",
+     404,
+     "https://www.bankhapoalim.co.il/careers"
+    ],
+    [
+     "https://careers.bankhapoalim.co.il"
+    ],
+    [
+     "https://www.bankhapoalim.co.il/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Discount Bank",
+   "type": "תאגיד בינלאומי",
+   "domain": "discountbank.co.il",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.discountbank.co.il/careers",
+     200
+    ],
+    [
+     "https://discountbank.co.il/careers",
+     200,
+     "https://www.discountbank.co.il/"
+    ],
+    [
+     "https://www.discountbank.co.il/lp/ourstory-digital_account_opening_grant/",
+     200
+    ],
+    [
+     "https://careers.discountbank.co.il"
+    ],
+    [
+     "https://www.discountbank.co.il/jobs",
+     200,
+     "https://www.discountbank.co.il/jobs/"
+    ]
+   ]
+  },
+  {
+   "company": "Migdal",
+   "type": "תאגיד בינלאומי",
+   "domain": "migdal.co.il",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.migdal.co.il/careers",
+     404
+    ],
+    [
+     "https://migdal.co.il/careers",
+     404,
+     "https://www.migdal.co.il/careers"
+    ],
+    [
+     "https://careers.migdal.co.il"
+    ],
+    [
+     "https://www.migdal.co.il/jobs",
+     404
+    ]
+   ]
+  },
+  {
+   "company": "Harel",
+   "type": "תאגיד בינלאומי",
+   "domain": "harel-group.co.il",
+   "found": {},
+   "fetched": [
+    [
+     "https://www.harel-group.co.il/careers",
+     200
+    ],
+    [
+     "https://harel-group.co.il/careers",
+     200,
+     "https://www.harel-group.co.il/careers"
+    ],
+    [
+     "https://careers.harel-group.co.il"
+    ],
+    [
+     "https://www.harel-group.co.il/jobs",
+     466
+    ]
+   ]
+  }
+ ]
+}
