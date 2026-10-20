@@ -1,0 +1,807 @@
+[
+{
+"company": "monday.com",
+"domain": "monday.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Fiverr",
+"domain": "fiverr.com",
+"type": "חברת מוצר"
+},
+{
+"company": "CyberArk",
+"domain": "cyberark.com",
+"type": "סייבר"
+},
+{
+"company": "Check Point",
+"domain": "checkpoint.com",
+"type": "סייבר"
+},
+{
+"company": "Amdocs",
+"domain": "amdocs.com",
+"type": "בית תוכנה"
+},
+{
+"company": "Elbit Systems",
+"domain": "elbitsystems.com",
+"type": "ביטחוני טכנולוגי"
+},
+{
+"company": "Outbrain",
+"domain": "outbrain.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Cyera",
+"domain": "cyera.io",
+"type": "סייבר"
+},
+{
+"company": "Claroty",
+"domain": "claroty.com",
+"type": "סייבר"
+},
+{
+"company": "Pentera",
+"domain": "pentera.io",
+"type": "סייבר"
+},
+{
+"company": "Silverfort",
+"domain": "silverfort.com",
+"type": "סייבר"
+},
+{
+"company": "Aqua Security",
+"domain": "aquasec.com",
+"type": "סייבר"
+},
+{
+"company": "Upwind",
+"domain": "upwind.io",
+"type": "סייבר"
+},
+{
+"company": "Aidoc",
+"domain": "aidoc.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Tabnine",
+"domain": "tabnine.com",
+"type": "סטארטאפ"
+},
+{
+"company": "AI21 Labs",
+"domain": "ai21.com",
+"type": "סטארטאפ"
+},
+{
+"company": "D-ID",
+"domain": "d-id.com",
+"type": "סטארטאפ"
+},
+{
+"company": "Riverside",
+"domain": "riverside.fm",
+"type": "סטארטאפ"
+},
+{
+"company": "Port",
+"domain": "port.io",
+"type": "סטארטאפ"
+},
+{
+"company": "Kaltura",
+"domain": "kaltura.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Innoviz",
+"domain": "innoviz.tech",
+"type": "חומרה"
+},
+{
+"company": "Sapiens",
+"domain": "sapiens.com",
+"type": "בית תוכנה"
+},
+{
+"company": "Nexar",
+"domain": "getnexar.com",
+"type": "סטארטאפ"
+},
+{
+"company": "Rapyd",
+"domain": "rapyd.net",
+"type": "פינטק"
+},
+{
+"company": "Papaya Global",
+"domain": "papayaglobal.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Coralogix",
+"domain": "coralogix.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Lusha",
+"domain": "lusha.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Nayax",
+"domain": "nayax.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Earnix",
+"domain": "earnix.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Hailo",
+"domain": "hailo.ai",
+"type": "חומרה"
+},
+{
+"company": "HiBob",
+"domain": "hibob.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Lightricks",
+"domain": "lightricks.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Moon Active",
+"domain": "moonactive.com",
+"type": "משחקים"
+},
+{
+"company": "Plarium",
+"domain": "plarium.com",
+"type": "משחקים"
+},
+{
+"company": "Playtech",
+"domain": "playtech.com",
+"type": "משחקים"
+},
+{
+"company": "Unity",
+"domain": "unity.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Varonis",
+"domain": "varonis.com",
+"type": "סייבר"
+},
+{
+"company": "Radware",
+"domain": "radware.com",
+"type": "סייבר"
+},
+{
+"company": "Allot",
+"domain": "allot.com",
+"type": "סייבר"
+},
+{
+"company": "AudioCodes",
+"domain": "audiocodes.com",
+"type": "חברת מוצר"
+},
+{
+"company": "CEVA",
+"domain": "ceva-ip.com",
+"type": "חומרה"
+},
+{
+"company": "Tower Semiconductor",
+"domain": "towersemi.com",
+"type": "חומרה"
+},
+{
+"company": "Nova",
+"domain": "novami.com",
+"type": "חומרה"
+},
+{
+"company": "Camtek",
+"domain": "camtek.com",
+"type": "חומרה"
+},
+{
+"company": "Kornit Digital",
+"domain": "kornit.com",
+"type": "חומרה"
+},
+{
+"company": "Stratasys",
+"domain": "stratasys.com",
+"type": "חומרה"
+},
+{
+"company": "Cognyte",
+"domain": "cognyte.com",
+"type": "סייבר"
+},
+{
+"company": "Verint",
+"domain": "verint.com",
+"type": "בית תוכנה"
+},
+{
+"company": "WSC Sports",
+"domain": "wsc-sports.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Cellebrite",
+"domain": "cellebrite.com",
+"type": "סייבר"
+},
+{
+"company": "Ironscales",
+"domain": "ironscales.com",
+"type": "סייבר"
+},
+{
+"company": "Salt Security",
+"domain": "salt.security",
+"type": "סייבר"
+},
+{
+"company": "WalkMe",
+"domain": "walkme.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Sisense",
+"domain": "sisense.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Bigabid",
+"domain": "bigabid.com",
+"type": "סטארטאפ"
+},
+{
+"company": "Palo Alto Networks",
+"domain": "paloaltonetworks.com",
+"type": "סייבר"
+},
+{
+"company": "Akamai",
+"domain": "akamai.com",
+"type": "תאגיד בינלאומי"
+},
+{
+"company": "Qualcomm",
+"domain": "qualcomm.com",
+"type": "חומרה"
+},
+{
+"company": "Broadcom",
+"domain": "broadcom.com",
+"type": "חומרה"
+},
+{
+"company": "Western Digital",
+"domain": "westerndigital.com",
+"type": "חומרה"
+},
+{
+"company": "HP Indigo",
+"domain": "hp.com",
+"type": "תאגיד בינלאומי"
+},
+{
+"company": "Salesforce",
+"domain": "salesforce.com",
+"type": "תאגיד בינלאומי"
+},
+{
+"company": "ServiceNow",
+"domain": "servicenow.com",
+"type": "תאגיד בינלאומי"
+},
+{
+"company": "Red Hat",
+"domain": "redhat.com",
+"type": "תאגיד בינלאומי"
+},
+{
+"company": "Dell Technologies",
+"domain": "dell.com",
+"type": "תאגיד בינלאומי"
+},
+{
+"company": "Microsoft",
+"domain": "microsoft.com",
+"type": "תאגיד בינלאומי"
+},
+{
+"company": "Google",
+"domain": "google.com",
+"type": "תאגיד בינלאומי"
+},
+{
+"company": "Meta",
+"domain": "metacareers.com",
+"type": "תאגיד בינלאומי"
+},
+{
+"company": "Amazon",
+"domain": "amazon.jobs",
+"type": "תאגיד בינלאומי"
+},
+{
+"company": "Apple",
+"domain": "apple.com",
+"type": "תאגיד בינלאומי"
+},
+{
+"company": "Booking.com",
+"domain": "booking.com",
+"type": "תאגיד בינלאומי"
+},
+{
+"company": "PayPal",
+"domain": "paypal.com",
+"type": "פינטק"
+},
+{
+"company": "eToro",
+"domain": "etoro.com",
+"type": "פינטק"
+},
+{
+"company": "Plus500",
+"domain": "plus500.com",
+"type": "פינטק"
+},
+{
+"company": "Pagaya",
+"domain": "pagaya.com",
+"type": "פינטק"
+},
+{
+"company": "Melio",
+"domain": "meliopayments.com",
+"type": "פינטק"
+},
+{
+"company": "Tipalti",
+"domain": "tipalti.com",
+"type": "פינטק"
+},
+{
+"company": "Hippo",
+"domain": "hippo.com",
+"type": "פינטק"
+},
+{
+"company": "Nuvei",
+"domain": "nuvei.com",
+"type": "פינטק"
+},
+{
+"company": "Sunbit",
+"domain": "sunbit.com",
+"type": "פינטק"
+},
+{
+"company": "Atera",
+"domain": "atera.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Optibus",
+"domain": "optibus.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Guesty",
+"domain": "guesty.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Tabit",
+"domain": "tabit.cloud",
+"type": "חברת מוצר"
+},
+{
+"company": "Wix",
+"domain": "wix.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Elementor",
+"domain": "elementor.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Bizzabo",
+"domain": "bizzabo.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Artlist",
+"domain": "artlist.io",
+"type": "חברת מוצר"
+},
+{
+"company": "Lemonade",
+"domain": "lemonade.com",
+"type": "חברת מוצר"
+},
+{
+"company": "ThetaRay",
+"domain": "thetaray.com",
+"type": "סייבר"
+},
+{
+"company": "Imperva",
+"domain": "imperva.com",
+"type": "סייבר"
+},
+{
+"company": "Snyk",
+"domain": "snyk.io",
+"type": "סייבר"
+},
+{
+"company": "Sygnia",
+"domain": "sygnia.co",
+"type": "סייבר"
+},
+{
+"company": "Team8",
+"domain": "team8.vc",
+"type": "סייבר"
+},
+{
+"company": "XM Cyber",
+"domain": "xmcyber.com",
+"type": "סייבר"
+},
+{
+"company": "Cato Networks",
+"domain": "catonetworks.com",
+"type": "סייבר"
+},
+{
+"company": "Perimeter 81",
+"domain": "perimeter81.com",
+"type": "סייבר"
+},
+{
+"company": "Zimperium",
+"domain": "zimperium.com",
+"type": "סייבר"
+},
+{
+"company": "Ox Security",
+"domain": "ox.security",
+"type": "סייבר"
+},
+{
+"company": "Tufin",
+"domain": "tufin.com",
+"type": "סייבר"
+},
+{
+"company": "BigID",
+"domain": "bigid.com",
+"type": "סייבר"
+},
+{
+"company": "Wiliot",
+"domain": "wiliot.com",
+"type": "חומרה"
+},
+{
+"company": "Valens",
+"domain": "valens.com",
+"type": "חומרה"
+},
+{
+"company": "Autotalks",
+"domain": "auto-talks.com",
+"type": "חומרה"
+},
+{
+"company": "Arbe Robotics",
+"domain": "arberobotics.com",
+"type": "חומרה"
+},
+{
+"company": "Imagry",
+"domain": "imagry.co",
+"type": "סטארטאפ"
+},
+{
+"company": "Foretellix",
+"domain": "foretellix.com",
+"type": "סטארטאפ"
+},
+{
+"company": "Cognata",
+"domain": "cognata.com",
+"type": "סטארטאפ"
+},
+{
+"company": "Rafael",
+"domain": "rafael.co.il",
+"type": "ביטחוני טכנולוגי"
+},
+{
+"company": "IAI",
+"domain": "iai.co.il",
+"type": "ביטחוני טכנולוגי"
+},
+{
+"company": "Ultra Security",
+"domain": "ultra.security",
+"type": "סייבר"
+},
+{
+"company": "Sentra",
+"domain": "sentra.io",
+"type": "סייבר"
+},
+{
+"company": "Granulate",
+"domain": "granulate.io",
+"type": "סטארטאפ"
+},
+{
+"company": "Run:ai",
+"domain": "run.ai",
+"type": "סטארטאפ"
+},
+{
+"company": "Deci",
+"domain": "deci.ai",
+"type": "סטארטאפ"
+},
+{
+"company": "Pecan",
+"domain": "pecan.ai",
+"type": "סטארטאפ"
+},
+{
+"company": "Hour One",
+"domain": "hourone.ai",
+"type": "סטארטאפ"
+},
+{
+"company": "Taranis",
+"domain": "taranis.com",
+"type": "סטארטאפ"
+},
+{
+"company": "Nanox",
+"domain": "nanox.vision",
+"type": "חומרה"
+},
+{
+"company": "Zebra Medical",
+"domain": "zebra-med.com",
+"type": "סטארטאפ"
+},
+{
+"company": "Viz.ai",
+"domain": "viz.ai",
+"type": "סטארטאפ"
+},
+{
+"company": "Sight Diagnostics",
+"domain": "sightdx.com",
+"type": "חומרה"
+},
+{
+"company": "Gamida",
+"domain": "gamida.com",
+"type": "סטארטאפ"
+},
+{
+"company": "Jit",
+"domain": "jit.io",
+"type": "סייבר"
+},
+{
+"company": "Spot.io",
+"domain": "spot.io",
+"type": "חברת מוצר"
+},
+{
+"company": "Zesty",
+"domain": "zesty.co",
+"type": "סטארטאפ"
+},
+{
+"company": "Firefly",
+"domain": "firefly.ai",
+"type": "סטארטאפ"
+},
+{
+"company": "Dazz",
+"domain": "dazz.io",
+"type": "סייבר"
+},
+{
+"company": "Wing Security",
+"domain": "wing.security",
+"type": "סייבר"
+},
+{
+"company": "Aim Security",
+"domain": "aim.security",
+"type": "סייבר"
+},
+{
+"company": "Noma Security",
+"domain": "noma.security",
+"type": "סייבר"
+},
+{
+"company": "Pillar Security",
+"domain": "pillar.security",
+"type": "סייבר"
+},
+{
+"company": "Make",
+"domain": "make.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Cloudinary",
+"domain": "cloudinary.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Yotpo",
+"domain": "yotpo.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Lili",
+"domain": "lili.co",
+"type": "פינטק"
+},
+{
+"company": "Mixtiles",
+"domain": "mixtiles.com",
+"type": "סטארטאפ"
+},
+{
+"company": "Superplay",
+"domain": "superplay.co",
+"type": "משחקים"
+},
+{
+"company": "Playstudios Israel",
+"domain": "playstudios.com",
+"type": "משחקים"
+},
+{
+"company": "Huuuge",
+"domain": "huuugegames.com",
+"type": "משחקים"
+},
+{
+"company": "Tiltan Games",
+"domain": "tiltangames.com",
+"type": "משחקים"
+},
+{
+"company": "Fyber/Digital Turbine",
+"domain": "digitalturbine.com",
+"type": "חברת מוצר"
+},
+{
+"company": "ironSource",
+"domain": "is.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Perion",
+"domain": "perion.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Tremor/Nexxen",
+"domain": "nexxen.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Kenshoo/Skai",
+"domain": "skai.io",
+"type": "חברת מוצר"
+},
+{
+"company": "Global-e",
+"domain": "global-e.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Riskified",
+"domain": "riskified.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Forter",
+"domain": "forter.com",
+"type": "חברת מוצר"
+},
+{
+"company": "Nice",
+"domain": "nice.com",
+"type": "בית תוכנה"
+},
+{
+"company": "Matrix",
+"domain": "matrix.co.il",
+"type": "בית תוכנה"
+},
+{
+"company": "Malam Team",
+"domain": "malamteam.com",
+"type": "בית תוכנה"
+},
+{
+"company": "One Technologies",
+"domain": "one1.co.il",
+"type": "בית תוכנה"
+},
+{
+"company": "Ness",
+"domain": "ness-tech.co.il",
+"type": "בית תוכנה"
+},
+{
+"company": "Sela",
+"domain": "sela.co.il",
+"type": "בית תוכנה"
+},
+{
+"company": "Bynet",
+"domain": "bynet.co.il",
+"type": "בית תוכנה"
+},
+{
+"company": "Bank Leumi",
+"domain": "leumi.co.il",
+"type": "תאגיד בינלאומי"
+},
+{
+"company": "Bank Hapoalim",
+"domain": "bankhapoalim.co.il",
+"type": "תאגיד בינלאומי"
+},
+{
+"company": "Discount Bank",
+"domain": "discountbank.co.il",
+"type": "תאגיד בינלאומי"
+},
+{
+"company": "Migdal",
+"domain": "migdal.co.il",
+"type": "תאגיד בינלאומי"
+},
+{
+"company": "Harel",
+"domain": "harel-group.co.il",
+"type": "תאגיד בינלאומי"
+}
+]
