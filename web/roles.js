@@ -23,7 +23,8 @@
     ['solutions', 'פתרונות, Presales ותמיכה'],
     ['hw', 'חומרה, אלקטרוניקה ומערכות'],
     ['it', 'IT ומערכות מידע'],
-    ['digital', 'דיגיטל, משחקים ותלת־ממד']
+    ['marketing', 'שיווק דיגיטלי, קריאייטיב ותוכן'],
+    ['digital', 'משחקים, תלת־ממד ו־XR']
   ];
 
   const R = (id, he, en, g, re, desc) => ({ id, he, en, g, re, desc: desc || null });
@@ -164,9 +165,48 @@
     R('xr', 'מפתח/ת VR / AR / XR', ['VR Developer', 'AR Developer', 'XR'], 'digital', /\bvr\b|\bar\b (developer|engineer)|\bxr\b|virtual reality|augmented reality|מציאות מדומה/i),
     R('simulation', 'מפתח/ת סימולטורים', ['Simulation Engineer', 'Simulator Developer'], 'digital', /simulat|סימולטור|סימולציה/i),
     R('creative_tech', 'מנהל/ת טכנולוגיה קריאייטיב', ['Creative Technologist', 'Creative Technology Lead'], 'digital', /creative technolog/i),
-    R('visual_design', 'מעצב/ת גרפי/ת ומיתוג דיגיטלי', ['Brand Designer', 'Visual Designer', 'Graphic Designer'], 'digital', /brand designer|visual designer|graphic designer|מעצב גרפי|מעצבת גרפית/i),
-    R('digital_marketing', 'מנהל/ת שיווק דיגיטלי ו־Growth', ['Digital Marketing', 'Growth Manager', 'Performance Marketing', 'SEO', 'PPC', 'Demand Generation'], 'digital',
-      /digital marketing|growth (manager|marketing|lead)|performance marketing|\bseo\b|\bppc\b|\bsem\b|demand generation|marketing technolog|martech|ad operation|programmatic|שיווק דיגיטלי/i)
+    R('concept_art', 'אמן/ית משחקים (2D / Concept / UI)', ['Game Artist', 'Concept Artist', 'UI Artist', '2D Artist'], 'digital', /concept art|2d artist|game artist|ui artist|character artist|environment artist/i),
+    R('sound', 'מעצב/ת סאונד', ['Sound Designer', 'Audio Designer'], 'digital', /sound design|audio (designer|engineer)|סאונד/i),
+    R('liveops', 'מנהל/ת LiveOps ומוניטיזציה', ['LiveOps Manager', 'Monetization', 'Game Economy'], 'digital', /live ?ops|monetization|game economy|economy design/i),
+    R('elearning', 'מפתח/ת הדרכה ו־e-Learning', ['Instructional Designer', 'e-Learning Developer'], 'digital', /instructional design|e-?learning|לומדות|פיתוח הדרכה/i),
+
+    /* ---------- שיווק דיגיטלי, קריאייטיב ותוכן ---------- */
+    R('art_director', 'ארט דירקטור/ית', ['Art Director', 'Senior Art Director'], 'marketing', /art direct|ארט דירקטור|ארט-דירקטור/i),
+    R('creative_dir', 'מנהל/ת קריאייטיב (Creative Director)', ['Creative Director', 'Head of Creative', 'Creative Lead'], 'marketing', /creative (director|lead|manager)|head of creative|קריאייטיב דירקטור|מנהל קריאייטיב|מנהלת קריאייטיב/i),
+    R('visual_design', 'מעצב/ת גרפי/ת ומיתוג', ['Graphic Designer', 'Brand Designer', 'Visual Designer'], 'marketing', /brand designer|visual designer|graphic designer|marketing designer|מעצב גרפי|מעצבת גרפית|גרפיקאי/i),
+    R('web_designer', 'מעצב/ת אתרים ודפי נחיתה', ['Web Designer', 'Landing Pages', 'Webflow'], 'marketing', /web designer|landing page|webflow|מעצב אתרים|עיצוב אתרים|דפי נחיתה/i),
+    R('illustrator', 'מאייר/ת', ['Illustrator'], 'marketing', /illustrat|מאייר/i),
+    R('video', 'עורך/ת וידאו ומפיק/ת תוכן', ['Video Editor', 'Video Producer', 'Content Creator'], 'marketing', /video (editor|producer|creator|designer)|content creator|עורך וידאו|עורכת וידאו|עריכת וידאו/i),
+    R('marcom', 'מנהל/ת מרקום (Marcom)', ['Marketing Communications Manager', 'Marcom'], 'marketing', /marcom|marketing communication|מרקום|תקשורת שיווקית/i),
+    R('pmm', 'מנהל/ת שיווק מוצר (PMM)', ['Product Marketing Manager', 'PMM'], 'marketing', /product marketing|\bpmm\b|שיווק מוצר/i),
+    R('marketing_mgr', 'מנהל/ת שיווק', ['Marketing Manager', 'Head of Marketing', 'VP Marketing', 'CMO'], 'marketing', /marketing (manager|director|lead)|head of marketing|vp,? marketing|\bcmo\b|מנהל שיווק|מנהלת שיווק|סמנכ"?ל שיווק/i),
+    R('brand', 'מנהל/ת מותג', ['Brand Manager', 'Brand Marketing'], 'marketing', /brand (manager|lead|marketing|strategist)|מנהל מותג|מנהלת מותג/i),
+    R('digital_marketing', 'מנהל/ת שיווק דיגיטלי', ['Digital Marketing Manager', 'Online Marketing', 'MarTech'], 'marketing', /digital marketing|online marketing|marketing technolog|martech|שיווק דיגיטלי|שיווק באינטרנט/i),
+    R('ppc', 'מנהל/ת קמפיינים (PPC / Performance)', ['PPC Manager', 'Performance Marketing', 'Paid Media', 'Media Buyer'], 'marketing', /\bppc\b|\bsem\b|performance marketing|paid (media|social|acquisition|search)|media buy|campaign manager|קמפיינר|מנהל קמפיינים|מנהלת קמפיינים|קניית מדיה/i),
+    R('seo', 'מומחה/ית SEO', ['SEO Specialist', 'SEO Manager'], 'marketing', /\bseo\b|קידום אורגני/i),
+    R('ua', 'מנהל/ת User Acquisition', ['User Acquisition Manager', 'UA', 'ASO'], 'marketing', /user acquisition|\bua\b (manager|specialist|lead|analyst)|\baso\b|app store optim/i),
+    R('growth', 'מנהל/ת Growth', ['Growth Manager', 'Growth Marketing', 'Growth Lead'], 'marketing', /\bgrowth\b|צמיחה/i),
+    R('demand_gen', 'מנהל/ת Demand Generation', ['Demand Generation', 'Lead Generation'], 'marketing', /demand gen|lead gen/i),
+    R('crm_mkt', 'מנהל/ת CRM ואוטומציה שיווקית', ['CRM Manager', 'Lifecycle Marketing', 'Marketing Automation', 'Marketing Ops'], 'marketing', /crm (manager|marketing|specialist|lead)|lifecycle|marketing automation|retention marketing|email marketing|marketing op(eration)?s|marketo|מנהל crm|מנהלת crm/i),
+    R('content', 'מנהל/ת תוכן וכתיבה שיווקית', ['Content Manager', 'Content Writer', 'Content Marketing'], 'marketing', /content (manager|writer|marketing|strategist|lead|specialist)|כותב תוכן|כותבת תוכן|מנהל תוכן|מנהלת תוכן/i),
+    R('copywriter', 'קופירייטר/ית', ['Copywriter'], 'marketing', /copywrit|קופירייט/i),
+    R('social', 'מנהל/ת סושיאל וקהילה', ['Social Media Manager', 'Community Manager'], 'marketing', /social media|community manager|סושיאל|רשתות חברתיות|מנהל קהילה|מנהלת קהילה/i),
+    R('adops', 'מנהל/ת Ad Operations ו־AdTech', ['Ad Operations', 'Programmatic', 'AdTech'], 'marketing', /ad ?op(eration)?s?\b|programmatic|adtech|ad trafficking/i),
+    R('ecommerce', 'מנהל/ת אי־קומרס', ['E-commerce Manager', 'Online Store Manager'], 'marketing', /e-?commerce|אי.?קומרס|סחר מקוון|חנות אונליין/i),
+    R('affiliate', 'מנהל/ת שותפים ואפיליאייט', ['Affiliate Manager', 'Partner Marketing'], 'marketing', /affiliate|partner marketing|אפיליאייט/i),
+    R('mkt_analyst', 'אנליסט/ית שיווק', ['Marketing Analyst', 'Marketing Data Analyst'], 'marketing', /marketing (analyst|analytics|data)|אנליסט שיווק|אנליסטית שיווק/i),
+
+    /* ---------- extra engineering roles ---------- */
+    R('fae', 'מהנדס/ת FAE / Application', ['Field Application Engineer', 'Application Engineer'], 'hw', /field application|\bfae\b|application engineer/i),
+    R('process_eng', 'מהנדס/ת תהליך ותפוקה (Process / Yield)', ['Process Engineer', 'Yield Engineer', 'Metrology'], 'hw', /process (engineer|integration|development)|\byield\b|lithograph|metrology|\betch\b|מהנדס תהליך/i),
+    R('hw_test', 'מהנדס/ת בדיקות חומרה (Post-Silicon / ATE)', ['Post-Silicon Validation', 'ATE Test Engineer', 'Production Test'], 'hw', /post.?silicon|\bate\b|production test|product test engineer|hardware test/i),
+    R('quantum', 'מהנדס/ת קוונטים', ['Quantum Engineer', 'Quantum Software'], 'dev', /quantum|קוונט/i),
+    R('finops', 'מהנדס/ת FinOps', ['FinOps', 'Cloud Cost'], 'infra', /finops|cloud cost/i),
+    R('bioinfo', 'ביואינפורמטיקאי/ת', ['Bioinformatician', 'Computational Biologist'], 'data', /bioinformatic|computational biolog|ביואינפורמטיק/i),
+    R('data_gov', 'Data Governance ואיכות נתונים', ['Data Governance', 'Data Quality', 'Data Steward'], 'data', /data (governance|quality|steward)/i),
+    R('fraud', 'אנליסט/ית הונאות ו־Trust & Safety', ['Fraud Analyst', 'Risk Analyst', 'Trust & Safety'], 'cyber', /fraud (analyst|research|investigat|data|manager)|risk analyst|trust (and|&) safety|הונאות/i),
+    R('devrel', 'Developer Relations', ['Developer Advocate', 'DevRel', 'Evangelist'], 'solutions', /developer (relations|advocate|evangelist)|devrel/i),
+    R('csm', 'מנהל/ת Customer Success', ['Customer Success Manager', 'CSM'], 'solutions', /customer success|הצלחת לקוח/i)
   ];
 
   const ROLE = Object.fromEntries(ROLES.map(r => [r.id, r]));
