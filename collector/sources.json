@@ -49,20 +49,6 @@
   "verified": "2026-10-15"
  },
  {
-  "company": "Lightricks",
-  "ats": "greenhouse",
-  "token": "lightricks",
-  "type": "חברת מוצר",
-  "verified": "2026-10-15"
- },
- {
-  "company": "Armis",
-  "ats": "greenhouse",
-  "token": "armissecurity",
-  "type": "סייבר",
-  "verified": "2026-10-15"
- },
- {
   "company": "Gong",
   "ats": "greenhouse",
   "token": "gongio",
@@ -91,213 +77,214 @@
   "verified": "2026-10-15"
  },
  {
-  "company": "HiBob",
-  "ats": "greenhouse",
-  "token": "hibob",
-  "type": "חברת מוצר",
-  "verified": null
- },
- {
-  "company": "Outbrain",
-  "ats": "greenhouse",
-  "token": "outbrain",
-  "type": "חברת מוצר",
-  "verified": null
- },
- {
-  "company": "Cyera",
-  "ats": "greenhouse",
-  "token": "cyera",
-  "type": "סייבר",
-  "verified": null
- },
- {
-  "company": "Snyk",
-  "ats": "greenhouse",
-  "token": "snyk",
-  "type": "סייבר",
-  "verified": null
- },
- {
   "company": "Yotpo",
   "ats": "greenhouse",
   "token": "yotpo",
   "type": "חברת מוצר",
-  "verified": null
+  "verified": "2026-10-20"
  },
  {
   "company": "Transmit Security",
   "ats": "greenhouse",
   "token": "transmitsecurity",
   "type": "סייבר",
-  "verified": null
- },
- {
-  "company": "Tipalti",
-  "ats": "greenhouse",
-  "token": "tipalti",
-  "type": "פינטק",
-  "verified": null
- },
- {
-  "company": "Rapyd",
-  "ats": "greenhouse",
-  "token": "rapyd",
-  "type": "פינטק",
-  "verified": null
+  "verified": "2026-10-20"
  },
  {
   "company": "Via",
   "ats": "greenhouse",
   "token": "via",
   "type": "חברת מוצר",
-  "verified": null
+  "verified": "2026-10-20"
  },
  {
   "company": "Melio",
   "ats": "greenhouse",
   "token": "melio",
   "type": "פינטק",
-  "verified": null
- },
- {
-  "company": "Papaya Global",
-  "ats": "greenhouse",
-  "token": "papayaglobal",
-  "type": "חברת מוצר",
-  "verified": null
- },
- {
-  "company": "Coralogix",
-  "ats": "greenhouse",
-  "token": "coralogix",
-  "type": "חברת מוצר",
-  "verified": null
- },
- {
-  "company": "Lemonade",
-  "ats": "greenhouse",
-  "token": "lemonade",
-  "type": "חברת מוצר",
-  "verified": null
- },
- {
-  "company": "Honeybook",
-  "ats": "greenhouse",
-  "token": "honeybook",
-  "type": "חברת מוצר",
-  "verified": null
- },
- {
-  "company": "Lusha",
-  "ats": "greenhouse",
-  "token": "lusha",
-  "type": "חברת מוצר",
-  "verified": null
+  "verified": "2026-10-20"
  },
  {
   "company": "Torq",
   "ats": "greenhouse",
   "token": "torq",
   "type": "סייבר",
-  "verified": null
- },
- {
-  "company": "Island",
-  "ats": "greenhouse",
-  "token": "islandio",
-  "type": "סייבר",
-  "verified": null
- },
- {
-  "company": "Redis",
-  "ats": "greenhouse",
-  "token": "redis",
-  "type": "חברת מוצר",
-  "verified": null
- },
- {
-  "company": "Nayax",
-  "ats": "greenhouse",
-  "token": "nayax",
-  "type": "חברת מוצר",
-  "verified": null
- },
- {
-  "company": "Earnix",
-  "ats": "greenhouse",
-  "token": "earnix",
-  "type": "חברת מוצר",
-  "verified": null
+  "verified": "2026-10-20"
  },
  {
   "company": "Optimove",
   "ats": "greenhouse",
   "token": "optimove",
   "type": "חברת מוצר",
-  "verified": null
+  "verified": "2026-10-20"
  },
  {
   "company": "Fireblocks",
   "ats": "greenhouse",
   "token": "fireblocks",
   "type": "פינטק",
-  "verified": null
+  "verified": "2026-10-20"
  },
  {
   "company": "Navan",
   "ats": "greenhouse",
   "token": "tripactions",
   "type": "חברת מוצר",
-  "verified": null
+  "verified": "2026-10-20"
  },
  {
   "company": "SentinelOne",
   "ats": "greenhouse",
   "token": "sentinellabs",
   "type": "סייבר",
-  "verified": null
- },
- {
-  "company": "Zesty",
-  "ats": "lever",
-  "token": "zesty",
-  "type": "סטארטאפ",
-  "verified": null
- },
- {
-  "company": "Hailo",
-  "ats": "lever",
-  "token": "hailo",
-  "type": "חומרה",
-  "verified": null
- },
- {
-  "company": "JFrog",
-  "ats": "lever",
-  "token": "jfrog",
-  "type": "חברת מוצר",
-  "verified": null
+  "verified": "2026-10-20"
  },
  {
   "company": "Wix",
   "ats": "smartrecruiters",
   "token": "Wix2",
   "type": "חברת מוצר",
-  "verified": null
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Armis",
+  "ats": "smartrecruiters",
+  "token": "armis",
+  "type": "סייבר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "JFrog",
+  "ats": "greenhouse",
+  "token": "jfrog",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Tipalti",
+  "ats": "greenhouse",
+  "token": "tipaltisolutions",
+  "type": "פינטק",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Island",
+  "ats": "greenhouse",
+  "token": "island",
+  "type": "סייבר",
+  "verified": "2026-10-20"
  },
  {
   "company": "Playtika",
-  "ats": "smartrecruiters",
-  "token": "Playtika",
+  "ats": "greenhouse",
+  "token": "playtikaltd",
   "type": "משחקים",
-  "verified": null
+  "verified": "2026-10-20"
  },
  {
-  "company": "Check Point",
-  "ats": "smartrecruiters",
-  "token": "CheckPointSoftwareTechnologiesLtd",
+  "company": "Orca Security",
+  "ats": "greenhouse",
+  "token": "orcasecurity",
   "type": "סייבר",
-  "verified": null
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "NICE",
+  "ats": "greenhouse",
+  "token": "nice",
+  "type": "בית תוכנה",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Snyk",
+  "ats": "ashby",
+  "token": "snyk",
+  "type": "סייבר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Honeybook",
+  "ats": "ashby",
+  "token": "honeybook",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Lemonade",
+  "ats": "ashby",
+  "token": "lemonade",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Redis",
+  "ats": "ashby",
+  "token": "redis",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Oligo Security",
+  "ats": "ashby",
+  "token": "oligo",
+  "type": "סייבר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Zesty",
+  "ats": "greenhouse",
+  "token": "zestyai",
+  "type": "סטארטאפ",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Bringg",
+  "ats": "greenhouse",
+  "token": "bringg",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Mobileye",
+  "ats": "lever",
+  "eu": true,
+  "token": "mobileye",
+  "type": "חומרה",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "NVIDIA",
+  "ats": "workday",
+  "token": "nvidia.wd5.myworkdayjobs.com|nvidia|NVIDIAExternalCareerSite",
+  "type": "חומרה",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Intel",
+  "ats": "workday",
+  "token": "intel.wd1.myworkdayjobs.com|intel|External",
+  "type": "חומרה",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Applied Materials",
+  "ats": "workday",
+  "token": "amat.wd1.myworkdayjobs.com|amat|External",
+  "type": "חומרה",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Marvell",
+  "ats": "workday",
+  "token": "marvell.wd1.myworkdayjobs.com|marvell|MarvellCareers",
+  "type": "חומרה",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "KLA",
+  "ats": "workday",
+  "token": "kla.wd1.myworkdayjobs.com|kla|Search",
+  "type": "חומרה",
+  "verified": "2026-10-20"
  }
 ]

@@ -154,9 +154,10 @@ const ADAPTERS = {
     const base = `https://${host}/wday/cxs/${tenant}/${site}`;
     if (FIXTURES) return readFixture('workday_' + tenant);
     const list = []; let total = Infinity;
-    for (let offset = 0; offset < Math.min(total, 600); offset += 20) {
+    for (let offset = 0; offset < Math.min(total, 1000); offset += 20) {
       const page = await request(base + '/jobs', { method: 'POST', body: { appliedFacets: {}, limit: 20, offset, searchText: src.search || 'Israel' } });
-      total = page.total ?? 0; list.push(...(page.jobPostings || []));
+      if (offset === 0) total = page.total ?? 0;   // Workday sends the total only on the first page
+      list.push(...(page.jobPostings || []));
       if (!(page.jobPostings || []).length) break;
       await sleep(250);
     }
