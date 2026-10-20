@@ -113,7 +113,7 @@
     R('ux', 'מעצב/ת UX/UI', ['UX/UI Designer', 'Product Designer', 'Interaction Designer'], 'product', /\bux\b|\bui\b designer|ui\/ux|product designer|interaction designer|מעצב ux|מעצבת ux|עיצוב ממשק/i),
     R('ux_research', 'חוקר/ת UX', ['UX Researcher', 'User Researcher'], 'product', /ux research|user research/i),
     R('ux_writer', 'כותב/ת UX', ['UX Writer', 'Content Designer'], 'product', /ux writ|content designer/i),
-    R('design_mgr', 'מנהל/ת עיצוב', ['Design Lead', 'Head of Design', 'Design Manager'], 'product', /design (team )?lead|head of design|director,? product design|design manager|product design team lead/i),
+    R('design_mgr', 'מנהל/ת עיצוב', ['Design Lead', 'Head of Design', 'Design Manager'], 'product', /(?<!chip |board |asic |hardware |physical )design (team )?lead|head of design|director,? product design|(?<!chip |board |asic |hardware |physical )design manager|product design team lead|ux (team )?(lead|manager)/i),
     R('business_analyst', 'מנתח/ת מערכות / Business Analyst', ['Business Analyst', 'System Analyst'], 'product', /business analyst|system(s)? analyst|מנתח מערכות|מנתחת מערכות/i),
 
     /* ---------- ניהול טכנולוגי ---------- */
