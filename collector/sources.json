@@ -286,5 +286,348 @@
   "token": "kla.wd1.myworkdayjobs.com|kla|Search",
   "type": "חומרה",
   "verified": "2026-10-20"
+ },
+ {
+  "company": "monday.com",
+  "ats": "ashby",
+  "token": "monday.com",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Teads (Outbrain)",
+  "ats": "greenhouse",
+  "token": "teads1",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Aidoc",
+  "ats": "greenhouse",
+  "token": "aidocmedical",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Unity / ironSource",
+  "ats": "workday",
+  "token": "unitytech.wd1.myworkdayjobs.com|unitytech|Unity",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Salt Security",
+  "ats": "greenhouse",
+  "token": "saltsecurity",
+  "type": "סייבר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Sisense",
+  "ats": "ashby",
+  "token": "sisense",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Palo Alto Networks",
+  "ats": "workday",
+  "token": "paloaltonetworks.wd5.myworkdayjobs.com|paloaltonetworks|panwexternalcareers",
+  "type": "סייבר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Western Digital",
+  "ats": "smartrecruiters",
+  "token": "WesternDigital",
+  "type": "חומרה",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Red Hat",
+  "ats": "workday",
+  "token": "redhat.wd5.myworkdayjobs.com|redhat|jobs",
+  "type": "תאגיד בינלאומי",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Hippo",
+  "ats": "greenhouse",
+  "token": "hippo70",
+  "type": "פינטק",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Viz.ai",
+  "ats": "ashby",
+  "token": "Viz.ai",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Flexera (Spot)",
+  "ats": "workday",
+  "token": "flexerasoftware.wd1.myworkdayjobs.com|flexerasoftware|FlexeraSoftware",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Mixtiles",
+  "ats": "greenhouse",
+  "token": "mixtiles",
+  "type": "סטארטאפ",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Huuuge Games",
+  "ats": "recruitee",
+  "token": "huuuge",
+  "type": "משחקים",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Digital Turbine",
+  "ats": "workday",
+  "token": "digitalturbine.wd501.myworkdayjobs.com|digitalturbine|Digital_Turbine_External_Careers",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Perion",
+  "ats": "greenhouse",
+  "token": "perionnetworkltd",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Nexxen",
+  "ats": "greenhouse",
+  "token": "nexxen",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Cyera",
+  "ats": "comeet",
+  "token": "cyera/17.008",
+  "type": "סייבר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Riverside",
+  "ats": "comeet",
+  "token": "riverside-fm/66.009",
+  "type": "סטארטאפ",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Earnix",
+  "ats": "comeet",
+  "token": "earnix/93.00B",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Cognyte",
+  "ats": "comeet",
+  "token": "cognyte/F2.009",
+  "type": "סייבר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Ironscales",
+  "ats": "comeet",
+  "token": "ironscales/1A.007",
+  "type": "סייבר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "ThetaRay",
+  "ats": "comeet",
+  "token": "thetaray/72.00F",
+  "type": "פינטק",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Claroty",
+  "ats": "comeet",
+  "token": "F2.004:2F4EC42F42F45E814AC1A945E814AC5E8",
+  "type": "סייבר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Pentera",
+  "ats": "comeet",
+  "token": "C5.00D:5CD1D013435289B343501D012E682E68289B",
+  "type": "סייבר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Silverfort",
+  "ats": "comeet",
+  "token": "54.007:45715B315B38AE22B8D051A0A457D051E61",
+  "type": "סייבר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Aqua Security",
+  "ats": "comeet",
+  "token": "91.001:191644966966644E194B3191644644",
+  "type": "סייבר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Upwind",
+  "ats": "comeet",
+  "token": "49.004:94440DC0944094401BCC12882510",
+  "type": "סייבר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "AI21 Labs",
+  "ats": "comeet",
+  "token": "E6.001:6E12946DC230276E13DE93708294637083708",
+  "type": "סטארטאפ",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Innoviz",
+  "ats": "comeet",
+  "token": "52.004:25495012A0104C012A0104C6FCBA40",
+  "type": "חומרה",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Coralogix",
+  "ats": "comeet",
+  "token": "06.004:604241801E141E1460430200604604",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Lusha",
+  "ats": "comeet",
+  "token": "73.00B:37B11676F61F53DEC6F606F61BD8185D",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "AudioCodes",
+  "ats": "comeet",
+  "token": "85.004:5841B942C2058431A4108C269C108C0108C",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "WSC Sports",
+  "ats": "comeet",
+  "token": "93.007:39711F3AC5AC539701CB81CB8204FE5C",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "eToro",
+  "ats": "comeet",
+  "token": "41.009:14952452466D3DB7B61495240B91",
+  "type": "פינטק",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Optibus",
+  "ats": "comeet",
+  "token": "D1.00C:1DC770D04770594B281DC3B83B81DC",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Elementor",
+  "ats": "comeet",
+  "token": "A3.00F:3AF126BB0D161A3AF161A00B0D126B",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Sygnia",
+  "ats": "comeet",
+  "token": "78.00A:87A32DC3B5687A196E2A6210F43B5610F43B56",
+  "type": "סייבר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "XM Cyber",
+  "ats": "comeet",
+  "token": "15.005:51519692393A2A1454A2A145423930F3F",
+  "type": "סייבר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Ox Security",
+  "ats": "comeet",
+  "token": "F8.006:8F635C447B035C42CCE2CCE23D83EBA35C48F6",
+  "type": "סייבר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Wiliot",
+  "ats": "comeet",
+  "token": "F6.003:6F329B2DE6379829B229B2037983E8B3E8B",
+  "type": "חומרה",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Autotalks",
+  "ats": "comeet",
+  "token": "03.009:309F2D30991BF2D1B51C24C2412361B51",
+  "type": "חומרה",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Arbe Robotics",
+  "ats": "comeet",
+  "token": "C6.001:6C12886D821B0414432886144328862F472F47",
+  "type": "חומרה",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Imagry",
+  "ats": "comeet",
+  "token": "B7.00F:7BF2E7A1EFC1EFCF7E7BF36393DF826BB2E7A",
+  "type": "סטארטאפ",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Taranis",
+  "ats": "comeet",
+  "token": "34.003:43314FF14FF043314FF10CC10CC25CB866",
+  "type": "סטארטאפ",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Firefly",
+  "ats": "comeet",
+  "token": "39.000:930372052B04980126024C024C02DF09304050",
+  "type": "סטארטאפ",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Superplay",
+  "ats": "comeet",
+  "token": "28.003:82330D228AF208C208C493B30D2208C38F538F5",
+  "type": "משחקים",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Skai",
+  "ats": "comeet",
+  "token": "22.00A:22A8A81150454CFC115022AAD2F26137A",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
+ },
+ {
+  "company": "Global-e",
+  "ats": "comeet",
+  "token": "62.002:262988131015727264C41572E4C10AE10AE",
+  "type": "חברת מוצר",
+  "verified": "2026-10-20"
  }
 ]

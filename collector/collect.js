@@ -148,6 +148,16 @@ const ADAPTERS = {
       desc: htmlToText(j.description || ''), dept: j.department || '', workplace: j.telecommuting ? 'Remote' : null, employment: j.employment_type || null, salary: null
     }));
   },
+  async recruitee(src) {
+    const data = await load('recruitee_' + src.token, `https://${src.token}.recruitee.com/api/offers/`);
+    return (data.offers || []).map(j => ({
+      extId: String(j.id), title: j.title, location: [j.city, j.state_name || j.state, j.country].filter(Boolean).join(', ') || j.location || '',
+      locations: (j.locations || []).map(l => [l.city, l.country].filter(Boolean).join(', ')),
+      url: j.careers_url || j.careers_apply_url, posted: j.published_at || j.created_at, updated: j.updated_at || null,
+      desc: htmlToText([j.description, j.requirements].filter(Boolean).join('\n')), dept: j.department || '',
+      workplace: j.remote ? 'Remote' : (j.hybrid ? 'Hybrid' : null), employment: j.employment_type_code || null, salary: null
+    }));
+  },
   async workday(src) {
     // token = "<host>|<tenant>|<site>", e.g. "nvidia.wd5.myworkdayjobs.com|nvidia|NVIDIAExternalCareerSite"
     const [host, tenant, site] = String(src.token).split('|');
