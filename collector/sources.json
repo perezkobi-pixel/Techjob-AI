@@ -400,13 +400,6 @@
   "verified": "2026-10-20"
  },
  {
-  "company": "Nexxen",
-  "ats": "greenhouse",
-  "token": "nexxen",
-  "type": "חברת מוצר",
-  "verified": "2026-10-20"
- },
- {
   "company": "Cyera",
   "ats": "comeet",
   "token": "cyera/17.008",
@@ -571,13 +564,6 @@
   "company": "Wiliot",
   "ats": "comeet",
   "token": "F6.003:6F329B2DE6379829B229B2037983E8B3E8B",
-  "type": "חומרה",
-  "verified": "2026-10-20"
- },
- {
-  "company": "Autotalks",
-  "ats": "comeet",
-  "token": "03.009:309F2D30991BF2D1B51C24C2412361B51",
   "type": "חומרה",
   "verified": "2026-10-20"
  },
