@@ -48,21 +48,25 @@ function htmlToText(html) {
 const clip = (s, n) => { if (!s || s.length <= n) return s || ''; const cut = s.slice(0, n); const i = Math.max(cut.lastIndexOf('. '), cut.lastIndexOf('\n')); return (i > n * 0.6 ? cut.slice(0, i + 1) : cut) + '…'; };
 const shortId = s => crypto.createHash('sha1').update(s).digest('base64url').slice(0, 10);
 
-async function getJSON(url, tries = 2) {
+async function request(url, { method = 'GET', body = null, tries = 2, as = 'json' } = {}) {
   for (let a = 1; a <= tries; a++) {
     try {
       const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), 25000);
-      const res = await fetch(url, { headers: { 'User-Agent': UA, Accept: 'application/json' }, signal: ctl.signal });
+      const headers = { 'User-Agent': UA, Accept: as === 'json' ? 'application/json' : 'text/html' };
+      if (body) headers['Content-Type'] = 'application/json';
+      const res = await fetch(url, { method, headers, body: body ? JSON.stringify(body) : undefined, signal: ctl.signal });
       clearTimeout(t);
-      if (res.status === 404) throw Object.assign(new Error('board not found (404)'), { fatal: true });
+      if (res.status === 404 || res.status === 410) throw Object.assign(new Error('board not found (' + res.status + ')'), { fatal: true });
+      if (res.status === 401 || res.status === 403) throw Object.assign(new Error('access denied (' + res.status + ')'), { fatal: true });
       if (!res.ok) throw new Error('HTTP ' + res.status);
-      return await res.json();
+      return as === 'json' ? await res.json() : await res.text();
     } catch (e) {
       if (e.fatal || a === tries) throw e;
       await sleep(1500 * a);
     }
   }
 }
+const getJSON = (url, tries) => request(url, { tries });
 function readFixture(name) {
   const f = path.join(FIXTURES, name + '.json');
   if (!fs.existsSync(f)) throw Object.assign(new Error('no fixture ' + name), { fatal: true });
@@ -74,7 +78,8 @@ const load = (fixtureName, url) => FIXTURES ? readFixture(fixtureName) : getJSON
 // raw = { extId, title, location, locations[], url, posted, desc, dept, workplace, employment, salary }
 const ADAPTERS = {
   async greenhouse(src) {
-    const data = await load('greenhouse_' + src.token, `https://boards-api.greenhouse.io/v1/boards/${src.token}/jobs?content=true`);
+    const host = src.eu ? 'boards-api.eu.greenhouse.io' : 'boards-api.greenhouse.io';
+    const data = await load('greenhouse_' + src.token, `https://${host}/v1/boards/${src.token}/jobs?content=true`);
     return (data.jobs || []).map(j => ({
       extId: String(j.id), title: j.title, location: j.location?.name || '',
       locations: (j.offices || []).map(o => [o.name, o.location].filter(Boolean).join(', ')),
@@ -84,7 +89,7 @@ const ADAPTERS = {
     }));
   },
   async lever(src) {
-    const data = await load('lever_' + src.token, `https://api.lever.co/v0/postings/${src.token}?mode=json`);
+    const data = await load('lever_' + src.token, `https://${src.eu ? 'api.eu.lever.co' : 'api.lever.co'}/v0/postings/${src.token}?mode=json`);
     return (Array.isArray(data) ? data : []).map(j => ({
       extId: j.id, title: j.text, location: j.categories?.location || '', locations: j.categories?.allLocations || [],
       url: j.hostedUrl, posted: j.createdAt ? new Date(j.createdAt).toISOString() : null, updated: null,
@@ -114,15 +119,64 @@ const ADAPTERS = {
     }));
   },
   async comeet(src) {
-    // token = "<company uid>:<public token>" — both appear in the company's Comeet careers page source
-    const [uid, tok] = String(src.token).split(':');
-    const data = await load('comeet_' + uid, `https://www.comeet.co/careers-api/2.0/company/${uid}/positions?token=${tok}&details=true`);
-    return (Array.isArray(data) ? data : []).map(j => ({
+    // token = "<company uid>:<public token>"  → official careers API
+    //      or "<company-slug>/<company uid>"  → reads the positions embedded in the public Comeet jobs page
+    const mapPos = j => ({
       extId: j.uid, title: j.name, location: [j.location?.city, j.location?.name, j.location?.country === 'IL' ? 'Israel' : j.location?.country].filter(Boolean).join(', '),
-      locations: [], url: j.url_active_page || j.url_comeet_hosted_page, posted: j.time_updated, updated: j.time_updated,
+      locations: [], url: j.url_active_page || j.url_comeet_hosted_page || j.url_detected_page, posted: j.time_updated, updated: j.time_updated,
       desc: (j.details || []).map(d => (d.name ? d.name + '\n' : '') + htmlToText(d.value)).join('\n\n'),
       dept: j.department || '', workplace: j.workplace_type || (j.location?.is_remote ? 'Remote' : null), employment: j.employment_type || null, salary: null
+    });
+    if (String(src.token).includes('/')) {
+      const [slug, uid] = String(src.token).split('/');
+      const html = FIXTURES ? JSON.stringify(readFixture('comeet_' + uid)) : await request(`https://www.comeet.com/jobs/${slug}/${uid}`, { as: 'text' });
+      const m = html.match(/COMPANY_POSITIONS_DATA\s*=\s*(\[[\s\S]*?\]);\s*\n/) || html.match(/"positions"\s*:\s*(\[[\s\S]*?\])\s*[,}]/);
+      if (!m) throw Object.assign(new Error('no positions found on Comeet page'), { fatal: true });
+      return JSON.parse(m[1]).map(mapPos);
+    }
+    const [uid, tok] = String(src.token).split(':');
+    const data = await load('comeet_' + uid, `https://www.comeet.co/careers-api/2.0/company/${uid}/positions?token=${tok}&details=true`);
+    return (Array.isArray(data) ? data : []).map(mapPos);
+  },
+  async workable(src) {
+    const data = await load('workable_' + src.token, `https://apply.workable.com/api/v1/widget/accounts/${src.token}?details=true`);
+    return (data.jobs || []).map(j => ({
+      extId: j.shortcode || j.id, title: j.title,
+      location: [j.city, j.state, j.country].filter(Boolean).join(', '),
+      locations: (j.locations || []).map(l => [l.city, l.region, l.country].filter(Boolean).join(', ')),
+      url: j.url || j.shortlink || `https://apply.workable.com/${src.token}/j/${j.shortcode}/`, posted: j.published_on || j.created_at, updated: null,
+      desc: htmlToText(j.description || ''), dept: j.department || '', workplace: j.telecommuting ? 'Remote' : null, employment: j.employment_type || null, salary: null
     }));
+  },
+  async workday(src) {
+    // token = "<host>|<tenant>|<site>", e.g. "nvidia.wd5.myworkdayjobs.com|nvidia|NVIDIAExternalCareerSite"
+    const [host, tenant, site] = String(src.token).split('|');
+    const base = `https://${host}/wday/cxs/${tenant}/${site}`;
+    if (FIXTURES) return readFixture('workday_' + tenant);
+    const list = []; let total = Infinity;
+    for (let offset = 0; offset < Math.min(total, 600); offset += 20) {
+      const page = await request(base + '/jobs', { method: 'POST', body: { appliedFacets: {}, limit: 20, offset, searchText: src.search || 'Israel' } });
+      total = page.total ?? 0; list.push(...(page.jobPostings || []));
+      if (!(page.jobPostings || []).length) break;
+      await sleep(250);
+    }
+    const out = [];
+    for (const p of list) {
+      const lt = p.locationsText || '';
+      if (!locate(lt).inIsrael && !/\d+ locations/i.test(lt)) continue;
+      try {
+        const d = await request(base + p.externalPath);
+        const info = d.jobPostingInfo || {};
+        out.push({
+          extId: info.jobReqId || p.externalPath, title: info.title || p.title,
+          location: info.location || lt, locations: info.additionalLocations || [],
+          url: info.externalUrl || `https://${host}/${site}${p.externalPath}`, posted: info.startDate || null, updated: null,
+          desc: htmlToText(info.jobDescription || ''), dept: '', workplace: info.remoteType || null, employment: info.timeType || null, salary: null
+        });
+      } catch (e) { /* skip a posting that fails to load */ }
+      await sleep(150);
+    }
+    return out;
   }
 };
 
@@ -242,4 +296,5 @@ async function main() {
     `(fetched ${stats.fetched}, in Israel ${stats.israel}, non-tech skipped ${stats.nonTech}, duplicates merged ${stats.dupes}) → ${path.relative(process.cwd(), OUT)}/jobs.js`);
   if (!report.some(r => r.ok)) process.exitCode = 1;
 }
-main().catch(e => { console.error(e); process.exit(1); });
+module.exports = { ADAPTERS, classifyRoles, locate };
+if (require.main === module) main().catch(e => { console.error(e); process.exit(1); });
