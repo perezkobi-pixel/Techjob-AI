@@ -1,7 +1,7 @@
 /*
  * TechJob AI — web app.
  * Jobs come from data/jobs.js (built by collector/collect.js).
- * Accounts and personal data use Supabase when config.js is filled in, otherwise this browser (local mode).
+ * Accounts and personal data use Firebase when config.js is filled in, otherwise this browser (local mode).
  */
 (function () {
 'use strict';
@@ -30,10 +30,18 @@ const MODEL_NAME = { any: 'כל המודלים', office: 'משרד', hybrid: 'ה
 const STATUSES = ['נשלח', 'ראיון', 'משימה', 'הצעה', 'נדחה'];
 const PAGE = 25;
 
-/* ================= backend (Supabase or local) ================= */
+/* ================= backend (Firebase or local) ================= */
 const CFG = window.TJ_CONFIG || {};
-const SB = (CFG.supabaseUrl && CFG.supabaseAnonKey && window.supabase) ? window.supabase.createClient(CFG.supabaseUrl, CFG.supabaseAnonKey) : null;
-const CLOUD = !!SB;
+const FBC = CFG.firebase || {};
+let FA = null, FS = null, ST = null;
+if (FBC.apiKey && FBC.projectId && window.firebase) {
+  try {
+    firebase.initializeApp(FBC);
+    FA = firebase.auth(); FS = firebase.firestore();
+    if (FBC.storageBucket && firebase.storage) ST = firebase.storage();
+  } catch (e) { console.error('Firebase init failed', e); FA = null; }
+}
+const CLOUD = !!FA;
 const HERE = location.href.split('#')[0].split('?')[0];
 
 const blankProfile = () => ({ full_name: '', exp_years: null, skills: [], roles: [], region: 'all', work_model: 'any', salary_min: null, cv_name: null, cv_size_kb: null, cv_uploaded_at: null, cv_path: null, alerts_on: true, alerts_freq: 'יומית' });
@@ -68,49 +76,73 @@ const Local = {
 async function hash(s) { try { const b = await crypto.subtle.digest('SHA-256', new TextEncoder().encode('tj:' + s)); return [...new Uint8Array(b)].map(x => x.toString(16).padStart(2, '0')).join(''); } catch (e) { return null; } }
 
 const Cloud = {
-  toUser(u) { return u ? { id: u.id, email: u.email, name: u.user_metadata?.full_name || u.user_metadata?.name || (u.email || '').split('@')[0], provider: u.app_metadata?.provider || 'email' } : null; },
-  async session() { const { data } = await SB.auth.getSession(); return this.toUser(data.session?.user); },
+  toUser(u) { return u ? { id: u.uid, email: u.email, name: u.displayName || (u.email || '').split('@')[0], provider: (u.providerData[0] && u.providerData[0].providerId) || 'password' } : null; },
+  session() { return new Promise(res => { const off = FA.onAuthStateChanged(u => { off(); res(this.toUser(u)); }); }); },
   async signUp(name, email, pw) {
-    const { data, error } = await SB.auth.signUp({ email, password: pw, options: { data: { full_name: name }, emailRedirectTo: HERE } });
-    if (error) throw new Error(heError(error)); return { user: this.toUser(data.session?.user), needsConfirm: !data.session };
+    try {
+      const cred = await FA.createUserWithEmailAndPassword(email, pw);
+      await cred.user.updateProfile({ displayName: name });
+      cred.user.sendEmailVerification().catch(() => {});
+      await this.userRef(cred.user.uid).set({ full_name: name, created_at: new Date().toISOString(), terms_accepted_at: new Date().toISOString() }, { merge: true });
+      return { user: { ...this.toUser(cred.user), name } };
+    } catch (e) { throw new Error(heError(e)); }
   },
-  async signIn(email, pw) { const { data, error } = await SB.auth.signInWithPassword({ email, password: pw }); if (error) throw new Error(heError(error)); return this.toUser(data.user); },
-  async google() { const { error } = await SB.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: HERE } }); if (error) throw new Error(heError(error)); },
-  async reset(email) { const { error } = await SB.auth.resetPasswordForEmail(email, { redirectTo: HERE }); if (error) throw new Error(heError(error)); },
-  async newPassword(pw) { const { error } = await SB.auth.updateUser({ password: pw }); if (error) throw new Error(heError(error)); },
-  async signOut() { await SB.auth.signOut(); },
+  async signIn(email, pw) { try { const c = await FA.signInWithEmailAndPassword(email, pw); return this.toUser(c.user); } catch (e) { throw new Error(heError(e)); } },
+  async google() {
+    const p = new firebase.auth.GoogleAuthProvider(); p.setCustomParameters({ prompt: 'select_account' });
+    try { const c = await FA.signInWithPopup(p); return this.toUser(c.user); }
+    catch (e) {
+      if (e && (e.code === 'auth/popup-blocked' || e.code === 'auth/operation-not-supported-in-this-environment')) { await FA.signInWithRedirect(p); return null; }
+      throw new Error(heError(e));
+    }
+  },
+  async reset(email) { try { await FA.sendPasswordResetEmail(email); } catch (e) { throw new Error(heError(e)); } },
+  async newPassword(pw) { try { await FA.currentUser.updatePassword(pw); } catch (e) { throw new Error(heError(e)); } },
+  async signOut() { await FA.signOut(); },
+  userRef(uid) { return FS.collection('users').doc(uid || me.id); },
+  sub(name) { return this.userRef().collection(name); },
   async load() {
-    const uid = me.id;
-    const [p, s, sj, ap, fb, se] = await Promise.all([
-      SB.from('profiles').select('*').eq('id', uid).maybeSingle(),
-      SB.from('saved_searches').select('*').order('created_at', { ascending: false }),
-      SB.from('saved_jobs').select('*'), SB.from('applications').select('*'), SB.from('job_feedback').select('*'), SB.from('alert_seen').select('job_id')
-    ]);
-    const err = [p, s, sj, ap, fb, se].find(r => r.error); if (err) throw new Error(err.error.message);
+    const ref = this.userRef();
+    const [p, s, sj, ap, fb, se] = await Promise.all([ref.get(), this.sub('searches').get(), this.sub('saved').get(), this.sub('apps').get(), this.sub('feedback').get(), this.sub('seen').get()]);
     const d = blankUserData();
-    d.profile = Object.assign(blankProfile(), p.data || {});
+    d.profile = Object.assign(blankProfile(), p.exists ? p.data() : {});
     if (!d.profile.full_name) d.profile.full_name = me.name;
-    d.searches = (s.data || []).map(r => ({ id: r.id, name: r.name, role: r.role, text: r.query_text, region: r.region, model: r.work_model }));
-    (sj.data || []).forEach(r => d.saved[r.job_id] = { job: r.job, saved_at: r.saved_at });
-    (ap.data || []).forEach(r => d.apps[r.job_id] = { job: r.job, status: r.status, created_at: r.created_at });
-    (fb.data || []).forEach(r => d.feedback[r.job_id] = { value: r.value, features: r.features });
-    d.seen = (se.data || []).map(r => r.job_id);
+    if (!p.exists) ref.set({ full_name: d.profile.full_name, created_at: new Date().toISOString(), terms_accepted_at: new Date().toISOString() }, { merge: true }).catch(() => {});
+    d.searches = s.docs.map(x => ({ id: x.id, ...x.data() })).sort((a, b) => String(b.created_at).localeCompare(String(a.created_at)));
+    sj.docs.forEach(x => d.saved[x.id] = x.data());
+    ap.docs.forEach(x => d.apps[x.id] = x.data());
+    fb.docs.forEach(x => d.feedback[x.id] = x.data());
+    d.seen = se.docs.map(x => x.id);
     return d;
   },
   async deleteAccount() {
-    if (U.profile.cv_path) await SB.storage.from('cvs').remove([U.profile.cv_path]);
-    const { error } = await SB.rpc('delete_my_account'); if (error) throw new Error(heError(error));
-    await SB.auth.signOut();
+    const user = FA.currentUser;
+    if (U.profile.cv_path && ST) await ST.ref(U.profile.cv_path).delete().catch(() => {});
+    for (const name of ['searches', 'saved', 'apps', 'feedback', 'seen']) {
+      const snapq = await this.sub(name).get();
+      for (let i = 0; i < snapq.docs.length; i += 400) { const b = FS.batch(); snapq.docs.slice(i, i + 400).forEach(d => b.delete(d.ref)); await b.commit(); }
+    }
+    await this.userRef().delete();
+    try { await user.delete(); }
+    catch (e) { await FA.signOut(); if (e.code === 'auth/requires-recent-login') throw new Error('כל הנתונים נמחקו. כדי למחוק גם את פרטי ההתחברות, התחבר שוב ומחק את החשבון מיד אחרי זה.'); throw new Error(heError(e)); }
   }
 };
 function heError(e) {
-  const m = (e && (e.message || e.error_description)) || String(e);
-  if (/invalid login/i.test(m)) return 'האימייל או הסיסמה שגויים.';
-  if (/already registered|already exists/i.test(m)) return 'כבר יש חשבון עם האימייל הזה. עבור ל„כניסה”.';
-  if (/email not confirmed/i.test(m)) return 'צריך לאשר את האימייל. בדוק את תיבת הדואר שלך.';
-  if (/password should be at least|weak password/i.test(m)) return 'הסיסמה חלשה מדי. בחר לפחות 8 תווים.';
-  if (/rate limit|too many/i.test(m)) return 'יותר מדי ניסיונות. נסה שוב בעוד כמה דקות.';
-  if (/provider is not enabled/i.test(m)) return 'ההתחברות עם Google עוד לא הופעלה ב־Supabase (ראה המדריך).';
+  const code = (e && e.code) || ''; const m = (e && e.message) || String(e);
+  const map = {
+    'auth/invalid-credential': 'האימייל או הסיסמה שגויים.', 'auth/wrong-password': 'האימייל או הסיסמה שגויים.', 'auth/user-not-found': 'האימייל או הסיסמה שגויים.',
+    'auth/invalid-login-credentials': 'האימייל או הסיסמה שגויים.', 'auth/email-already-in-use': 'כבר יש חשבון עם האימייל הזה. עבור ל„כניסה”.',
+    'auth/invalid-email': 'כתובת האימייל לא תקינה.', 'auth/weak-password': 'הסיסמה חלשה מדי. בחר לפחות 8 תווים.',
+    'auth/too-many-requests': 'יותר מדי ניסיונות. נסה שוב בעוד כמה דקות.', 'auth/popup-closed-by-user': 'חלון ההתחברות נסגר לפני שההתחברות הסתיימה.',
+    'auth/cancelled-popup-request': 'חלון ההתחברות נסגר לפני שההתחברות הסתיימה.',
+    'auth/operation-not-allowed': 'שיטת ההתחברות הזו עוד לא הופעלה ב־Firebase (ראה המדריך, שלב 3).',
+    'auth/unauthorized-domain': 'כתובת האתר לא מאושרת ב־Firebase. הוסף אותה ב־Authentication → Settings → Authorized domains.',
+    'auth/network-request-failed': 'אין חיבור לשרת. בדוק את החיבור לאינטרנט.', 'auth/requires-recent-login': 'מטעמי אבטחה צריך להתחבר שוב ואז לנסות שוב.',
+    'permission-denied': 'אין הרשאה לשמור. בדוק שחוקי האבטחה של Firestore הועתקו (ראה המדריך).',
+    'storage/unauthorized': 'אין הרשאה לשמור את הקובץ. בדוק את חוקי האבטחה של Storage.',
+    'storage/unknown': 'שמירת קבצים לא הופעלה בפרויקט Firebase.', 'storage/bucket-not-found': 'שמירת קבצים לא הופעלה בפרויקט Firebase.'
+  };
+  if (map[code]) return map[code];
   if (/failed to fetch|network/i.test(m)) return 'אין חיבור לשרת. בדוק את החיבור לאינטרנט.';
   return m;
 }
@@ -118,42 +150,45 @@ const Auth = CLOUD ? Cloud : Local;
 
 /* --- writes: update the cache first, then persist; show an error if it fails --- */
 async function write(fn) {
-  try { if (CLOUD) { const r = await fn(); if (r && r.error) throw r.error; } else await Local.persist(); }
+  try { if (CLOUD) await fn(); else await Local.persist(); }
   catch (e) { toast('השינוי לא נשמר: ' + heError(e)); }
 }
+const now = () => new Date().toISOString();
 const W = {
-  profile(patch) { Object.assign(U.profile, patch); return write(() => SB.from('profiles').update({ ...patch, updated_at: new Date().toISOString() }).eq('id', me.id)); },
+  profile(patch) { Object.assign(U.profile, patch); return write(() => Cloud.userRef().set({ ...patch, updated_at: now() }, { merge: true })); },
   async addSearch(s) {
-    if (!CLOUD) { s.id = 'l' + Date.now(); U.searches.unshift(s); return write(); }
-    const { data, error } = await SB.from('saved_searches').insert({ name: s.name, role: s.role, query_text: s.text, region: s.region, work_model: s.model }).select().single();
-    if (error) { toast('החיפוש לא נשמר: ' + heError(error)); return; }
-    U.searches.unshift({ ...s, id: data.id });
+    const rec = { name: s.name, role: s.role || null, text: s.text || '', region: s.region, model: s.model, created_at: now() };
+    if (!CLOUD) { U.searches.unshift({ ...rec, id: 'l' + Date.now() }); return write(); }
+    try { const ref = await Cloud.sub('searches').add(rec); U.searches.unshift({ ...rec, id: ref.id }); }
+    catch (e) { toast('החיפוש לא נשמר: ' + heError(e)); }
   },
-  delSearch(id) { U.searches = U.searches.filter(s => s.id !== id); return write(() => SB.from('saved_searches').delete().eq('id', id)); },
-  save(j) { U.saved[j.id] = { job: snap(j), saved_at: new Date().toISOString() }; return write(() => SB.from('saved_jobs').upsert({ job_id: j.id, job: snap(j) })); },
-  unsave(id) { delete U.saved[id]; return write(() => SB.from('saved_jobs').delete().eq('job_id', id)); },
+  delSearch(id) { U.searches = U.searches.filter(s => s.id !== id); return write(() => Cloud.sub('searches').doc(id).delete()); },
+  save(j) { const rec = { job: snap(j), saved_at: now() }; U.saved[j.id] = rec; return write(() => Cloud.sub('saved').doc(j.id).set(rec)); },
+  unsave(id) { delete U.saved[id]; return write(() => Cloud.sub('saved').doc(id).delete()); },
   app(j, status) {
-    const ex = U.apps[j.id]; U.apps[j.id] = { job: ex ? ex.job : snap(j), status, created_at: ex ? ex.created_at : new Date().toISOString() };
-    return write(() => SB.from('applications').upsert({ job_id: j.id, job: U.apps[j.id].job, status, updated_at: new Date().toISOString() }));
+    const ex = U.apps[j.id]; const rec = { job: ex ? ex.job : snap(j), status, created_at: ex ? ex.created_at : now(), updated_at: now() };
+    U.apps[j.id] = rec; return write(() => Cloud.sub('apps').doc(j.id).set(rec));
   },
-  unapp(id) { delete U.apps[id]; return write(() => SB.from('applications').delete().eq('job_id', id)); },
+  unapp(id) { delete U.apps[id]; return write(() => Cloud.sub('apps').doc(id).delete()); },
   feedback(j, value) {
-    if (!value) { delete U.feedback[j.id]; } else U.feedback[j.id] = { value, features: feats(j) };
+    if (!value) { delete U.feedback[j.id]; } else U.feedback[j.id] = { value, features: feats(j), created_at: now() };
     if (guest) { LS.set('guest', U); return; }
-    return write(() => value ? SB.from('job_feedback').upsert({ job_id: j.id, value, features: feats(j) }) : SB.from('job_feedback').delete().eq('job_id', j.id));
+    return write(() => value ? Cloud.sub('feedback').doc(j.id).set(U.feedback[j.id]) : Cloud.sub('feedback').doc(j.id).delete());
   },
   seen(ids) {
     const nw = ids.filter(id => !U.seen.includes(id)); if (!nw.length) return; U.seen.push(...nw);
-    return write(() => SB.from('alert_seen').upsert(nw.map(job_id => ({ job_id }))));
+    return write(async () => { const b = FS.batch(); nw.forEach(id => b.set(Cloud.sub('seen').doc(id), { seen_at: now() })); await b.commit(); });
   },
   async cv(file) {
-    if (!CLOUD) return W.profile({ cv_name: file.name, cv_size_kb: Math.max(1, Math.round(file.size / 1024)), cv_uploaded_at: new Date().toISOString() });
+    const meta = { cv_name: file.name, cv_size_kb: Math.max(1, Math.round(file.size / 1024)), cv_uploaded_at: now() };
+    if (!CLOUD) return W.profile(meta);
+    if (!ST) { toast('שמירת קבצים עוד לא הופעלה בפרויקט Firebase (ראה המדריך).'); return; }
     const safe = file.name.replace(/[^\w.\-]+/g, '_').slice(-80);
-    const p = `${me.id}/${Date.now()}-${safe}`;
-    const { error } = await SB.storage.from('cvs').upload(p, file, { contentType: file.type || undefined });
-    if (error) { toast('ההעלאה נכשלה: ' + heError(error)); return; }
-    if (U.profile.cv_path) SB.storage.from('cvs').remove([U.profile.cv_path]);
-    await W.profile({ cv_path: p, cv_name: file.name, cv_size_kb: Math.max(1, Math.round(file.size / 1024)), cv_uploaded_at: new Date().toISOString() });
+    const p = `cvs/${me.id}/${Date.now()}-${safe}`;
+    try { await ST.ref(p).put(file, { contentType: file.type || 'application/octet-stream' }); }
+    catch (e) { toast('ההעלאה נכשלה: ' + heError(e)); return; }
+    if (U.profile.cv_path) ST.ref(U.profile.cv_path).delete().catch(() => {});
+    await W.profile({ ...meta, cv_path: p });
   }
 };
 
@@ -355,7 +390,7 @@ function vAuth() {
     <h1>${rs ? 'איפוס סיסמה' : su ? 'יצירת חשבון' : 'התחברות'}</h1>
     ${rs ? '' : `<div class="seg" role="tablist"><button role="tab" aria-selected="${su}" data-mode="signup" data-act="mode">הרשמה</button><button role="tab" aria-selected="${!su}" data-mode="login" data-act="mode">כניסה</button></div>
     <button class="btn big" data-act="google" ${CLOUD ? '' : 'disabled'}><span class="g-mark">G</span>המשך עם Google</button>
-    ${CLOUD ? '' : '<p class="note" style="margin:-6px 0 0">התחברות עם Google תופעל אחרי חיבור Supabase (שלב 3 במדריך).</p>'}
+    ${CLOUD ? '' : '<p class="note" style="margin:-6px 0 0">התחברות עם Google תופעל אחרי חיבור Firebase (שלב 3 במדריך).</p>'}
     <div class="or">או עם אימייל</div>`}
     <form class="card" id="authForm" novalidate>
       ${su ? `<div class="field"><label for="aName">שם מלא</label><input class="input" id="aName" autocomplete="name" placeholder="איך לקרוא לך?"></div>` : ''}
@@ -365,7 +400,7 @@ function vAuth() {
       <button class="btn primary big" type="submit" id="aSubmit">${rs ? 'שלח קישור לאיפוס' : su ? 'יצירת חשבון' : 'כניסה'}</button>
       ${!su && !rs && CLOUD ? `<button type="button" class="link small" data-act="mode" data-mode="reset" style="justify-self:start">שכחתי סיסמה</button>` : ''}
     </form>
-    ${CLOUD ? '' : '<p class="note">מצב מקומי: החשבון נשמר רק בדפדפן במכשיר הזה. אחרי חיבור Supabase החשבונות יישמרו בענן ויעבדו מכל מכשיר.</p>'}
+    ${CLOUD ? '' : '<p class="note">מצב מקומי: החשבון נשמר רק בדפדפן במכשיר הזה. אחרי חיבור Firebase החשבונות יישמרו בענן ויעבדו מכל מכשיר.</p>'}
     ${su || rs ? '' : `<p class="small muted" style="text-align:center;margin:0">אין לך חשבון? <button class="link" data-act="mode" data-mode="signup">הרשמה</button></p>`}
   </main>`;
 }
@@ -678,7 +713,7 @@ document.addEventListener('click', async e => {
     case 'back': history.back(); break;
     case 'more': shown += PAGE; refreshList(); break;
     case 'pw': { const i = $('#aPass'); i.type = i.type === 'password' ? 'text' : 'password'; t.setAttribute('aria-label', i.type === 'password' ? 'הצג סיסמה' : 'הסתר סיסמה'); break; }
-    case 'google': try { await Cloud.google(); } catch (x) { $('#aErr').textContent = x.message; } break;
+    case 'google': try { const u = await Cloud.google(); if (u && (!me || me.id !== u.id)) await afterAuth(u); } catch (x) { $('#aErr').textContent = x.message; } break;
     case 'savesearch': {
       if (!me) { needAccount('שמירת חיפוש'); return; }
       const ex = U.searches.find(s => s.role === lastQ.role && (s.text || '') === (lastQ.text || '') && s.region === lastQ.region && s.model === lastQ.model);
@@ -692,7 +727,7 @@ document.addEventListener('click', async e => {
     case 'delete': try { await Auth.deleteAccount(); me = null; U = null; lastQ = null; toast('החשבון וכל הנתונים נמחקו'); go('welcome', { replace: true }); } catch (x) { toast('המחיקה נכשלה: ' + x.message); } break;
     case 'seenall': W.seen(alertJobs().map(j => j.id)); render(); break;
     case 'resetfb': for (const id of Object.keys(U.feedback)) W.feedback({ id }, 0); render(); toast('הלמידה אופסה'); break;
-    case 'opencv': { const { data, error } = await SB.storage.from('cvs').createSignedUrl(U.profile.cv_path, 120); if (error) toast('לא ניתן לפתוח את הקובץ: ' + heError(error)); else window.open(data.signedUrl, '_blank', 'noopener'); break; }
+    case 'opencv': { try { const url = await ST.ref(U.profile.cv_path).getDownloadURL(); window.open(url, '_blank', 'noopener'); } catch (x) { toast('לא ניתן לפתוח את הקובץ: ' + heError(x)); } break; }
   }
 });
 document.addEventListener('change', e => {
@@ -731,10 +766,7 @@ document.addEventListener('submit', async e => {
 /* ================= boot ================= */
 (async function boot() {
   if (CLOUD) {
-    SB.auth.onAuthStateChange(async (ev, session) => {
-      if (ev === 'PASSWORD_RECOVERY') { recoveryMode = true; me = Cloud.toUser(session?.user); go('newpw', { replace: true }); return; }
-      if (ev === 'SIGNED_IN' && session?.user && (!me || me.id !== session.user.id) && screen !== 'loading') { await afterAuth(Cloud.toUser(session.user)); }
-    });
+    FA.getRedirectResult().catch(e => toast(heError(e)));
   }
   let user = null;
   try { user = await Auth.session(); } catch (e) {}

@@ -12,7 +12,7 @@
 
 ה־AI לומד מהלייקים והדיסלייקים של כל משתמש ומשפר את הדירוג בחיפוש הבא.
 
-הכל רץ על חבילות חינמיות: **GitHub** לאחסון האתר ולאיסוף היומי, ו־**Supabase** לחשבונות ולנתוני המשתמשים.
+הכל רץ על חבילות חינמיות: **GitHub** לאחסון האתר ולאיסוף היומי, ו־**Firebase** (של Google) לחשבונות ולנתוני המשתמשים.
 
 ---
 
@@ -24,7 +24,7 @@
 | `web/data/jobs.js` | המשרות. הקובץ נוצר אוטומטית מסקריפט האיסוף |
 | `collector/collect.js` | סקריפט האיסוף: מושך משרות, מסנן ישראל ותפקידי טכנולוגיה, מסווג ומאחד כפילויות |
 | `collector/sources.json` | רשימת החברות שמהן אוספים |
-| `supabase/schema.sql` | מסד הנתונים: טבלאות והרשאות. כל משתמש רואה רק את הנתונים שלו |
+| `firebase/firestore.rules`, `firebase/storage.rules` | חוקי האבטחה: כל משתמש רואה ומשנה רק את הנתונים והקבצים שלו |
 | `.github/workflows/` | איסוף יומי אוטומטי והעלאת האתר |
 | `tools/build-single.js` | בונה קובץ HTML יחיד שנפתח ישירות בטלפון |
 
@@ -48,33 +48,41 @@
 מעכשיו המשרות מתעדכנות לבד כל בוקר.
 האפליקציה כבר עובדת במצב הזה עם משרות אמיתיות. בשלב הזה חשבונות המשתמשים נשמרים רק בדפדפן של כל משתמש.
 
-## שלב 3: חשבונות בענן עם Supabase (כ־15 דקות)
+## שלב 3: חשבונות בענן עם Firebase (כ־15 דקות)
 
-1. **פתיחת פרויקט:** פתח חשבון ב־[supabase.com](https://supabase.com) ולחץ **New project**. בחר אזור קרוב, למשל Frankfurt, ושמור את סיסמת מסד הנתונים.
-2. **יצירת מסד הנתונים:** היכנס ל־**SQL Editor → New query**, הדבק את כל התוכן של `supabase/schema.sql` ולחץ **Run**.
-3. **כתובות האתר:** היכנס ל־**Authentication → URL Configuration**.
-   - ב־**Site URL** הכנס את כתובת האתר משלב 2.
-   - ב־**Redirect URLs** הוסף את אותה כתובת.
-4. **חיבור האפליקציה:** היכנס ל־**Project Settings → API** והעתק את **Project URL** ואת המפתח **anon public**. הדבק אותם בקובץ `web/config.js`:
+1. **פתיחת פרויקט:** היכנס ל־[console.firebase.google.com](https://console.firebase.google.com) עם חשבון Google ולחץ **Create a project**. את Google Analytics אפשר לכבות.
+2. **הוספת אפליקציית Web:** במסך הפרויקט לחץ על הסמל `</>` (Web), תן שם (למשל TechJob AI) ולחץ **Register app**. יופיע קטע קוד עם `firebaseConfig`. העתק אותו.
+3. **הפעלת ההתחברות:** היכנס ל־**Build → Authentication → Get started**, ובלשונית **Sign-in method** הפעל:
+   - **Email/Password**
+   - **Google**: בחר אימייל לתמיכה ולחץ **Save**. אין צורך ב־Google Cloud Console, הכל מוגדר לבד.
+4. **אישור כתובת האתר:** ב־**Authentication → Settings → Authorized domains** לחץ **Add domain** והוסף: `perezkobi-pixel.github.io`
+5. **מסד הנתונים:** היכנס ל־**Build → Firestore Database → Create database**. בחר מיקום קרוב, למשל `me-west1` (תל אביב) או `eur3`, ובחר **production mode**. אחרי שהוא נוצר, היכנס ללשונית **Rules**, הדבק את התוכן של `firebase/firestore.rules` ולחץ **Publish**.
+6. **חיבור האפליקציה:** הדבק את הערכים מ־`firebaseConfig` בקובץ `web/config.js`:
    ```js
    window.TJ_CONFIG = {
-     supabaseUrl: 'https://xxxx.supabase.co',
-     supabaseAnonKey: 'eyJ...'
+     firebase: {
+       apiKey: 'AIza...',
+       authDomain: 'techjob-ai.firebaseapp.com',
+       projectId: 'techjob-ai',
+       storageBucket: 'techjob-ai.firebasestorage.app',
+       messagingSenderId: '...',
+       appId: '1:...:web:...'
+     }
    };
    ```
    שמור את הקובץ והעלה אותו ל־GitHub. האתר יתעדכן לבד תוך כמה דקות.
-   המפתח הזה ציבורי מטבעו. ההרשאות שהוגדרו ב־schema.sql מגינות על הנתונים, וכל משתמש יכול לגשת רק לנתונים שלו.
+   הערכים האלה ציבוריים מטבעם. חוקי האבטחה מגינים על הנתונים, וכל משתמש יכול לגשת רק לנתונים שלו.
 
-עכשיו הרשמה עם אימייל וסיסמה עובדת. כל משתמש מקבל מייל אישור, ויש גם אפשרות "שכחתי סיסמה".
+עכשיו הרשמה עם Google ועם אימייל וסיסמה עובדת, והחשבון זמין מכל מכשיר. כל משתמש חדש מקבל מייל אימות, ויש גם אפשרות "שכחתי סיסמה".
 
-### הפעלת התחברות עם Google
+### שמירת קובץ קורות חיים (אופציונלי)
 
-1. היכנס ל־[Google Cloud Console](https://console.cloud.google.com) וצור פרויקט.
-2. היכנס ל־**APIs & Services → OAuth consent screen**. מלא שם אפליקציה ואימייל, ובחר **External**.
-3. היכנס ל־**Credentials → Create credentials → OAuth client ID** ובחר סוג **Web application**.
-4. תחת **Authorized redirect URIs** הוסף את הכתובת:
-   `https://<הפרויקט-שלך>.supabase.co/auth/v1/callback`
-5. העתק את **Client ID** ואת **Client secret** ל־Supabase, תחת **Authentication → Providers → Google**, והפעל את Google.
+כדי לשמור קבצים צריך להפעיל ב־Firebase את Storage. בפרויקטים חדשים זה דורש לעבור לתוכנית **Blaze**, שמחייבת להזין כרטיס אשראי. השימוש עצמו נשאר בחינם עד מכסה גבוהה, ואפשר להגדיר תקרת תקציב.
+
+1. היכנס ל־**Build → Storage → Get started**.
+2. בלשונית **Rules** הדבק את התוכן של `firebase/storage.rules` ולחץ **Publish**.
+
+בלי השלב הזה כל שאר האפליקציה עובדת. רק העלאת קובץ קורות החיים תציג הודעה שהשמירה לא הופעלה.
 
 ---
 
@@ -129,7 +137,7 @@ npx serve web -l 8080
 
 ## השלבים הבאים (לא בגרסה הזו)
 
-- **הבנת חיפוש חופשי ב־AI:** Supabase Edge Function שקוראת ל־Claude API ומפרשת בקשות בשפה חופשית.
-- **התראות במייל:** Supabase Cron, ושירות מייל כמו Resend.
+- **הבנת חיפוש חופשי ב־AI:** Firebase Cloud Function שקוראת ל־Claude API ומפרשת בקשות בשפה חופשית.
+- **התראות במייל ובטלפון:** Firebase Cloud Messaging (התראות פוש) ותזמון של Cloud Functions.
 - **מקורות נוספים:** יותר חברות, ואתרי דרושים בהסכם.
 - **אפליקציה לחנויות:** אפשר לעטוף את האתר עם Capacitor.

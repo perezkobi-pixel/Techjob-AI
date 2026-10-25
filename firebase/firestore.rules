@@ -1,0 +1,15 @@
+rules_version = '2';
+// TechJob AI — Firestore security rules.
+// Paste into Firebase console → Firestore Database → Rules → Publish.
+// Every signed-in user can read and write only users/<their uid> and the collections under it.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+      match /{collection}/{docId} {
+        allow read, write: if request.auth != null && request.auth.uid == uid
+          && collection in ['searches', 'saved', 'apps', 'feedback', 'seen'];
+      }
+    }
+  }
+}

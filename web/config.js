@@ -1,12 +1,19 @@
 /*
  * TechJob AI — app configuration.
  *
- * Paste your Supabase project's URL and "anon public" key here (Supabase → Project Settings → API).
- * The anon key is meant to be public: Row Level Security in supabase/schema.sql protects every user's data.
+ * Paste your Firebase web app config here (Firebase console → Project settings → General → Your apps → SDK setup → Config).
+ * These values are public by design: the security rules in firebase/firestore.rules and firebase/storage.rules
+ * make sure every user can read and change only their own data.
  *
- * Leave both empty to run in local mode: real jobs work, and accounts are kept only in this browser.
+ * Leave apiKey empty to run in local mode: real jobs work, and accounts are kept only in this browser.
  */
 window.TJ_CONFIG = {
-  supabaseUrl: '',
-  supabaseAnonKey: ''
+  firebase: {
+    apiKey: '',
+    authDomain: '',
+    projectId: '',
+    storageBucket: '',
+    messagingSenderId: '',
+    appId: ''
+  }
 };

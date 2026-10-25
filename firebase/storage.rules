@@ -1,0 +1,14 @@
+rules_version = '2';
+// TechJob AI — Cloud Storage security rules (CV files).
+// Paste into Firebase console → Storage → Rules → Publish.
+// Files live under cvs/<uid>/ and only that user can read, upload or delete them.
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /cvs/{uid}/{fileName} {
+      allow read, delete: if request.auth != null && request.auth.uid == uid;
+      allow create, update: if request.auth != null && request.auth.uid == uid
+        && request.resource.size < 10 * 1024 * 1024
+        && request.resource.contentType.matches('application/pdf|application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+    }
+  }
+}
