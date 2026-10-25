@@ -1,0 +1,23 @@
+name: Debug custom careers sites
+on:
+  push:
+    branches: [main]
+    paths: ['tools/sitemap-debug.js', 'tools/sitemap-debug-sites.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node tools/sitemap-debug.js
+      - run: |
+          git config user.name "techjob-bot"
+          git config user.email "techjob-bot@users.noreply.github.com"
+          git add tools/sitemap-debug-report.json
+          git diff --cached --quiet || git commit -m "Custom sites debug report"
+          git pull --rebase -q origin main && git push || echo "nothing to push"
