@@ -11,6 +11,7 @@
 const fs = require('fs');
 const path = require('path');
 const { ADAPTERS, classifyRoles, locate } = require('../collector/collect.js');
+const ONLY_EXPLICIT = c => !c.slugs || !c.slugs.length;
 
 const candidates = JSON.parse(fs.readFileSync(path.join(__dirname, 'discover-candidates.json'), 'utf8'));
 const sleep = ms => new Promise(r => setTimeout(r, ms));
@@ -29,8 +30,8 @@ function attempts(c) {
       { ats: 'ashby', token: v }, { ats: 'workable', token: v },
       { ats: 'smartrecruiters', token: v }, { ats: 'smartrecruiters', token: v.charAt(0).toUpperCase() + v.slice(1) });
   }
-  for (const w of c.workday || []) list.push({ ats: 'workday', token: w });
-  for (const m of c.comeet || []) list.push({ ats: 'comeet', token: m });
+  for (const ats of ['workday', 'comeet', 'jsonld', 'eightfold', 'amazon', 'recruitee'])
+    for (const t of c[ats] || []) list.push({ ats, token: t, explicit: true });
   return list;
 }
 
@@ -53,17 +54,18 @@ async function tryOne(c, a) {
 (async () => {
   const report = [];
   for (const c of candidates) {
-    const found = [];
+    const found = []; const errors = [];
     const list = attempts(c);
     // a few at a time, politely
     for (let i = 0; i < list.length; i += 4) {
       const res = await Promise.all(list.slice(i, i + 4).map(a => tryOne(c, a)));
       found.push(...res.filter(r => r.ok && r.total > 0));
+      errors.push(...res.filter(r => r.explicit && (!r.ok || !r.total)).map(r => ({ ats: r.ats, token: r.token, error: r.error || 'no jobs' })));
       await sleep(300);
     }
     found.sort((a, b) => b.israel - a.israel || b.total - a.total);
     const best = found[0] || null;
-    report.push({ company: c.company, type: c.type, best, all: found });
+    report.push({ company: c.company, type: c.type, best, all: found, errors });
     console.log(`${best ? '✓' : '✗'} ${c.company.padEnd(24)} ${best ? `${best.ats}${best.eu ? ' (eu)' : ''}:${best.token}  total ${best.total}  israel ${best.israel}  tech ${best.tech}` : 'not found'}`);
   }
   fs.writeFileSync(path.join(__dirname, 'discover-report.json'), JSON.stringify({ ranAt: new Date().toISOString(), report }, null, 1));

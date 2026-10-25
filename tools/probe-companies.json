@@ -1,142 +1,457 @@
 [
 {
-"company": "Claroty",
-"domain": "claroty.com",
-"type": "סייבר"
+"company": "NeuroBlade",
+"domain": "neuroblade.com",
+"type": "חברת הייטק"
 },
 {
-"company": "Pentera",
-"domain": "pentera.io",
-"type": "סייבר"
+"company": "Next Insurance",
+"domain": "nextinsurance.com",
+"type": "חברת הייטק"
 },
 {
-"company": "Silverfort",
-"domain": "silverfort.com",
-"type": "סייבר"
+"company": "SolarEdge",
+"domain": "solaredge.com",
+"type": "חברת הייטק"
 },
 {
-"company": "Aqua Security",
-"domain": "aquasec.com",
-"type": "סייבר"
+"company": "DriveNets",
+"domain": "drivenets.com",
+"type": "חברת הייטק"
 },
 {
-"company": "Upwind",
-"domain": "upwind.io",
-"type": "סייבר"
+"company": "Weka",
+"domain": "weka.io",
+"type": "חברת הייטק"
 },
 {
-"company": "AI21 Labs",
-"domain": "ai21.com",
-"type": "סטארטאפ"
+"company": "Checkmarx",
+"domain": "checkmarx.com",
+"type": "חברת הייטק"
 },
 {
-"company": "Innoviz",
-"domain": "innoviz.tech",
-"type": "חומרה"
+"company": "Cymulate",
+"domain": "cymulate.com",
+"type": "חברת הייטק"
 },
 {
-"company": "Coralogix",
-"domain": "coralogix.com",
-"type": "חברת מוצר"
+"company": "SafeBreach",
+"domain": "safebreach.com",
+"type": "חברת הייטק"
 },
 {
-"company": "Lusha",
-"domain": "lusha.com",
-"type": "חברת מוצר"
+"company": "Augury",
+"domain": "augury.com",
+"type": "חברת הייטק"
 },
 {
-"company": "AudioCodes",
-"domain": "audiocodes.com",
-"type": "חברת מוצר"
+"company": "Vayyar",
+"domain": "vayyar.com",
+"type": "חברת הייטק"
 },
 {
-"company": "WSC Sports",
-"domain": "wsc-sports.com",
-"type": "חברת מוצר"
+"company": "Gett",
+"domain": "gett.com",
+"type": "חברת הייטק"
 },
 {
-"company": "eToro",
-"domain": "etoro.com",
-"type": "פינטק"
+"company": "Duda",
+"domain": "duda.co",
+"type": "חברת הייטק"
 },
 {
-"company": "Optibus",
-"domain": "optibus.com",
-"type": "חברת מוצר"
+"company": "Applitools",
+"domain": "applitools.com",
+"type": "חברת הייטק"
 },
 {
-"company": "Elementor",
-"domain": "elementor.com",
-"type": "חברת מוצר"
+"company": "Komodor",
+"domain": "komodor.com",
+"type": "חברת הייטק"
 },
 {
-"company": "Sygnia",
-"domain": "sygnia.co",
-"type": "סייבר"
+"company": "Lightrun",
+"domain": "lightrun.com",
+"type": "חברת הייטק"
 },
 {
-"company": "Team8",
-"domain": "team8.vc",
-"type": "סייבר"
+"company": "Qodo",
+"domain": "qodo.ai",
+"type": "חברת הייטק"
 },
 {
-"company": "XM Cyber",
-"domain": "xmcyber.com",
-"type": "סייבר"
+"company": "Apiiro",
+"domain": "apiiro.com",
+"type": "חברת הייטק"
 },
 {
-"company": "Ox Security",
-"domain": "ox.security",
-"type": "סייבר"
+"company": "Cycode",
+"domain": "cycode.com",
+"type": "חברת הייטק"
 },
 {
-"company": "Wiliot",
-"domain": "wiliot.com",
-"type": "חומרה"
+"company": "Legit Security",
+"domain": "legitsecurity.com",
+"type": "חברת הייטק"
 },
 {
-"company": "Autotalks",
-"domain": "auto-talks.com",
-"type": "חומרה"
+"company": "Zero Networks",
+"domain": "zeronetworks.com",
+"type": "חברת הייטק"
 },
 {
-"company": "Arbe Robotics",
-"domain": "arberobotics.com",
-"type": "חומרה"
+"company": "Sweet Security",
+"domain": "sweet.security",
+"type": "חברת הייטק"
 },
 {
-"company": "Imagry",
-"domain": "imagry.co",
-"type": "סטארטאפ"
+"company": "Cyolo",
+"domain": "cyolo.io",
+"type": "חברת הייטק"
 },
 {
-"company": "Taranis",
-"domain": "taranis.com",
-"type": "סטארטאפ"
+"company": "Mesh Payments",
+"domain": "meshpayments.com",
+"type": "חברת הייטק"
 },
 {
-"company": "Zesty",
-"domain": "zesty.co",
-"type": "סטארטאפ"
+"company": "Minute Media",
+"domain": "minutemedia.com",
+"type": "חברת הייטק"
 },
 {
-"company": "Firefly",
-"domain": "firefly.ai",
-"type": "סטארטאפ"
+"company": "TytoCare",
+"domain": "tytocare.com",
+"type": "חברת הייטק"
 },
 {
-"company": "Superplay",
-"domain": "superplay.co",
-"type": "משחקים"
+"company": "Classiq",
+"domain": "classiq.io",
+"type": "חברת הייטק"
 },
 {
-"company": "Kenshoo/Skai",
-"domain": "skai.io",
-"type": "חברת מוצר"
+"company": "Quantum Machines",
+"domain": "quantum-machines.co",
+"type": "חברת הייטק"
 },
 {
-"company": "Global-e",
-"domain": "global-e.com",
-"type": "חברת מוצר"
+"company": "NextSilicon",
+"domain": "nextsilicon.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Speedata",
+"domain": "speedata.io",
+"type": "חברת הייטק"
+},
+{
+"company": "Pliops",
+"domain": "pliops.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Lightbits",
+"domain": "lightbitslabs.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Xsight Labs",
+"domain": "xsightlabs.com",
+"type": "חברת הייטק"
+},
+{
+"company": "CrazyLabs",
+"domain": "crazylabs.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Bria",
+"domain": "bria.ai",
+"type": "חברת הייטק"
+},
+{
+"company": "env0",
+"domain": "env0.com",
+"type": "חברת הייטק"
+},
+{
+"company": "groundcover",
+"domain": "groundcover.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Panaya",
+"domain": "panaya.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Gilat",
+"domain": "gilat.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Ceragon",
+"domain": "ceragon.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Silicom",
+"domain": "silicom-usa.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Essence",
+"domain": "essence-grp.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Moovit",
+"domain": "moovit.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Fabric",
+"domain": "getfabric.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Foresight",
+"domain": "foresightauto.com",
+"type": "חברת הייטק"
+},
+{
+"company": "REE Automotive",
+"domain": "ree.auto",
+"type": "חברת הייטק"
+},
+{
+"company": "StoreDot",
+"domain": "store-dot.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Brainsway",
+"domain": "brainsway.com",
+"type": "חברת הייטק"
+},
+{
+"company": "CathWorks",
+"domain": "cathworks.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Itamar",
+"domain": "itamar-medical.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Wochit",
+"domain": "wochit.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Optimal+",
+"domain": "optimalplus.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Sapiens",
+"domain": "sapiens.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Kaltura",
+"domain": "kaltura.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Nayax",
+"domain": "nayax.com",
+"type": "חברת הייטק"
+},
+{
+"company": "HiBob",
+"domain": "hibob.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Lightricks",
+"domain": "lightricks.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Moon Active",
+"domain": "moonactive.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Plarium",
+"domain": "plarium.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Rapyd",
+"domain": "rapyd.net",
+"type": "חברת הייטק"
+},
+{
+"company": "Papaya Global",
+"domain": "papayaglobal.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Guesty",
+"domain": "guesty.com",
+"type": "חברת הייטק"
+},
+{
+"company": "WalkMe",
+"domain": "walkme.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Tufin",
+"domain": "tufin.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Cloudinary",
+"domain": "cloudinary.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Make",
+"domain": "make.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Port",
+"domain": "getport.io",
+"type": "חברת הייטק"
+},
+{
+"company": "Hailo",
+"domain": "hailo.ai",
+"type": "חברת הייטק"
+},
+{
+"company": "Valens",
+"domain": "valens.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Tower Semiconductor",
+"domain": "towersemi.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Nova",
+"domain": "novami.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Camtek",
+"domain": "camtek.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Unit",
+"domain": "unit.co",
+"type": "חברת הייטק"
+},
+{
+"company": "Bluevine",
+"domain": "bluevine.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Obligo",
+"domain": "myobligo.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Hippo",
+"domain": "hippo.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Atera",
+"domain": "atera.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Bizzabo",
+"domain": "bizzabo.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Artlist",
+"domain": "artlist.io",
+"type": "חברת הייטק"
+},
+{
+"company": "BigID",
+"domain": "bigid.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Imperva",
+"domain": "imperva.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Radware",
+"domain": "radware.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Allot",
+"domain": "allot.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Cellebrite",
+"domain": "cellebrite.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Kornit",
+"domain": "kornit.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Verbit",
+"domain": "verbit.ai",
+"type": "חברת הייטק"
+},
+{
+"company": "Hunters",
+"domain": "hunters.security",
+"type": "חברת הייטק"
+},
+{
+"company": "Axis Security",
+"domain": "axissecurity.com",
+"type": "חברת הייטק"
+},
+{
+"company": "Anecdotes",
+"domain": "anecdotes.ai",
+"type": "חברת הייטק"
+},
+{
+"company": "Spectral",
+"domain": "spectralops.io",
+"type": "חברת הייטק"
+},
+{
+"company": "Coro",
+"domain": "coro.net",
+"type": "חברת הייטק"
+},
+{
+"company": "Talon",
+"domain": "talon-sec.com",
+"type": "חברת הייטק"
 }
 ]

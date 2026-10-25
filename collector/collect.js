@@ -158,6 +158,89 @@ const ADAPTERS = {
       workplace: j.remote ? 'Remote' : (j.hybrid ? 'Hybrid' : null), employment: j.employment_type_code || null, salary: null
     }));
   },
+  async jsonld(src) {
+    // Custom careers sites: read the job URLs from the site's sitemap and the schema.org JobPosting
+    // data each job page publishes for Google Jobs. Respects robots.txt.
+    // token = site origin, e.g. "https://careers.cyberark.com"; optional src.sitemap, src.match, src.max
+    if (FIXTURES) return readFixture('jsonld_' + new URL(src.token).hostname);
+    const origin = new URL(src.token).origin;
+    const robots = await request(origin + '/robots.txt', { as: 'text', tries: 1 }).catch(() => '');
+    const disallow = []; let applies = false; const maps = [];
+    for (const line of robots.split(/\r?\n/)) {
+      const [k, ...rest] = line.split(':'); const v = rest.join(':').trim(); const key = (k || '').trim().toLowerCase();
+      if (key === 'user-agent') applies = v === '*';
+      else if (key === 'disallow' && applies && v) disallow.push(v);
+      else if (key === 'sitemap' && v) maps.push(v);
+    }
+    const allowed = u => { const p = new URL(u).pathname; return !disallow.some(d => p.startsWith(d.replace(/\*.*$/, ''))); };
+    const queue = src.sitemap ? [src.sitemap] : (maps.length ? maps : [origin + '/sitemap.xml']);
+    const jobRe = new RegExp(src.match || '/(job|jobs|position|positions|vacanc|opening)s?/[^/]+', 'i');
+    const urls = new Set(); let seenMaps = 0;
+    while (queue.length && seenMaps < 15) {
+      const sm = queue.shift(); seenMaps++;
+      const xml = await request(sm, { as: 'text', tries: 1 }).catch(() => '');
+      for (const m of xml.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/gi)) {
+        const u = decode(m[1]);
+        if (/\.xml(\.gz)?$/i.test(u) || /<sitemap>/i.test(xml) && !jobRe.test(u)) { if (/\.xml/i.test(u)) queue.push(u); continue; }
+        if (jobRe.test(u) && allowed(u)) urls.add(u);
+      }
+    }
+    const out = []; const max = src.max || 400;
+    for (const u of [...urls].slice(0, max)) {
+      const html = await request(u, { as: 'text', tries: 1 }).catch(() => '');
+      for (const b of html.matchAll(/<script[^>]+application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi)) {
+        let data; try { data = JSON.parse(b[1].trim()); } catch (e) { continue; }
+        const items = [].concat(data['@graph'] || data).filter(x => x && /JobPosting/i.test([].concat(x['@type']).join(',')));
+        for (const j of items) {
+          if (j.validThrough && new Date(j.validThrough) < new Date()) continue;
+          const locs = [].concat(j.jobLocation || []).map(l => { const a = l.address || l; return [a.addressLocality, a.addressRegion, a.addressCountry && (a.addressCountry.name || a.addressCountry)].filter(Boolean).join(', '); });
+          const remote = /TELECOMMUTE/i.test(j.jobLocationType || '');
+          out.push({
+            extId: String(j.identifier?.value || j.identifier || u), title: decode(j.title || ''), location: locs[0] || (remote ? 'Remote' : ''), locations: locs.slice(1),
+            url: j.url || u, posted: j.datePosted || null, updated: null, desc: htmlToText(j.description || ''),
+            dept: j.occupationalCategory || '', workplace: remote ? 'Remote' : null, employment: [].concat(j.employmentType || []).join(', ') || null, salary: null
+          });
+        }
+      }
+      await sleep(300);
+    }
+    return out;
+  },
+  async eightfold(src) {
+    // token = "<host>|<domain>", e.g. "apply.careers.microsoft.com|microsoft.com"
+    const [host, domain] = String(src.token).split('|');
+    if (FIXTURES) return readFixture('eightfold_' + domain);
+    const out = [];
+    for (let start = 0; start < 1000; start += 10) {
+      const d = await request(`https://${host}/api/apply/v2/jobs?domain=${encodeURIComponent(domain)}&location=${encodeURIComponent(src.search || 'Israel')}&start=${start}&num=10&sort_by=relevance`);
+      const ps = d.positions || [];
+      for (const p of ps) out.push({
+        extId: String(p.id), title: p.name, location: p.location || '', locations: p.locations || [],
+        url: p.canonicalPositionUrl || `https://${host}/careers/job/${p.id}`, posted: p.t_create ? new Date(p.t_create * 1000).toISOString() : null, updated: null,
+        desc: htmlToText(p.job_description || ''), dept: p.department || '', workplace: p.work_location_option || null, employment: null, salary: null
+      });
+      if (ps.length < 10 || out.length >= (d.count || 0)) break;
+      await sleep(250);
+    }
+    return out;
+  },
+  async amazon(src) {
+    if (FIXTURES) return readFixture('amazon_' + src.token);
+    const out = [];
+    for (let offset = 0; offset < 1000; offset += 100) {
+      const d = await request(`https://www.amazon.jobs/en/search.json?normalized_country_code%5B%5D=${src.token}&result_limit=100&offset=${offset}&sort=recent`);
+      const js = d.jobs || [];
+      for (const j of js) out.push({
+        extId: String(j.id_icims || j.id), title: j.title, location: [j.city, j.normalized_location, j.location].filter(Boolean).join(', ') + ', Israel', locations: [],
+        url: 'https://www.amazon.jobs' + j.job_path, posted: j.posted_date ? new Date(j.posted_date).toISOString() : null, updated: null,
+        desc: htmlToText([j.description, j.basic_qualifications, j.preferred_qualifications].filter(Boolean).join('\n\n')), dept: j.business_category || j.job_category || '',
+        workplace: null, employment: j.job_schedule_type || null, salary: null
+      });
+      if (js.length < 100) break;
+      await sleep(300);
+    }
+    return out;
+  },
   async workday(src) {
     // token = "<host>|<tenant>|<site>", e.g. "nvidia.wd5.myworkdayjobs.com|nvidia|NVIDIAExternalCareerSite"
     const [host, tenant, site] = String(src.token).split('|');
