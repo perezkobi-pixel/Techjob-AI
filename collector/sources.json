@@ -615,5 +615,266 @@
   "token": "62.002:262988131015727264C41572E4C10AE10AE",
   "type": "חברת מוצר",
   "verified": "2026-10-20"
+ },
+ {
+  "company": "Fiverr",
+  "ats": "comeet",
+  "token": "fiverr/60.002",
+  "type": "חברת מוצר",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Amazon",
+  "ats": "amazon",
+  "token": "ISR",
+  "type": "תאגיד בינלאומי",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Intuit",
+  "ats": "jsonld",
+  "token": "https://jobs.intuit.com",
+  "type": "תאגיד בינלאומי",
+  "verified": "2026-10-25",
+  "match": "/job/(petah|tel-aviv|hod|herzliya|ra|israel)",
+  "max": 300
+ },
+ {
+  "company": "Salesforce",
+  "ats": "workday",
+  "token": "salesforce.wd12.myworkdayjobs.com|salesforce|External_Career_Site",
+  "type": "תאגיד בינלאומי",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "HP",
+  "ats": "workday",
+  "token": "hp.wd5.myworkdayjobs.com|hp|ExternalCareerSite",
+  "type": "תאגיד בינלאומי",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Philips",
+  "ats": "workday",
+  "token": "philips.wd3.myworkdayjobs.com|philips|jobs-and-careers",
+  "type": "תאגיד בינלאומי",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "GE HealthCare",
+  "ats": "workday",
+  "token": "gehc.wd5.myworkdayjobs.com|gehc|GEHC_ExternalSite",
+  "type": "תאגיד בינלאומי",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Cadence",
+  "ats": "workday",
+  "token": "cadence.wd1.myworkdayjobs.com|cadence|External_Careers",
+  "type": "חומרה",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Motorola Solutions",
+  "ats": "workday",
+  "token": "motorolasolutions.wd5.myworkdayjobs.com|motorolasolutions|Careers",
+  "type": "תאגיד בינלאומי",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Medtronic",
+  "ats": "workday",
+  "token": "medtronic.wd1.myworkdayjobs.com|medtronic|MedtronicCareers",
+  "type": "תאגיד בינלאומי",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Citi",
+  "ats": "workday",
+  "token": "citi.wd5.myworkdayjobs.com|citi|2",
+  "type": "פינטק",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Next Insurance",
+  "ats": "greenhouse",
+  "token": "nextinsurance66",
+  "type": "פינטק",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Cymulate",
+  "ats": "greenhouse",
+  "token": "cymulate",
+  "type": "סייבר",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Duda",
+  "ats": "greenhouse",
+  "token": "duda",
+  "type": "חברת מוצר",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Lightrun",
+  "ats": "greenhouse",
+  "token": "lightrun",
+  "type": "סטארטאפ",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Apiiro",
+  "ats": "greenhouse",
+  "token": "apiiro",
+  "type": "סייבר",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Sweet Security",
+  "ats": "greenhouse",
+  "token": "sweetsecurity",
+  "type": "סייבר",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "SafeBreach",
+  "ats": "greenhouse",
+  "token": "safebreach",
+  "type": "סייבר",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Obligo",
+  "ats": "greenhouse",
+  "token": "obligo",
+  "type": "פינטק",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Unit",
+  "ats": "ashby",
+  "token": "unit",
+  "type": "פינטק",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Vayyar",
+  "ats": "workable",
+  "token": "vayyar",
+  "type": "חומרה",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Legit Security",
+  "ats": "comeet",
+  "token": "legitsecurity.com/37.004",
+  "type": "סייבר",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Checkmarx",
+  "ats": "comeet",
+  "token": "C0.008:C8320190002581902584B0708",
+  "type": "חברת הייטק",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Komodor",
+  "ats": "comeet",
+  "token": "96.005:695277ED2A020E9277E69534A81A54277E",
+  "type": "חברת הייטק",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Qodo",
+  "ats": "comeet",
+  "token": "B8.00B:8BB34623D1D45D8346203D1D08BB8BB",
+  "type": "חברת הייטק",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Cycode",
+  "ats": "comeet",
+  "token": "A8.00D:8AD340E3CBB3CBB22B445680340E22B44568",
+  "type": "חברת הייטק",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Zero Networks",
+  "ats": "comeet",
+  "token": "39.00F:93F40B9001BBD49F824FC49F824FC377A",
+  "type": "חברת הייטק",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Minute Media",
+  "ats": "comeet",
+  "token": "45.00A:54A1A7225062A50FDE2F9A1FBC01FBC1528",
+  "type": "חברת הייטק",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "NextSilicon",
+  "ats": "comeet",
+  "token": "18.007:817308A2873102E1845308A308A40B8308A205C",
+  "type": "חברת הייטק",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "CrazyLabs",
+  "ats": "comeet",
+  "token": "32.00E:23E8F811F0B360FB20142E8F8142E",
+  "type": "חברת הייטק",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Panaya",
+  "ats": "comeet",
+  "token": "61.00C:16C5B071C444CCC16C5B044416C888",
+  "type": "חברת הייטק",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Ceragon",
+  "ats": "comeet",
+  "token": "D3.003:3D3131FF4C01AC57A61AC51E98131FF4C",
+  "type": "חברת הייטק",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Moovit",
+  "ats": "comeet",
+  "token": "63.007:36711036CE11031E9F146A1B38367A356CE",
+  "type": "חברת הייטק",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "REE Automotive",
+  "ats": "comeet",
+  "token": "D3.00B:3DB1347F6C7B63DB3DB13471AFD3DB3DB",
+  "type": "חברת הייטק",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Hunters",
+  "ats": "comeet",
+  "token": "67.007:7672C6A163533D11D9C429F33D10250333D1",
+  "type": "חברת הייטק",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Anecdotes",
+  "ats": "comeet",
+  "token": "F9.00B:9FB45DD1DF11DF113F69FB59D345DD13F61DF1",
+  "type": "חברת הייטק",
+  "verified": "2026-10-25"
+ },
+ {
+  "company": "Coro",
+  "ats": "comeet",
+  "token": "08.00A:80A303C28320181E2028485A485A4050181E",
+  "type": "חברת הייטק",
+  "verified": "2026-10-25"
  }
 ]
