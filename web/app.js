@@ -51,7 +51,7 @@ let me = null;          // {id, email, name, provider}
 let U = null;           // user data cache (or guest data)
 let guest = false;
 
-const snap = j => ({ id: j.id, title: j.title, company: j.company, city: j.city, region: j.region, model: j.model, url: j.url, roles: j.roles, skills: j.skills, seniority: j.seniority, posted: j.posted, groups: j.groups });
+const snap = j => ({ id: j.id, title: j.title, company: j.company, city: j.city, region: j.region, model: j.model, url: j.url, roles: j.roles, skills: j.skills, seniority: j.seniority, posted: j.posted, groups: j.groups, contact: j.contact || null });
 const feats = j => ({ roles: j.roles || [], skills: j.skills || [], company: j.company, seniority: j.seniority, model: j.model, groups: j.groups || [] });
 
 const Local = {
@@ -440,7 +440,7 @@ function jobCard(j) {
   const dir = !fb && j.boost >= 6;
   return `<article class="job ${fb === 1 ? 'liked' : ''}" data-open="${j.id}" tabindex="0">
     <div class="job-top"><div style="min-width:0"><h3 class="job-title" dir="auto">${esc(j.title)}</h3><div class="job-co">${esc(j.company)} · ${esc(loc(j))}${j.model === 'hybrid' || j.model === 'office' ? ' · ' + MODEL_NAME[j.model] : ''}</div></div><span class="score ${scls(j.score)}" title="ציון התאמה">${j.score}%</span></div>
-    <div class="job-meta"><span>${ago(j.posted)}</span><span>${esc(j.seniority)}</span>${salaryText(j.salary) ? `<span class="sal" dir="ltr">${esc(salaryText(j.salary))}</span>` : ''}${dir ? `<span class="dir-tag">${ic('spark')}בכיוון שאהבת</span>` : ''}</div>
+    <div class="job-meta"><span>${ago(j.posted)}</span><span>${esc(j.seniority)}</span>${salaryText(j.salary) ? `<span class="sal" dir="ltr">${esc(salaryText(j.salary))}</span>` : ''}${j.contact && (j.contact.name || j.contact.phone) ? `<span class="dir-tag" style="color:var(--accent)">${ic('user')}איש קשר במודעה</span>` : ''}${dir ? `<span class="dir-tag">${ic('spark')}בכיוון שאהבת</span>` : ''}</div>
     <div class="job-actions">
       <button class="fb up" data-fb="${j.id}" data-v="1" aria-pressed="${fb === 1}" aria-label="לייק: זה הכיוון" title="זה הכיוון">${ic('up')}</button>
       <button class="fb down" data-fb="${j.id}" data-v="-1" aria-pressed="false" aria-label="דיסלייק: לא הכיוון" title="לא הכיוון">${ic('dn')}</button>
@@ -630,6 +630,11 @@ function openJob(id) {
     <div><h3>תיאור המשרה</h3>${j.desc ? `<p class="desc" dir="auto">${esc(j.desc)}</p><p class="disc">תקציר מתוך המודעה. התיאור המלא נמצא באתר החברה.</p>` : `<p class="muted" style="margin:6px 0 0">התיאור המלא נמצא במודעה באתר החברה.</p>`}</div>
     <div><h3>למה המשרה מתאימה</h3><ul class="reasons">${j.reasons.map(r => { const ok = r[2] === null ? (r[1] >= 0) : r[1] >= r[2] * .5; return `<li><span class="${r[2] === null ? 'mid' : ok ? 'ok' : 'no'}">${r[2] === null ? '✦' : ok ? '✓' : '✕'}</span><span>${esc(r[0])}</span><span class="pts">${r[2] === null ? (r[1] > 0 ? '+' : '') + r[1] : r[1] + '/' + r[2]}</span></li>`; }).join('')}</ul><p class="disc">ציון ההתאמה הוא הערכה בלבד ואינו מבטיח התאמה או קבלה לעבודה.</p></div>
     ${j.skills.length ? `<div class="gap"><h3>${hasProf ? 'כישורים: יש לך מול חסר' : 'כישורים שמוזכרים במודעה'}</h3><div class="chips" style="margin-top:8px">${hasProf ? j.have.map(s => `<span class="chip have">✓ ${esc(s)}</span>`).join('') + j.miss.map(s => `<span class="chip miss">${esc(s)}</span>`).join('') : j.skills.map(s => `<span class="chip">${esc(s)}</span>`).join('')}</div></div>` : ''}
+    ${j.contact ? `<div class="contact"><h3>איש קשר</h3><dl class="kv" style="margin-top:8px">
+      ${j.contact.name ? `<div><dt>שם</dt><dd>${esc(j.contact.name)}</dd></div>` : ''}
+      ${j.contact.phone ? `<div><dt>טלפון</dt><dd><a href="tel:${esc(j.contact.phone.replace(/[^\d+]/g, ''))}" dir="ltr">${esc(j.contact.phone)}</a></dd></div>` : ''}
+      ${j.contact.email ? `<div style="grid-column:1/-1"><dt>אימייל</dt><dd><a href="mailto:${esc(j.contact.email)}" dir="ltr" style="word-break:break-all">${esc(j.contact.email)}</a> <button class="link small" data-copy="${esc(j.contact.email)}">העתק</button></dd></div>` : ''}
+    </dl><p class="disc">${j.contact.from === 'site' ? 'כתובת הגיוס שמופיעה באתר החברה.' : j.contact.from === 'ad+site' ? 'פרטים מתוך המודעה, והאימייל מאתר החברה.' : 'פרטים שהחברה פרסמה במודעה.'} מומלץ להגיש מועמדות גם דרך הקישור למשרה.</p></div>` : ''}
     <div><h3>מקור</h3><p style="margin:4px 0 0;color:var(--muted);font-size:14px">לוח הדרושים של ${esc(j.company)} (${esc(j.source)})${j.alsoAt ? ` · פורסמה גם ב־${j.alsoAt.length} מקומות נוספים` : ''}</p></div>
   </div>
   <div class="sheet-foot"><a class="btn primary full" href="${esc(j.url)}" target="_blank" rel="noopener" data-link="${j.id}">${ic('ext')}מעבר למודעה והגשת מועמדות</a>
@@ -682,7 +687,8 @@ async function submitAuth(e) {
 document.addEventListener('click', async e => {
   const t = e.target.closest('button,a,[data-open]'); if (!t || t.disabled) return; const d = t.dataset;
   if (d.close !== undefined) { closeSheet(); return; }
-  if (d.link) { return; } // real link, opens in a new tab
+  if (d.link) { return; }
+  if (d.copy) { try { await navigator.clipboard.writeText(d.copy); toast('הועתק'); } catch (x) { toast(d.copy); } return; } // real link, opens in a new tab
   if (d.fb) {
     e.stopPropagation(); const id = d.fb, v = +d.v; const j = JOB[id]; if (!j) return;
     const prev = fbOf(id); const nv = (v === 0 || prev === v) ? 0 : v;

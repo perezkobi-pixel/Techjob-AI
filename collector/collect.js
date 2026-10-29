@@ -21,6 +21,7 @@ const crypto = require('crypto');
 const { ROLES } = require('../web/roles.js');
 const { locate, norm } = require('./geo.js');
 const { extractSkills } = require('./skills.js');
+const { extractFromAd, extractCareersEmail } = require('./contacts.js');
 
 const args = process.argv.slice(2);
 const arg = (k, d) => { const i = args.indexOf(k); return i >= 0 ? args[i + 1] : d; };
@@ -359,6 +360,7 @@ async function main() {
           posted: raw.posted ? new Date(raw.posted).toISOString().slice(0, 10) : null,
           updated: raw.updated ? new Date(raw.updated).toISOString().slice(0, 10) : null,
           url: raw.url, source: src.ats, dept: raw.dept || null,
+          contact: extractFromAd(desc), _host: (() => { try { return new URL(raw.url).hostname; } catch (e) { return null; } })(),
           skills: extractSkills(`${title}\n${desc}`), salary: raw.salary || null,
           desc: clip(desc, DESC_MAX)
         });
@@ -380,6 +382,32 @@ async function main() {
     if (seen.has(k)) { const o = seen.get(k); o.alsoAt = [...new Set([...(o.alsoAt || []), j.url])]; stats.dupes++; continue; }
     seen.set(k, j); jobs.push(j);
   }
+  // careers e-mail published on each company's own website (fallback when the ad has no contact)
+  if (!FIXTURES) {
+    const ATS_HOST = /greenhouse|lever\.co|ashbyhq|comeet|workable|smartrecruiters|myworkdayjobs|recruitee|amazon\.jobs|eightfold/i;
+    const hostsByCompany = new Map();
+    for (const j of jobs) if (j._host && !ATS_HOST.test(j._host) && !hostsByCompany.has(j.company)) hostsByCompany.set(j.company, j._host.replace(/^(careers|jobs|join|apply)\./, 'www.'));
+    const careersEmail = new Map();
+    for (const [company, host] of hostsByCompany) {
+      const origin = 'https://' + host;
+      const robots = await request(origin + '/robots.txt', { as: 'text', tries: 1 }).catch(() => '');
+      const blocked = p => /user-agent:\s*\*[\s\S]*?disallow:\s*\/\s*$/im.test(robots) || new RegExp('disallow:\\s*' + p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i').test(robots);
+      for (const p of ['/careers', '/contact', '/contact-us', '/jobs']) {
+        if (blocked(p)) continue;
+        const html = await request(origin + p, { as: 'text', tries: 1 }).catch(() => '');
+        const e = extractCareersEmail(html);
+        if (e) { careersEmail.set(company, { email: e, page: origin + p }); break; }
+        await sleep(200);
+      }
+    }
+    for (const j of jobs) {
+      const c = careersEmail.get(j.company);
+      if (c && !(j.contact && j.contact.email)) j.contact = { ...(j.contact || {}), email: c.email, from: j.contact ? 'ad+site' : 'site', page: c.page };
+    }
+    stats.careersEmails = careersEmail.size;
+  }
+  for (const j of jobs) { delete j._host; if (!j.contact) delete j.contact; }
+  stats.withContact = jobs.filter(j => j.contact).length;
   jobs.sort((a, b) => String(b.posted || '').localeCompare(String(a.posted || '')));
 
   const out = { generatedAt: new Date().toISOString(), count: jobs.length, sources: report, stats, jobs };
