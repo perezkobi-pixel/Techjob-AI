@@ -49,10 +49,10 @@ function htmlToText(html) {
 const clip = (s, n) => { if (!s || s.length <= n) return s || ''; const cut = s.slice(0, n); const i = Math.max(cut.lastIndexOf('. '), cut.lastIndexOf('\n')); return (i > n * 0.6 ? cut.slice(0, i + 1) : cut) + '…'; };
 const shortId = s => crypto.createHash('sha1').update(s).digest('base64url').slice(0, 10);
 
-async function request(url, { method = 'GET', body = null, tries = 2, as = 'json' } = {}) {
+async function request(url, { method = 'GET', body = null, tries = 2, as = 'json', timeout = 25000 } = {}) {
   for (let a = 1; a <= tries; a++) {
     try {
-      const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), 25000);
+      const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), timeout);
       const headers = { 'User-Agent': UA, Accept: as === 'json' ? 'application/json' : 'text/html' };
       if (body) headers['Content-Type'] = 'application/json';
       const res = await fetch(url, { method, headers, body: body ? JSON.stringify(body) : undefined, signal: ctl.signal });
@@ -388,18 +388,21 @@ async function main() {
     const hostsByCompany = new Map();
     for (const j of jobs) if (j._host && !ATS_HOST.test(j._host) && !hostsByCompany.has(j.company)) hostsByCompany.set(j.company, j._host.replace(/^(careers|jobs|join|apply)\./, 'www.'));
     const careersEmail = new Map();
-    for (const [company, host] of hostsByCompany) {
+    const started = Date.now();
+    const lookup = async ([company, host]) => {
       const origin = 'https://' + host;
-      const robots = await request(origin + '/robots.txt', { as: 'text', tries: 1 }).catch(() => '');
-      const blocked = p => /user-agent:\s*\*[\s\S]*?disallow:\s*\/\s*$/im.test(robots) || new RegExp('disallow:\\s*' + p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i').test(robots);
+      const robots = await request(origin + '/robots.txt', { as: 'text', tries: 1, timeout: 6000 }).catch(() => '');
+      const blocked = p => /user-agent:\s*\*\s*\n(?:[^\n]*\n)*?disallow:\s*\/\s*$/im.test(robots) || robots.toLowerCase().includes('disallow: ' + p);
       for (const p of ['/careers', '/contact', '/contact-us', '/jobs']) {
+        if (Date.now() - started > 4 * 60 * 1000) return;      // never spend more than 4 minutes on this
         if (blocked(p)) continue;
-        const html = await request(origin + p, { as: 'text', tries: 1 }).catch(() => '');
+        const html = await request(origin + p, { as: 'text', tries: 1, timeout: 8000 }).catch(() => '');
         const e = extractCareersEmail(html);
-        if (e) { careersEmail.set(company, { email: e, page: origin + p }); break; }
-        await sleep(200);
+        if (e) { careersEmail.set(company, { email: e, page: origin + p }); return; }
       }
-    }
+    };
+    const entries = [...hostsByCompany];
+    for (let i = 0; i < entries.length; i += 6) await Promise.all(entries.slice(i, i + 6).map(lookup));
     for (const j of jobs) {
       const c = careersEmail.get(j.company);
       if (c && !(j.contact && j.contact.email)) j.contact = { ...(j.contact || {}), email: c.email, from: j.contact ? 'ad+site' : 'site', page: c.page };
