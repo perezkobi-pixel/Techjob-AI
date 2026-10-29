@@ -9,11 +9,11 @@
  */
 window.TJ_CONFIG = {
   firebase: {
-    apiKey: '',
-    authDomain: '',
-    projectId: '',
-    storageBucket: '',
-    messagingSenderId: '',
-    appId: ''
+    apiKey: 'AIzaSyDUz2HkqGzB8_AYLrSkFNsImMUE-_J64v4',
+    authDomain: 'techjob-ai.firebaseapp.com',
+    projectId: 'techjob-ai',
+    storageBucket: 'techjob-ai.firebasestorage.app',
+    messagingSenderId: '286302323232',
+    appId: '1:286302323232:web:f863148dc73c1ee9e0b245'
   }
 };
