@@ -173,7 +173,7 @@
     /* ---------- שיווק דיגיטלי, קריאייטיב ותוכן ---------- */
     R('art_director', 'ארט דירקטור/ית', ['Art Director', 'Senior Art Director'], 'marketing', /art direct|ארט דירקטור|ארט-דירקטור/i),
     R('creative_dir', 'מנהל/ת קריאייטיב (Creative Director)', ['Creative Director', 'Head of Creative', 'Creative Lead'], 'marketing', /creative (director|lead|manager)|head of creative|קריאייטיב דירקטור|מנהל קריאייטיב|מנהלת קריאייטיב/i),
-    R('visual_design', 'מעצב/ת גרפי/ת ומיתוג', ['Graphic Designer', 'Brand Designer', 'Visual Designer'], 'marketing', /brand designer|visual designer|graphic designer|marketing designer|מעצב גרפי|מעצבת גרפית|גרפיקאי/i),
+    R('visual_design', 'גרפיקאי/ת ומעצב/ת גרפי/ת', ['Graphic Designer', 'Brand Designer', 'Visual Designer', 'Packaging Designer', 'DTP'], 'marketing', /brand designer|visual designer|graphic designer|marketing designer|packaging design|print designer|\bdtp\b|מעצב גרפי|מעצבת גרפית|מעצב\/ת גרפי|גרפיקאי|גרפיקאית|עיצוב גרפי|עיצוב אריזות|מעצב אריזות|מעצבת אריזות|עימוד|דפוס/i),
     R('web_designer', 'מעצב/ת אתרים ודפי נחיתה', ['Web Designer', 'Landing Pages', 'Webflow'], 'marketing', /web designer|landing page|webflow|מעצב אתרים|עיצוב אתרים|דפי נחיתה/i),
     R('illustrator', 'מאייר/ת', ['Illustrator'], 'marketing', /illustrat|מאייר/i),
     R('video', 'עורך/ת וידאו ומפיק/ת תוכן', ['Video Editor', 'Video Producer', 'Content Creator'], 'marketing', /video (editor|producer|creator|designer)|content creator|עורך וידאו|עורכת וידאו|עריכת וידאו/i),
