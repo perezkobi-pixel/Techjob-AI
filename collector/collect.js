@@ -277,7 +277,7 @@ const ADAPTERS = {
 
 /* ---------------- classification ---------------- */
 const DEV_GROUPS = new Set(['dev', 'data', 'infra', 'qa', 'mgmt', 'cyber']);
-const NON_TECH = /recruit|talent acquisition|payroll|bookkeep|receptionist|office manager|account executive|\bsdr\b|\bbdr\b|sales (manager|director|representative)|business development|legal|counsel|paralegal|accountant|controller|fp&a|\bhr\b|people partner|executive assistant|stock administration|finance operations|treasury|tax |procurement/i;
+const NON_TECH = /payroll|bookkeep|receptionist|office manager|account executive|\bsdr\b|\bbdr\b|sales (manager|director|representative)|business development|legal|counsel|paralegal|accountant|controller|fp&a|executive assistant|stock administration|finance operations|treasury|tax |procurement/i;
 
 function classifyRoles(title, desc) {
   const roles = [];

@@ -24,7 +24,8 @@
     ['hw', 'חומרה, אלקטרוניקה ומערכות'],
     ['it', 'IT ומערכות מידע'],
     ['marketing', 'שיווק דיגיטלי, קריאייטיב ותוכן'],
-    ['digital', 'משחקים, תלת־ממד ו־XR']
+    ['digital', 'משחקים, תלת־ממד ו־XR'],
+    ['hr', 'משאבי אנוש וגיוס']
   ];
 
   const R = (id, he, en, g, re, desc) => ({ id, he, en, g, re, desc: desc || null });
@@ -119,7 +120,7 @@
 
     /* ---------- ניהול טכנולוגי ---------- */
     R('team_lead', 'מנהל/ת צוות פיתוח', ['Team Lead', 'Software Team Leader', 'R&D Team Lead'], 'mgmt',
-      /(software|engineering|development|r&d|backend|frontend|full ?stack|platform|infrastructure|data platform|production engineering|devex|algorithm)[^,]*team (lead|leader|manager)|team (lead|leader|manager)[^,]*(r&d|engineering|software|\(c\))|engineering team lead|ראש צוות|מנהל צוות/i),
+      /(software|engineering|development|r&d|backend|frontend|full ?stack|platform|infrastructure|data platform|production engineering|devex|algorithm)[^,]*team (lead|leader|manager)|team (lead|leader|manager)[^,]*(r&d|engineering|software|\(c\))|engineering team lead|ראש צוות(?! גיוס)|מנהל צוות(?! גיוס)/i),
     R('eng_manager', 'מנהל/ת פיתוח (R&D)', ['Engineering Manager', 'R&D Manager', 'Director of Engineering'], 'mgmt', /engineering manager|r&d,? (manager|director|group)|development manager|director of engineering|head of engineering|group (manager|leader)|מנהל פיתוח|מנהלת פיתוח/i),
     R('cto', 'מנהל/ת טכנולוגיות ראשי/ת (CTO / VP R&D)', ['CTO', 'VP R&D', 'VP Engineering', 'R&D Architect Director'], 'mgmt', /\bcto\b(?! office)|vp,? (of )?(r&d|engineering)|chief technology|architect director|סמנכ"?ל (פיתוח|טכנולוגיות)/i),
     R('pm_tech', 'מנהל/ת פרויקטים טכנולוגיים', ['Technical Project Manager', 'Program Manager', 'Delivery Manager', 'PMO'], 'mgmt', /project manager|program manager|\btpm\b|\bpmo\b|delivery manager|מנהל פרויקט|מנהלת פרויקט/i),
@@ -206,7 +207,17 @@
     R('data_gov', 'Data Governance ואיכות נתונים', ['Data Governance', 'Data Quality', 'Data Steward'], 'data', /data (governance|quality|steward)/i),
     R('fraud', 'אנליסט/ית הונאות ו־Trust & Safety', ['Fraud Analyst', 'Risk Analyst', 'Trust & Safety'], 'cyber', /fraud (analyst|research|investigat|data|manager)|risk analyst|trust (and|&) safety|הונאות/i),
     R('devrel', 'Developer Relations', ['Developer Advocate', 'DevRel', 'Evangelist'], 'solutions', /developer (relations|advocate|evangelist)|devrel/i),
-    R('csm', 'מנהל/ת Customer Success', ['Customer Success Manager', 'CSM'], 'solutions', /customer success|הצלחת לקוח/i)
+    R('csm', 'מנהל/ת Customer Success', ['Customer Success Manager', 'CSM'], 'solutions', /customer success|הצלחת לקוח/i),
+
+    /* ---------- משאבי אנוש וגיוס ---------- */
+    R('recruiter', 'מגייס/ת', ['Recruiter', 'Technical Recruiter', 'Talent Acquisition Partner', 'Sourcer'], 'hr', /recruit(er|ing|ment)|talent acquisition|talent partner|sourc(er|ing) |\bsourcer\b|מגייס|מגייסת|גיוס עובדים|רכז(ת)? גיוס/i),
+    R('recruit_lead', 'מנהל/ת צוות גיוס', ['Recruiting Team Lead', 'Recruitment Manager', 'Head of Talent Acquisition', 'TA Manager'], 'hr', /(recruit\w*|talent acquisition|\bta\b)\s*(team )?(lead|leader|manager|director)|head of (talent|recruit)|director,? (talent|recruit)|vp,? talent|מנהל(ת)? (צוות )?גיוס|ראש צוות גיוס|מנהלת גיוס/i),
+    R('hr_manager', 'מנהל/ת משאבי אנוש', ['HR Manager', 'Head of HR', 'VP HR', 'Head of People', 'CHRO'], 'hr', /\bhr (manager|director|lead|team lead)|head of (hr|people|human resources)|vp,? (hr|people|human resources)|\bchro\b|chief people|people (manager|director|lead)|human resources (manager|director)|מנהל(ת)? משאבי אנוש|סמנכ"?ל(ית)? משאבי אנוש|מנהל(ת)? מש"א/i),
+    R('hrbp', 'שותף/ה עסקי/ת משאבי אנוש (HRBP)', ['HR Business Partner', 'People Partner', 'HRBP'], 'hr', /\bhrbp\b|(hr|people) (business )?partner|business partner,? (hr|people)|שותף עסקי|שותפה עסקית/i),
+    R('hr_generalist', 'רכז/ת משאבי אנוש', ['HR Generalist', 'HR Coordinator', 'People Operations', 'HR Specialist'], 'hr', /\bhr (generalist|coordinator|specialist|administrator|assistant|operations)|people op(eration)?s|people (coordinator|specialist)|human resources|רכז(ת)? משאבי אנוש|משאבי אנוש/i),
+    R('employer_brand', 'מנהל/ת Employer Branding', ['Employer Branding', 'Talent Brand'], 'hr', /employer brand|talent brand/i),
+    R('lnd', 'מנהל/ת הדרכה ופיתוח ארגוני', ['Learning & Development', 'L&D', 'Organizational Development'], 'hr', /learning (and|&) development|\bl&d\b|organizational development|org(anization)? development|פיתוח ארגוני|מנהל(ת)? הדרכה/i),
+    R('comp_ben', 'מנהל/ת תגמול והטבות', ['Compensation & Benefits', 'Total Rewards'], 'hr', /compensation|total rewards|benefits (manager|specialist|lead)|תגמול/i)
   ];
 
   const ROLE = Object.fromEntries(ROLES.map(r => [r.id, r]));
