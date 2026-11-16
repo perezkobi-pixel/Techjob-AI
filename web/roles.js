@@ -188,7 +188,7 @@
     R('ua', 'מנהל/ת User Acquisition', ['User Acquisition Manager', 'UA', 'ASO'], 'marketing', /user acquisition|\bua\b (manager|specialist|lead|analyst)|\baso\b|app store optim/i),
     R('growth', 'מנהל/ת Growth', ['Growth Manager', 'Growth Marketing', 'Growth Lead'], 'marketing', /\bgrowth\b|צמיחה/i),
     R('demand_gen', 'מנהל/ת Demand Generation', ['Demand Generation', 'Lead Generation'], 'marketing', /demand gen|lead gen/i),
-    R('crm_mkt', 'מנהל/ת CRM ואוטומציה שיווקית', ['CRM Manager', 'Lifecycle Marketing', 'Marketing Automation', 'Marketing Ops'], 'marketing', /crm (manager|marketing|specialist|lead)|lifecycle|marketing automation|retention marketing|email marketing|marketing op(eration)?s|marketo|מנהל crm|מנהלת crm/i),
+    R('crm_mkt', 'מנהל/ת CRM ואוטומציה שיווקית', ['CRM Manager', 'Lifecycle Marketing', 'Marketing Automation', 'Marketing Ops'], 'marketing', /crm (manager|marketing|specialist|lead)|lifecycle (marketing|manager)|marketing automation|retention marketing|email marketing|marketing op(eration)?s|marketo|מנהל crm|מנהלת crm/i),
     R('content', 'מנהל/ת תוכן וכתיבה שיווקית', ['Content Manager', 'Content Writer', 'Content Marketing'], 'marketing', /content (manager|writer|marketing|strategist|lead|specialist)|כותב תוכן|כותבת תוכן|מנהל תוכן|מנהלת תוכן/i),
     R('copywriter', 'קופירייטר/ית', ['Copywriter'], 'marketing', /copywrit|קופירייט/i),
     R('social', 'מנהל/ת סושיאל וקהילה', ['Social Media Manager', 'Community Manager'], 'marketing', /social media|community manager|סושיאל|רשתות חברתיות|מנהל קהילה|מנהלת קהילה/i),
