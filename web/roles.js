@@ -210,7 +210,7 @@
     R('csm', 'מנהל/ת Customer Success', ['Customer Success Manager', 'CSM'], 'solutions', /customer success|הצלחת לקוח/i),
 
     /* ---------- משאבי אנוש וגיוס ---------- */
-    R('recruiter', 'מגייס/ת', ['Recruiter', 'Technical Recruiter', 'Talent Acquisition Partner', 'Sourcer'], 'hr', /recruit(er|ing|ment)|talent acquisition|talent partner|sourc(er|ing) |\bsourcer\b|מגייס|מגייסת|גיוס עובדים|רכז(ת)? גיוס/i),
+    R('recruiter', 'מגייס/ת', ['Recruiter', 'Technical Recruiter', 'Talent Acquisition Partner', 'Sourcer'], 'hr', /^(?!.*\b(scientist|engineer|developer|internship|intern)\b).*(recruit(er|ing|ment)|talent acquisition|talent partner|talent sourc|\bsourcer\b|מגייס|מגייסת|גיוס עובדים|רכז(ת)? גיוס)/i),
     R('recruit_lead', 'מנהל/ת צוות גיוס', ['Recruiting Team Lead', 'Recruitment Manager', 'Head of Talent Acquisition', 'TA Manager'], 'hr', /(recruit\w*|talent acquisition|\bta\b)\s*(team )?(lead|leader|manager|director)|head of (talent|recruit)|director,? (talent|recruit)|vp,? talent|מנהל(ת)? (צוות )?גיוס|ראש צוות גיוס|מנהלת גיוס/i),
     R('hr_manager', 'מנהל/ת משאבי אנוש', ['HR Manager', 'Head of HR', 'VP HR', 'Head of People', 'CHRO'], 'hr', /\bhr (manager|director|lead|team lead)|head of (hr|people|human resources)|vp,? (hr|people|human resources)|\bchro\b|chief people|people (manager|director|lead)|human resources (manager|director)|מנהל(ת)? משאבי אנוש|סמנכ"?ל(ית)? משאבי אנוש|מנהל(ת)? מש"א/i),
     R('hrbp', 'שותף/ה עסקי/ת משאבי אנוש (HRBP)', ['HR Business Partner', 'People Partner', 'HRBP'], 'hr', /\bhrbp\b|(hr|people) (business )?partner|business partner,? (hr|people)|שותף עסקי|שותפה עסקית/i),
